@@ -18,6 +18,7 @@ STAGES = (
         ("city13", "十三王子市"),
         ("apart", "畠中のアパート"),
         ("office", "退魔師事務所"),
+        ("chineseshop", "中華飯店"),
         )
 
 
@@ -27,10 +28,19 @@ DAYS = (
 
 
 ITEMS = (
+        ("wallet", "財布"),
+        ("GAnovel", "GA文庫"),
+        ("truck", "トラック"),
         )
 
 
 INFOS = (
+        ("suicide", "自殺"),
+        ("despair", "絶望"),
+        ("deadzenzo", "善蔵の死"),
+        ("hittruck", "トラックに轢かれる"),
+        ("firejob", "仕事を首になる"),
+        ("poor", "貧乏"),
         )
 
 
