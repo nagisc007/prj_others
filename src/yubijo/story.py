@@ -27,6 +27,16 @@ def world():
 
 def story(w: wd.World):
     return (w.maintitle("幽霊が美少女なら問題ないよね？"),
+            w.zenzo.hear(w.i.firejob, w.stage.chineseshop, w.day.meet),
+            w.zenzo.look(w.wallet, w.i.poor),
+            w.zenzo.know(w.i.despair),
+            w.zenzo.remember(w.GAnovel),
+            w.zenzo.do(w.i.suicide),
+            w.zenzo.look(w.truck),
+            w.zenzo.do(w.i.hittruck),
+            w.zenzo.do("rescue", w.akebi),
+            w.zenzo.know(w.akebi, w.i.deadzenzo),
+            w.zenzo.do("rescue", w.murako),
             )
 
 
