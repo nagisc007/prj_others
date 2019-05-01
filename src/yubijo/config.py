@@ -60,6 +60,11 @@ INFOS = (
         ("ghostbuster", "退魔師"),
         ("ability", "善蔵の能力"),
         ("ghost_real", "幽霊の本当の姿"),
+        ("crisis", "危機"),
+        # chapter5
+        ("minako_reason", "水菜子の事情"),
+        ("minako_death", "水菜子の死因"),
+        ("minako_dream", "水菜子の夢"),
         )
 
 
