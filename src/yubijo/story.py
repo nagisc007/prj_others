@@ -7,17 +7,17 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 
 from storybuilder.builder import world as wd
-from . import config as cnf
-from . import chapter01 as chap01
-from . import chapter02 as chap02
-from . import chapter03 as chap03
-from . import chapter04 as chap04
-from . import chapter05 as chap05
-from . import chapter06 as chap06
-from . import chapter07 as chap07
-from . import chapter08 as chap08
-from . import chapter09 as chap09
-from . import chapter10 as chap10
+from src.yubijo import config as cnf
+from src.yubijo import chapter01 as chap01
+from src.yubijo import chapter02 as chap02
+from src.yubijo import chapter03 as chap03
+from src.yubijo import chapter04 as chap04
+from src.yubijo import chapter05 as chap05
+from src.yubijo import chapter06 as chap06
+from src.yubijo import chapter07 as chap07
+from src.yubijo import chapter08 as chap08
+from src.yubijo import chapter09 as chap09
+from src.yubijo import chapter10 as chap10
 
 
 # episodes
