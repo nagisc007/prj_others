@@ -8,6 +8,17 @@ sys.path.append('storybuilder')
 
 from storybuilder.builder import world as wd
 from . import config as cnf
+from . import chapter01 as chap01
+from . import chapter02 as chap02
+from . import chapter03 as chap03
+from . import chapter04 as chap04
+from . import chapter05 as chap05
+from . import chapter06 as chap06
+from . import chapter07 as chap07
+from . import chapter08 as chap08
+from . import chapter09 as chap09
+from . import chapter10 as chap10
+
 
 # episodes
 
@@ -37,6 +48,16 @@ def story(w: wd.World):
             w.zenzo.do("rescue", w.akebi),
             w.zenzo.know(w.akebi, w.i.deadzenzo),
             w.zenzo.do("rescue", w.murako),
+            chap01.story(w),
+            chap02.story(w),
+            chap03.story(w),
+            chap04.story(w),
+            chap05.story(w),
+            chap06.story(w),
+            chap07.story(w),
+            chap08.story(w),
+            chap09.story(w),
+            chap10.story(w),
             )
 
 

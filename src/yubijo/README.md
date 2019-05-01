@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Develop | 2019.- | 2019.4.30 | Life, Fantasy, Love, Mystery | 1M | [Non published](https://google.com/) | [第12回GA文庫大賞](https://ga.sbcr.jp/novel/taisyo/guide.html) |
+| v0.1.0 | Develop | 2019.- | 2019.5.1 | Life, Fantasy, Love, Mystery | 1M | [Non published](https://google.com/) | [第12回GA文庫大賞](https://ga.sbcr.jp/novel/taisyo/guide.html) |
 
 **「もう俺相手が幽霊でもいい」**
 
@@ -29,6 +29,19 @@
 ## Stages
 
 - 十三王子市……主人公が主に活動する場所。モデルは八王子市
+
+## Chapters
+
+1. 無職が自殺しても問題ないよね？
+2. ファーストキスが幽霊でも問題ないよね？
+3. 退魔師が恋に落ちても問題ないよね？
+4. 地縛霊がストーカーでも問題ないよね？
+5. 退魔師が籠絡されても問題ないよね？
+6. ハーレムが地獄でも問題ないよね？
+7. 世界が滅んでも問題ないよね？
+8. 初恋が失われても問題ないよね？
+9. 真実が残酷でも問題ないよね？
+10. 退魔師が幽霊になっても問題ないよね？
 
 ## License
 
