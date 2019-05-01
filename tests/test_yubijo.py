@@ -60,7 +60,7 @@ class StoryTest(unittest.TestCase):
                 # chapter3
                 ("chapter3", self.chap3, self.w.zenzo, self.w.murako),
                 # chapter4
-                ("chapter4", self.chap4, self.w.zenzo, self.w.akebi),
+                ("chapter4", self.chap4, self.w.zenzo, self.w.minako),
                 # chapter5
                 ("chapter5", self.chap5, self.w.zenzo, self.w.akebi),
                 # chapter6
@@ -108,10 +108,10 @@ class StoryTest(unittest.TestCase):
                     True),
                 # chapter4
                 ("chapter4", self.chap4,
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
+                    w.zenzo.do(w.i.ghost, w.i.goheaven, "$must"),
+                    w.zenzo.have(w.i.salary),
+                    w.zenzo.look(w.i.ghost),
+                    w.zenzo.meet(w.minako),
                     True),
                 # chapter5
                 ("chapter5", self.chap5,
