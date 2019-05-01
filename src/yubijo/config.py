@@ -19,6 +19,7 @@ STAGES = (
         ("apart", "畠中のアパート"),
         ("office", "退魔師事務所"),
         ("chineseshop", "中華飯店"),
+        ("ghosthome", "幽霊屋敷"),
         )
 
 
@@ -41,6 +42,11 @@ INFOS = (
         ("hittruck", "トラックに轢かれる"),
         ("firejob", "仕事を首になる"),
         ("poor", "貧乏"),
+        ("kiss", "キス"),
+        ("makelove", "恋愛"),
+        ("akebi_reason", "山女の事情"),
+        ("akebi_death", "山女の死因"),
+        ("ghostbuster", "退魔師"),
         )
 
 

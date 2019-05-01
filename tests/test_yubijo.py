@@ -57,13 +57,21 @@ class StoryTest(unittest.TestCase):
                 ("chapter1", self.chap1, self.w.zenzo, self.w.akebi),
                 # chapter2
                 ("chapter2", self.chap2, self.w.zenzo, self.w.akebi),
+                # chapter3
                 ("chapter3", self.chap3, self.w.zenzo, self.w.akebi),
+                # chapter4
                 ("chapter4", self.chap4, self.w.zenzo, self.w.akebi),
+                # chapter5
                 ("chapter5", self.chap5, self.w.zenzo, self.w.akebi),
+                # chapter6
                 ("chapter6", self.chap6, self.w.zenzo, self.w.akebi),
+                # chapter7
                 ("chapter7", self.chap7, self.w.zenzo, self.w.akebi),
+                # chapter8
                 ("chapter8", self.chap8, self.w.zenzo, self.w.akebi),
+                # chapter9
                 ("chapter9", self.chap9, self.w.zenzo, self.w.akebi),
+                # chapter10
                 ("chapter10", self.chap10, self.w.zenzo, self.w.akebi),
                 ])
 
@@ -86,53 +94,61 @@ class StoryTest(unittest.TestCase):
                     True),
                 # chapter2
                 ("chapter2", self.chap2,
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
+                    w.zenzo.do(w.akebi, w.i.makelove),
+                    w.zenzo.look(w.akebi, "自分好み"),
+                    w.zenzo.talk(w.akebi, "彼女のことを知る"),
+                    w.zenzo.do(w.akebi, w.i.kiss),
                     True),
+                # chapter3
                 ("chapter3", self.chap3,
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     True),
+                # chapter4
                 ("chapter4", self.chap4,
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     True),
+                # chapter5
                 ("chapter5", self.chap5,
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     True),
+                # chapter6
                 ("chapter6", self.chap6,
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     True),
+                # chapter7
                 ("chapter7", self.chap7,
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     True),
+                # chapter8
                 ("chapter8", self.chap8,
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     True),
+                # chapter9
                 ("chapter9", self.chap9,
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
                     True),
+                # chapter10
                 ("chapter10", self.chap10,
                     w.zenzo.be(),
                     w.zenzo.be(),
