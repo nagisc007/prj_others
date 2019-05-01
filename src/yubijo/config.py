@@ -11,6 +11,9 @@ CHARAS = (
         ("zenzo", "畠中善蔵", 20, "male", "退魔師", "me:オレ", "幽霊が美少女に見える男"),
         ("akebi", "山野井山女", 17, "female", "幽霊", "me:わたし", "自殺した女子高生"),
         ("murako", "田村邑子", 33, "female", "退魔師", "me:私"),
+        ("cap", "柊聖文", 56, "male", "所長", "me:僕:zenzo:善ちゃん:murako:ムラムラちゃん"),
+        # chapter4
+        ("minako", "水辺水菜子", 28, "female", "幽霊", "me:ワタシ"),
         )
 
 
@@ -20,11 +23,14 @@ STAGES = (
         ("office", "退魔師事務所"),
         ("chineseshop", "中華飯店"),
         ("ghosthome", "幽霊屋敷"),
+        ("ghostschool", "幽霊廃校"),
+        ("ghosthospital", "幽霊病院"),
         )
 
 
 DAYS = (
         ("meet", "出会いの日"),
+        ("meet2", "出会いの日２"),
         )
 
 
@@ -37,8 +43,10 @@ ITEMS = (
 
 INFOS = (
         ("ghost", "幽霊"),
+        ("goheaven", "成仏"),
         ("beauty", "美少女"),
         ("job", "仕事"),
+        ("salary", "給料"),
         ("suicide", "自殺"),
         ("despair", "絶望"),
         ("deadzenzo", "善蔵の死"),
