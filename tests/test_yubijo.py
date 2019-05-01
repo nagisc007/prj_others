@@ -53,7 +53,9 @@ class StoryTest(unittest.TestCase):
         utl.exists_basic_infos_by_data(self,
                 [
                 ("story", self.story, self.w.zenzo, self.w.murako),
+                # chapter1
                 ("chapter1", self.chap1, self.w.zenzo, self.w.akebi),
+                # chapter2
                 ("chapter2", self.chap2, self.w.zenzo, self.w.akebi),
                 ("chapter3", self.chap3, self.w.zenzo, self.w.akebi),
                 ("chapter4", self.chap4, self.w.zenzo, self.w.akebi),
@@ -71,16 +73,18 @@ class StoryTest(unittest.TestCase):
                 [
                 ("story", self.story,
                     w.zenzo.do(w.i.suicide),
-                    w.zenzo.know(w.i.despair),
+                    w.zenzo.be(w.i.despair),
                     w.zenzo.do(w.i.hittruck),
                     w.zenzo.know(w.akebi, w.i.deadzenzo),
                     True),
+                # chapter1
                 ("chapter1", self.chap1,
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
+                    w.zenzo.do(w.i.suicide, "$want"),
+                    w.zenzo.be(w.i.despair),
+                    w.zenzo.do(w.i.suicide),
+                    w.zenzo.meet(w.akebi),
                     True),
+                # chapter2
                 ("chapter2", self.chap2,
                     w.zenzo.be(),
                     w.zenzo.be(),
