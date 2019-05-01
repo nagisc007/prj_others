@@ -36,6 +36,9 @@ ITEMS = (
 
 
 INFOS = (
+        ("ghost", "幽霊"),
+        ("beauty", "美少女"),
+        ("job", "仕事"),
         ("suicide", "自殺"),
         ("despair", "絶望"),
         ("deadzenzo", "善蔵の死"),
@@ -47,6 +50,8 @@ INFOS = (
         ("akebi_reason", "山女の事情"),
         ("akebi_death", "山女の死因"),
         ("ghostbuster", "退魔師"),
+        ("ability", "善蔵の能力"),
+        ("ghost_real", "幽霊の本当の姿"),
         )
 
 
