@@ -15,9 +15,25 @@ from src.yubijo import config as cnf
 
 # main
 def story(w: wd.World):
-    return (w.maintitle("第五話"),
-            w.zenzo.be(w.stage.chineseshop, w.day.meet),
-            w.zenzo.meet(w.akebi),
+    return (w.maintitle("第五話　退魔師が籠絡されても問題ないよね？"),
+            w.zenzo.meet(w.minako, w.stage.ghostschool, w.day.meet2),
+            w.zenzo.hear(w.minako, w.i.minako_reason),
+            w.zenzo.ask(w.minako, w.i.minako_death),
+            w.zenzo.do("help", w.minako),
+            w.minako.ask(w.zenzo, w.i.minako_dream),
+            w.zenzo.do(w.minako, "願望を叶える"),
+            w.zenzo.reply(w.minako, "yes"),
+            w.zenzo.do("live with", w.minako, w.stage.ghostschool),
+            w.zenzo.be("衰弱"),
+            w.murako.come(w.stage.ghostschool),
+            w.murako.talk(w.zenzo, "このままじゃ死ぬ"),
+            w.zenzo.reply(w.murako, w.minako, w.i.minako_dream),
+            w.murako.talk("忠告", w.zenzo),
+            w.zenzo.be("衰弱"),
+            w.zenzo.talk(w.minako, "幸せ"),
+            w.murako.come(w.stage.ghostschool),
+            w.murako.talk(w.minako),
+            w.zenzo.do("rescue", w.murako, w.i.crisis),
             )
 
 
