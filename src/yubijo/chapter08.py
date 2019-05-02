@@ -18,6 +18,8 @@ def story(w: wd.World):
     return (w.maintitle("第八話"),
             w.zenzo.be(w.stage.chineseshop, w.day.meet),
             w.zenzo.meet(w.akebi),
+            # TODO: secret world
+            w.zenzo.know(w.deflag.secret_world),
             )
 
 

@@ -27,6 +27,7 @@ def story(w: wd.World):
             w.zenzo.ask(w.stage.ghosthospital),
             w.murako.talk(w.i.ghospital_info),
             w.zenzo.go(w.stage.ghosthospital),
+            w.zenzo.hear(w.flag.secret_hospital),
             w.zenzo.meet(w.beniko),
             w.zenzo.meet(w.mia),
             w.zenzo.meet(w.kii),
