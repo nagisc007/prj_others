@@ -19,6 +19,16 @@ def story(w: wd.World):
             w.zenzo.be(w.stage.ghosthospital, w.day.meet3),
             w.zenzo.be("life", w.beniko, w.mia, w.kii),
             w.beniko.do(w.zenzo, "取り合う"),
+            w.zenzo.do(w.i.propose, w.beniko),
+            w.zenzo.do(w.i.propose, w.mia),
+            w.zenzo.do(w.i.propose, w.kii),
+            w.zenzo.think("決める", "marry", w.beniko, w.mia, w.kii, "$must"),
+            w.zenzo.think(w.i.propose),
+            w.zenzo.know(w.deflag.secret_hospital),
+            w.zenzo.think(w.flag.secret_world),
+            w.zenzo.talk(w.murako, w.flag.secret_hospital),
+            w.zenzo.meet(w.murako),
+            w.zenzo.go(w.stage.ghosthospital, "$not"),
             )
 
 

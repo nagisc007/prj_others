@@ -130,7 +130,7 @@ class StoryTest(unittest.TestCase):
                 # chapter7
                 ("chapter7", self.chap7,
                     w.zenzo.think("決める", "marry", w.beniko, "$must"),
-                    w.zenzo.do("プロポーズされた", w.beniko),
+                    w.zenzo.do(w.i.propose, w.beniko),
                     w.zenzo.meet(w.murako),
                     w.zenzo.go(w.stage.ghosthospital, "$not"),
                     True),

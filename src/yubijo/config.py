@@ -83,9 +83,14 @@ INFOS = (
         ("beniko_reason", "紅子の事情"),
         ("mia_reason", "未青の事情"),
         ("kii_reason", "黄衣の事情"),
+        # chapter 7
+        ("propose", "プロポーズ"),
         )
 
 
 FLAGS = (
+        ("case_suicide", "連続自殺事件"),
+        ("secret_hospital", "病院の秘密"),
+        ("secret_world", "世界の秘密"),
         )
 
