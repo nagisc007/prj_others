@@ -99,5 +99,7 @@ FLAGS = (
         ("secret_world", "世界の秘密"),
         ("secret_cap", "柊の秘密"), # 実は死神
         ("secret_murako", "邑子の秘密"), # 実は幽霊
+        ("case_murako", "邑子の事件"),
+        ("secret_zenzo", "善蔵の秘密"), # 邑子の恩人だった
         )
 

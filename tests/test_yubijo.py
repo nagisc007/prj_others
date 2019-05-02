@@ -143,16 +143,16 @@ class StoryTest(unittest.TestCase):
                     True),
                 # chapter9
                 ("chapter9", self.chap9,
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
+                    w.zenzo.remember(w.flag.case_murako),
+                    w.zenzo.hear(w.machiko, w.flag.case_murako),
+                    w.zenzo.talk(w.murako),
+                    w.zenzo.know(w.flag.secret_zenzo),
                     True),
                 # chapter10
                 ("chapter10", self.chap10,
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
+                    w.zenzo.do(w.murako, "もう一度殺す", "$must"),
+                    w.zenzo.know(w.murako, "原因"),
+                    w.zenzo.meet(w.murako),
                     w.zenzo.do(w.murako, w.i.goheaven),
                     True),
                 ])
