@@ -68,11 +68,11 @@ class StoryTest(unittest.TestCase):
                 # chapter7
                 ("chapter7", self.chap7, self.w.zenzo, self.w.beniko),
                 # chapter8
-                ("chapter8", self.chap8, self.w.zenzo, self.w.akebi),
+                ("chapter8", self.chap8, self.w.zenzo, self.w.machiko),
                 # chapter9
-                ("chapter9", self.chap9, self.w.zenzo, self.w.akebi),
+                ("chapter9", self.chap9, self.w.zenzo, self.w.murako),
                 # chapter10
-                ("chapter10", self.chap10, self.w.zenzo, self.w.akebi),
+                ("chapter10", self.chap10, self.w.zenzo, self.w.cap),
                 ])
 
     def test_has_outline_infos(self):
@@ -136,10 +136,10 @@ class StoryTest(unittest.TestCase):
                     True),
                 # chapter8
                 ("chapter8", self.chap8,
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
-                    w.zenzo.be(),
+                    w.zenzo.know(w.flag.secret_murako, "$must"),
+                    w.zenzo.hear(w.machiko, w.flag.secret_murako),
+                    w.zenzo.deal("search", w.murako),
+                    w.zenzo.deal(w.machiko, "監禁"),
                     True),
                 # chapter9
                 ("chapter9", self.chap9,
@@ -153,7 +153,7 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.be(),
                     w.zenzo.be(),
                     w.zenzo.be(),
-                    w.zenzo.be(),
+                    w.zenzo.do(w.murako, w.i.goheaven),
                     True),
                 ])
 

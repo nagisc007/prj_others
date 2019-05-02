@@ -15,7 +15,8 @@ from src.yubijo import config as cnf
 
 # main
 def story(w: wd.World):
-    return (w.maintitle("第八話"),
+    return (w.maintitle("第八話　初恋が失われても問題ないよね？"),
+            w.zenzo.go(w.stage.office, w.day.meet4, w.murako),
             w.zenzo.be(w.stage.chineseshop, w.day.meet),
             w.zenzo.meet(w.akebi),
             # TODO: secret world
