@@ -16,8 +16,9 @@ from src.yubijo import config as cnf
 # main
 def story(w: wd.World):
     return (w.maintitle("第十話"),
-            w.zenzo.be(w.stage.chineseshop, w.day.meet),
-            w.zenzo.meet(w.akebi),
+            w.zenzo.be(w.stage.office, w.day.meet4),
+            w.zenzo.meet(w.cap),
+            w.zenzo.do(w.murako, w.i.goheaven),
             )
 
 

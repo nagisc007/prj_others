@@ -37,6 +37,7 @@ STAGES = (
         # chapter 8
         ("ghosttonnel", "幽霊トンネル"),
         ("ghostworld", "幽霊世界"),
+        ("murakohome", "邑子の実家"),
         )
 
 
