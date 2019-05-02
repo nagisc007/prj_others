@@ -18,6 +18,8 @@ CHARAS = (
         ("beniko", "紅沢紅子", 35, "female", "幽霊", "me:私"),
         ("mia", "青井未青", 22, "female", "幽霊", "me:みぃ"),
         ("kii", "黄川田黄衣", 17, "female", "幽霊", "me:アタイ"),
+        # chapter 8
+        ("machiko", "田村真千子", 35, "female", "退魔師", "me:私"),
         )
 
 
@@ -35,6 +37,7 @@ STAGES = (
         # chapter 8
         ("ghosttonnel", "幽霊トンネル"),
         ("ghostworld", "幽霊世界"),
+        ("murakohome", "邑子の実家"),
         )
 
 
@@ -44,6 +47,8 @@ DAYS = (
         ("meet2", "出会いの日２"),
         # chapter 6
         ("meet3", "出会いの日３"),
+        # chapter 8
+        ("meet4", "出会いの日４"),
         )
 
 
@@ -92,5 +97,7 @@ FLAGS = (
         ("case_suicide", "連続自殺事件"),
         ("secret_hospital", "病院の秘密"),
         ("secret_world", "世界の秘密"),
+        ("secret_cap", "柊の秘密"), # 実は死神
+        ("secret_murako", "邑子の秘密"), # 実は幽霊
         )
 
