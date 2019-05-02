@@ -15,9 +15,10 @@ from src.yubijo import config as cnf
 
 # main
 def story(w: wd.World):
-    return (w.maintitle("第七話"),
-            w.zenzo.be(w.stage.chineseshop, w.day.meet),
-            w.zenzo.meet(w.akebi),
+    return (w.maintitle("第七話　世界が滅んでも問題ないよね？"),
+            w.zenzo.be(w.stage.ghosthospital, w.day.meet3),
+            w.zenzo.be("life", w.beniko, w.mia, w.kii),
+            w.beniko.do(w.zenzo, "取り合う"),
             )
 
 
