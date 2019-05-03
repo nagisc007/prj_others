@@ -37,6 +37,9 @@ class StoryTest(unittest.TestCase):
         self.chap2ep2 = chap02.ep_goodyubijo(self.w)
         self.chap2ep3 = chap02.ep_ghostbuster(self.w)
         self.chap3 = chap03.story(self.w)
+        self.chap3ep1 = chap03.ep_avant(self.w)
+        self.chap3ep2 = chap03.ep_ghostbuster(self.w)
+        self.chap3ep3 = chap03.ep_ghosthunter(self.w)
         self.chap4 = chap04.story(self.w)
         self.chap5 = chap05.story(self.w)
         self.chap6 = chap06.story(self.w)
@@ -71,6 +74,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter2-B", self.chap2ep3, self.w.zenzo, self.w.akebi),
                 # chapter3
                 ("chapter3", self.chap3, self.w.zenzo, self.w.murako),
+                ("chapter3-avant", self.chap3ep1, self.w.zenzo, self.w.murako),
+                ("chapter3-A", self.chap3ep2, self.w.zenzo, self.w.murako),
+                ("chapter3-B", self.chap3ep3, self.w.zenzo, self.w.murako),
                 # chapter4
                 ("chapter4", self.chap4, self.w.zenzo, self.w.minako),
                 # chapter5
@@ -152,6 +158,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.look(w.i.job, "$must"),
                     w.zenzo.be(w.i.firejob),
                     w.zenzo.talk(w.murako, w.i.ghostbuster),
+                    w.zenzo.be(w.i.ghostbuster),
+                    True),
+                ("chapter3-avant", self.chap3ep1,
+                    w.zenzo.know(w.murako),
+                    w.zenzo.do("rescue", w.murako),
+                    w.zenzo.hear(w.murako, "仕事"),
+                    w.zenzo.meet(w.cap),
+                    True),
+                ("chapter3-A", self.chap3ep2,
+                    w.zenzo.know(w.murako, w.i.ghostbuster),
+                    w.zenzo.know(w.i.ghost),
+                    w.zenzo.hear(w.murako, w.i.job),
+                    w.zenzo.know(w.i.ghostbuster),
+                    True),
+                ("chapter3-B", self.chap3ep3,
+                    w.zenzo.have(w.i.salary),
+                    w.zenzo.be(w.i.poor),
+                    w.zenzo.talk(w.murako, "頼む"),
                     w.zenzo.be(w.i.ghostbuster),
                     True),
                 # chapter4
