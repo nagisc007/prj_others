@@ -50,7 +50,7 @@ class StoryTest(unittest.TestCase):
         self.assertTrue(utl.exists_looking_from_master(self.story, self.ma))
 
     def test_followed_flags(self):
-        self.assertTrue(utl.followed_all_flags(self.story))
+        self.assertTrue(utl.followed_all_flags_with_error_info(self, self.story))
 
     def test_has_basic_infos(self):
         utl.exists_basic_infos_by_data(self,

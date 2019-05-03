@@ -14,6 +14,7 @@ CHARAS = (
         ("cap", "柊聖文", 56, "male", "所長", "me:僕:zenzo:善ちゃん:murako:ムラムラちゃん"),
         # chapter 1
         ("truckdriver", "トラック運転手", 35, "male", "運送配達員", "me:俺"),
+        ("tencho", "店長", 44, "male", "中華屋店長", "me:オレ"),
         # chapter 4
         ("minako", "水辺水菜子", 28, "female", "幽霊", "me:ワタシ"),
         # chapter 6
@@ -31,6 +32,7 @@ STAGES = (
         ("office", "退魔師事務所"),
         ("chineseshop", "中華飯店"),
         # chapter 1,2
+        ("street", "通り"),
         ("ghosthome", "幽霊屋敷"),
         # chapter 4,5
         ("ghostschool", "幽霊廃校"),
@@ -56,6 +58,7 @@ DAYS = (
 
 ITEMS = (
         ("wallet", "財布"),
+        # chapter 1
         ("GAnovel", "GA文庫"),
         ("truck", "トラック"),
         )
@@ -83,6 +86,9 @@ INFOS = (
         # chapter 1
         ("hittruck", "トラックに轢かれる"),
         ("gosteady", "付き合う"),
+        ("akebi_history", "山女の恋愛履歴"),
+        ("shojo", "処女"),
+        ("nohuman", "人間離れ"),
         # chapter5
         ("minako_reason", "水菜子の事情"),
         ("minako_death", "水菜子の死因"),
