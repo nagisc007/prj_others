@@ -29,6 +29,9 @@ class StoryTest(unittest.TestCase):
         self.w = world()
         self.story = story(self.w)
         self.chap1 = chap01.story(self.w)
+        self.chap1ep1 = chap01.ep_avant(self.w)
+        self.chap1ep2 = chap01.ep_meetbijo(self.w)
+        self.chap1ep3 = chap01.ep_bijoghost(self.w)
         self.chap2 = chap02.story(self.w)
         self.chap3 = chap03.story(self.w)
         self.chap4 = chap04.story(self.w)
@@ -47,7 +50,7 @@ class StoryTest(unittest.TestCase):
         self.assertTrue(utl.exists_looking_from_master(self.story, self.ma))
 
     def test_followed_flags(self):
-        self.assertTrue(utl.followed_all_flags(self.story))
+        self.assertTrue(utl.followed_all_flags_with_error_info(self, self.story))
 
     def test_has_basic_infos(self):
         utl.exists_basic_infos_by_data(self,
@@ -55,6 +58,9 @@ class StoryTest(unittest.TestCase):
                 ("story", self.story, self.w.zenzo, self.w.murako),
                 # chapter1
                 ("chapter1", self.chap1, self.w.zenzo, self.w.akebi),
+                ("chapter1-avant", self.chap1ep1, self.w.zenzo, self.w.truckdriver),
+                ("chapter1-A", self.chap1ep2, self.w.zenzo, self.w.akebi),
+                ("chapter1-B", self.chap1ep3, self.w.zenzo, self.w.akebi),
                 # chapter2
                 ("chapter2", self.chap2, self.w.zenzo, self.w.akebi),
                 # chapter3
@@ -91,6 +97,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.be(w.i.despair),
                     w.zenzo.do(w.i.suicide),
                     w.zenzo.meet(w.akebi),
+                    True),
+                ("chapter1-avant", self.chap1ep1,
+                    w.zenzo.do(w.i.suicide, "$want"),
+                    w.zenzo.be(w.i.despair),
+                    w.zenzo.do(w.i.suicide),
+                    w.zenzo.do(w.i.hittruck),
+                    True),
+                ("chapter1-A", self.chap1ep2,
+                    w.zenzo.do(w.akebi, "love", "$want"),
+                    w.zenzo.meet(w.akebi),
+                    w.zenzo.talk(w.akebi, w.i.gosteady),
+                    w.zenzo.do(w.akebi, w.i.gosteady, "yes"),
+                    True),
+                ("chapter1-B", self.chap1ep3,
+                    w.zenzo.do(w.akebi, w.i.kiss, "$want"),
+                    w.zenzo.be(w.akebi, w.i.gosteady),
+                    w.zenzo.know(w.akebi),
+                    w.zenzo.know(w.akebi, w.i.ghost),
                     True),
                 # chapter2
                 ("chapter2", self.chap2,
