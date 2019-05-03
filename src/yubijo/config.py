@@ -69,12 +69,10 @@ INFOS = (
         ("goheaven", "成仏"),
         ("beauty", "美少女"),
         ("job", "仕事"),
-        ("salary", "給料"),
         ("suicide", "自殺"),
         ("despair", "絶望"),
         ("deadzenzo", "善蔵の死"),
         ("firejob", "仕事を首になる"),
-        ("poor", "貧乏"),
         ("kiss", "キス"),
         ("makelove", "恋愛"),
         ("akebi_reason", "山女の事情"),
@@ -93,6 +91,9 @@ INFOS = (
         ("lostlife", "生命力を奪われる"),
         ("betogether", "一緒に居る"),
         ("gotodeath", "やがて死ぬ"),
+        # chapter 3
+        ("poor", "貧乏"),
+        ("salary", "給料"),
         # chapter5
         ("minako_reason", "水菜子の事情"),
         ("minako_death", "水菜子の死因"),
