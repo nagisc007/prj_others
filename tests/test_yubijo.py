@@ -33,6 +33,9 @@ class StoryTest(unittest.TestCase):
         self.chap1ep2 = chap01.ep_meetbijo(self.w)
         self.chap1ep3 = chap01.ep_bijoghost(self.w)
         self.chap2 = chap02.story(self.w)
+        self.chap2ep1 = chap02.ep_avant(self.w)
+        self.chap2ep2 = chap02.ep_goodyubijo(self.w)
+        self.chap2ep3 = chap02.ep_ghostbuster(self.w)
         self.chap3 = chap03.story(self.w)
         self.chap4 = chap04.story(self.w)
         self.chap5 = chap05.story(self.w)
@@ -63,6 +66,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter1-B", self.chap1ep3, self.w.zenzo, self.w.akebi),
                 # chapter2
                 ("chapter2", self.chap2, self.w.zenzo, self.w.akebi),
+                ("chapter2-avant", self.chap2ep1, self.w.zenzo, self.w.akebi),
+                ("chapter2-A", self.chap2ep2, self.w.zenzo, self.w.akebi),
+                ("chapter2-B", self.chap2ep3, self.w.zenzo, self.w.akebi),
                 # chapter3
                 ("chapter3", self.chap3, self.w.zenzo, self.w.murako),
                 # chapter4
@@ -122,6 +128,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.look(w.akebi, "自分好み"),
                     w.zenzo.talk(w.akebi, "彼女のことを知る"),
                     w.zenzo.do(w.akebi, w.i.kiss),
+                    True),
+                ("chapter2-avant", self.chap2ep1,
+                    w.zenzo.think(w.akebi, "付き合えないか"),
+                    w.zenzo.know(w.akebi, w.i.ghost),
+                    w.zenzo.be(w.akebi, "一緒に暮らす"),
+                    w.zenzo.be(w.akebi, w.i.lostlife),
+                    True),
+                ("chapter2-A", self.chap2ep2,
+                    w.zenzo.be(w.akebi, "恋人になる"),
+                    w.zenzo.be(w.akebi, "好きになる"),
+                    w.zenzo.talk(w.akebi, "思いを伝える"),
+                    w.zenzo.do(w.akebi, w.i.kiss),
+                    True),
+                ("chapter2-B", self.chap2ep3,
+                    w.zenzo.think(w.akebi, w.i.gotodeath),
+                    w.zenzo.know(w.akebi, w.i.betogether, w.i.gotodeath),
+                    w.zenzo.do(w.akebi, w.i.kiss),
+                    w.zenzo.meet(w.murako),
                     True),
                 # chapter3
                 ("chapter3", self.chap3,
