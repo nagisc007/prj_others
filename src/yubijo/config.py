@@ -89,6 +89,10 @@ INFOS = (
         ("akebi_history", "山女の恋愛履歴"),
         ("shojo", "処女"),
         ("nohuman", "人間離れ"),
+        # chapter 2
+        ("lostlife", "生命力を奪われる"),
+        ("betogether", "一緒に居る"),
+        ("gotodeath", "やがて死ぬ"),
         # chapter5
         ("minako_reason", "水菜子の事情"),
         ("minako_death", "水菜子の死因"),
