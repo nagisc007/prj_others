@@ -12,6 +12,8 @@ CHARAS = (
         ("akebi", "山野井山女", 17, "female", "幽霊", "me:わたし", "自殺した女子高生"),
         ("murako", "田村邑子", 33, "female", "退魔師", "me:私"),
         ("cap", "柊聖文", 56, "male", "所長", "me:僕:zenzo:善ちゃん:murako:ムラムラちゃん"),
+        # chapter 1
+        ("truckdriver", "トラック運転手", 35, "male", "運送配達員", "me:俺"),
         # chapter 4
         ("minako", "水辺水菜子", 28, "female", "幽霊", "me:ワタシ"),
         # chapter 6
@@ -68,7 +70,6 @@ INFOS = (
         ("suicide", "自殺"),
         ("despair", "絶望"),
         ("deadzenzo", "善蔵の死"),
-        ("hittruck", "トラックに轢かれる"),
         ("firejob", "仕事を首になる"),
         ("poor", "貧乏"),
         ("kiss", "キス"),
@@ -79,6 +80,9 @@ INFOS = (
         ("ability", "善蔵の能力"),
         ("ghost_real", "幽霊の本当の姿"),
         ("crisis", "危機"),
+        # chapter 1
+        ("hittruck", "トラックに轢かれる"),
+        ("gosteady", "付き合う"),
         # chapter5
         ("minako_reason", "水菜子の事情"),
         ("minako_death", "水菜子の死因"),
