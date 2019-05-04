@@ -17,6 +17,8 @@ CHARAS = (
         ("tencho", "店長", 44, "male", "中華屋店長", "me:オレ"),
         # chapter 4
         ("minako", "水辺水菜子", 28, "female", "幽霊", "me:ワタシ"),
+        # chapter 5
+        ("ghostjk", "幽霊JK", 17, "female", "幽霊", "me:ワタシ"),
         # chapter 6
         ("beniko", "紅沢紅子", 35, "female", "幽霊", "me:私"),
         ("mia", "青井未青", 22, "female", "幽霊", "me:みぃ"),
