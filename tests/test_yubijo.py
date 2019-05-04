@@ -41,6 +41,9 @@ class StoryTest(unittest.TestCase):
         self.chap3ep2 = chap03.ep_ghostbuster(self.w)
         self.chap3ep3 = chap03.ep_ghosthunter(self.w)
         self.chap4 = chap04.story(self.w)
+        self.chap4ep1 = chap04.ep_avant(self.w)
+        self.chap4ep2 = chap04.ep_ghostschool(self.w)
+        self.chap4ep3 = chap04.ep_ghostjk(self.w)
         self.chap5 = chap05.story(self.w)
         self.chap6 = chap06.story(self.w)
         self.chap7 = chap07.story(self.w)
@@ -79,6 +82,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter3-B", self.chap3ep3, self.w.zenzo, self.w.murako),
                 # chapter4
                 ("chapter4", self.chap4, self.w.zenzo, self.w.minako),
+                ("chapter4-avant", self.chap4ep1, self.w.zenzo, self.w.murako),
+                ("chapter4-A", self.chap4ep2, self.w.zenzo, self.w.minako),
+                ("chapter4-B", self.chap4ep3, self.w.zenzo, self.w.minako),
                 # chapter5
                 ("chapter5", self.chap5, self.w.zenzo, self.w.minako),
                 # chapter6
@@ -184,6 +190,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.have(w.i.salary),
                     w.zenzo.look(w.i.ghost),
                     w.zenzo.meet(w.minako),
+                    True),
+                ("chapter4-avant", self.chap4ep1,
+                    w.zenzo.have(w.i.salary, "$want"),
+                    w.zenzo.be(w.i.poor),
+                    w.zenzo.go(w.i.ghost, w.murako, "探しに行く"),
+                    w.zenzo.have(w.i.rumor_ghostschool),
+                    True),
+                ("chapter4-A", self.chap4ep2,
+                    w.zenzo.go(w.stage.ghostschool),
+                    w.zenzo.look(w.i.ghost),
+                    w.zenzo.look("search", w.stage.ghostschool),
+                    w.zenzo.meet(w.minako),
+                    True),
+                ("chapter4-B", self.chap4ep3,
+                    w.zenzo.do(w.i.goheaven, w.i.ghost),
+                    w.zenzo.look("search", w.minako),
+                    w.zenzo.talk(w.minako),
+                    w.zenzo.be(w.minako, "取り憑かれた"),
                     True),
                 # chapter5
                 ("chapter5", self.chap5,

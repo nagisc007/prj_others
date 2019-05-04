@@ -94,6 +94,8 @@ INFOS = (
         # chapter 3
         ("poor", "貧乏"),
         ("salary", "給料"),
+        # chapter 4
+        ("rumor_ghostschool", "幽霊廃校の噂"),
         # chapter5
         ("minako_reason", "水菜子の事情"),
         ("minako_death", "水菜子の死因"),
