@@ -45,6 +45,9 @@ class StoryTest(unittest.TestCase):
         self.chap4ep2 = chap04.ep_ghostschool(self.w)
         self.chap4ep3 = chap04.ep_ghostjk(self.w)
         self.chap5 = chap05.story(self.w)
+        self.chap5ep1 = chap05.ep_avant(self.w)
+        self.chap5ep2 = chap05.ep_marryghost(self.w)
+        self.chap5ep3 = chap05.ep_ghosthappy(self.w)
         self.chap6 = chap06.story(self.w)
         self.chap7 = chap07.story(self.w)
         self.chap8 = chap08.story(self.w)
@@ -87,6 +90,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter4-B", self.chap4ep3, self.w.zenzo, self.w.minako),
                 # chapter5
                 ("chapter5", self.chap5, self.w.zenzo, self.w.minako),
+                ("chapter5-avant", self.chap5ep1, self.w.zenzo, self.w.minako),
+                ("chapter5-A", self.chap5ep2, self.w.zenzo, self.w.minako),
+                ("chapter5-B", self.chap5ep3, self.w.zenzo, self.w.minako),
                 # chapter6
                 ("chapter6", self.chap6, self.w.zenzo, self.w.beniko),
                 # chapter7
@@ -215,6 +221,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.meet(w.minako),
                     w.zenzo.do(w.minako, "願望を叶える"),
                     w.zenzo.do("rescue", w.murako, w.i.crisis),
+                    True),
+                ("chapter5-avant", self.chap5ep1,
+                    w.zenzo.do(w.i.goheaven, w.minako),
+                    w.zenzo.be("付き合う", w.minako),
+                    w.zenzo.be(w.i.kiss, w.minako),
+                    w.zenzo.be("birth", w.ghostjk),
+                    True),
+                ("chapter5-A", self.chap5ep2,
+                    w.zenzo.be("叶える", w.i.minako_dream),
+                    w.zenzo.know(w.i.minako_dream),
+                    w.zenzo.do(w.i.kiss),
+                    w.zenzo.be("surround", w.ghostjk),
+                    True),
+                ("chapter5-B", self.chap5ep3,
+                    w.zenzo.be("rescue", w.murako),
+                    w.zenzo.meet(w.murako),
+                    w.zenzo.go(w.minako, "runaway"),
+                    w.zenzo.be(w.stage.ghostschool, "broken"),
                     True),
                 # chapter6
                 ("chapter6", self.chap6,
