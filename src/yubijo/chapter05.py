@@ -18,12 +18,20 @@ def ep_avant(w: wd.World):
             w.zenzo.ask(w.minako, w.i.minako_death),
             w.zenzo.do("help", w.minako),
             w.minako.ask(w.zenzo, w.i.minako_dream),
+            w.zenzo.do(w.i.goheaven, w.minako),
+            w.zenzo.be("付き合う", w.minako),
+            w.zenzo.be(w.i.kiss, w.minako),
+            w.zenzo.be("birth", w.ghostjk),
+            w.zenzo.look(w.ghostjk),
             ]
 
 
 def ep_marryghost(w: wd.World):
     return [w.chaptertitle("幽霊婚"),
+            w.zenzo.be(w.stage.ghostschool, w.day.meet2),
             w.zenzo.do(w.minako, "願望を叶える"),
+            w.zenzo.be("叶える", w.i.minako_dream),
+            w.zenzo.know(w.i.minako_dream),
             w.zenzo.reply(w.minako, "yes"),
             w.zenzo.do("live with", w.minako, w.stage.ghostschool),
             w.zenzo.be("衰弱"),
@@ -31,16 +39,23 @@ def ep_marryghost(w: wd.World):
             w.murako.talk(w.zenzo, "このままじゃ死ぬ"),
             w.zenzo.reply(w.murako, w.minako, w.i.minako_dream),
             w.murako.talk("忠告", w.zenzo),
+            w.zenzo.do(w.i.kiss),
+            w.zenzo.be("surround", w.ghostjk),
             ]
 
 
 def ep_ghosthappy(w: wd.World):
     return [w.chaptertitle("幽霊の幸福"),
+            w.zenzo.be(w.stage.ghostschool, w.day.meet2),
             w.zenzo.be("衰弱"),
+            w.zenzo.be("rescue", w.murako),
+            w.zenzo.meet(w.murako),
+            w.zenzo.go(w.minako, "runaway"),
             w.zenzo.talk(w.minako, "幸せ"),
             w.murako.come(w.stage.ghostschool),
             w.murako.talk(w.minako),
             w.zenzo.do("rescue", w.murako, w.i.crisis),
+            w.zenzo.be(w.stage.ghostschool, "broken"),
             ]
 
 
