@@ -187,7 +187,7 @@ class StoryTest(unittest.TestCase):
                 # chapter4
                 ("chapter4", self.chap4,
                     w.zenzo.do(w.i.ghost, w.i.goheaven, "$must"),
-                    w.zenzo.have(w.i.salary),
+                    w.zenzo.be(w.i.poor),
                     w.zenzo.look(w.i.ghost),
                     w.zenzo.meet(w.minako),
                     True),
