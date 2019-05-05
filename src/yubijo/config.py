@@ -103,6 +103,7 @@ INFOS = (
         ("minako_death", "水菜子の死因"),
         ("minako_dream", "水菜子の夢"),
         # chapter 6
+        ("badhealth", "体調不良"),
         ("ghospital_info", "幽霊病院の噂"),
         ("beniko_reason", "紅子の事情"),
         ("mia_reason", "未青の事情"),
