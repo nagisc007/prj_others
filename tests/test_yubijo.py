@@ -49,6 +49,9 @@ class StoryTest(unittest.TestCase):
         self.chap5ep2 = chap05.ep_marryghost(self.w)
         self.chap5ep3 = chap05.ep_ghosthappy(self.w)
         self.chap6 = chap06.story(self.w)
+        self.chap6ep1 = chap06.ep_avant(self.w)
+        self.chap6ep2 = chap06.ep_gotohospital(self.w)
+        self.chap6ep3 = chap06.ep_haremghosts(self.w)
         self.chap7 = chap07.story(self.w)
         self.chap8 = chap08.story(self.w)
         self.chap9 = chap09.story(self.w)
@@ -95,6 +98,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter5-B", self.chap5ep3, self.w.zenzo, self.w.minako),
                 # chapter6
                 ("chapter6", self.chap6, self.w.zenzo, self.w.beniko),
+                ("chapter6-avant", self.chap6ep1, self.w.zenzo, self.w.murako),
+                ("chapter6-A", self.chap6ep2, self.w.zenzo, self.w.beniko),
+                ("chapter6-B", self.chap6ep3, self.w.zenzo, self.w.beniko),
                 # chapter7
                 ("chapter7", self.chap7, self.w.zenzo, self.w.beniko),
                 # chapter8
@@ -246,6 +252,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.do("失恋"),
                     w.zenzo.go(w.stage.ghosthospital),
                     w.zenzo.do("selection", "三人から"),
+                    True),
+                ("chapter6-avant", self.chap6ep1,
+                    w.zenzo.look("診察", w.i.badhealth),
+                    w.zenzo.feel(w.i.badhealth),
+                    w.zenzo.look("安い病院を探す"),
+                    w.zenzo.go(w.stage.ghosthospital),
+                    True),
+                ("chapter6-A", self.chap6ep2,
+                    w.zenzo.know(w.i.badhealth),
+                    w.zenzo.feel(w.i.badhealth),
+                    w.zenzo.look("診察", w.beniko),
+                    w.zenzo.know(w.beniko, w.i.ghost),
+                    True),
+                ("chapter6-B", self.chap6ep3,
+                    w.zenzo.do(w.i.goheaven, w.beniko),
+                    w.zenzo.meet(w.beniko, w.i.ghost),
+                    w.zenzo.talk(w.beniko),
+                    w.zenzo.meet(w.mia, w.kii),
                     True),
                 # chapter7
                 ("chapter7", self.chap7,

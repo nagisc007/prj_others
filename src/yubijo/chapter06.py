@@ -11,6 +11,19 @@ from src.yubijo import config as cnf
 
 
 # episodes
+def ep_avant(w: wd.World):
+    return [w.chaptertitle("体調不良"),
+            ]
+
+
+def ep_gotohospital(w: wd.World):
+    return [w.chaptertitle("そうだ病院に行こう"),
+            ]
+
+
+def ep_haremghosts(w: wd.World):
+    return [w.chaptertitle("そこはハーレムだった"),
+            ]
 
 
 # main
