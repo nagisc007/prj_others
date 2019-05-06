@@ -53,6 +53,9 @@ class StoryTest(unittest.TestCase):
         self.chap6ep2 = chap06.ep_gotohospital(self.w)
         self.chap6ep3 = chap06.ep_haremghosts(self.w)
         self.chap7 = chap07.story(self.w)
+        self.chap7ep1 = chap07.ep_avant(self.w)
+        self.chap7ep2 = chap07.ep_ghostworld(self.w)
+        self.chap7ep3 = chap07.ep_anotherbuster(self.w)
         self.chap8 = chap08.story(self.w)
         self.chap9 = chap09.story(self.w)
         self.chap10 = chap10.story(self.w)
@@ -103,6 +106,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter6-B", self.chap6ep3, self.w.zenzo, self.w.beniko),
                 # chapter7
                 ("chapter7", self.chap7, self.w.zenzo, self.w.beniko),
+                ("chapter7-avant", self.chap7ep1, self.w.zenzo, self.w.beniko),
+                ("chapter7-A", self.chap7ep2, self.w.zenzo, self.w.beniko),
+                ("chapter7-B", self.chap7ep3, self.w.zenzo, self.w.machiko),
                 # chapter8
                 ("chapter8", self.chap8, self.w.zenzo, self.w.machiko),
                 # chapter9
@@ -277,6 +283,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.do(w.i.propose, w.beniko),
                     w.zenzo.meet(w.murako),
                     w.zenzo.go(w.stage.ghosthospital, "$not"),
+                    True),
+                ("chapter7-avant", self.chap7ep1,
+                    w.zenzo.think("ここは天国？"),
+                    w.zenzo.look("美女だらけの世界"),
+                    w.zenzo.do("enjoy harem"),
+                    w.zenzo.look("女幽霊同士で孕む"),
+                    True),
+                ("chapter7-A", self.chap7ep2,
+                    w.zenzo.meet(w.murako, "$must"),
+                    w.zenzo.be("どんどん増える", w.i.ghost),
+                    w.zenzo.go("runaway", w.stage.ghosthospital),
+                    w.zenzo.be("幽霊だらけ"),
+                    True),
+                ("chapter7-B", self.chap7ep3,
+                    w.zenzo.do(w.i.goheaven, "$must"),
+                    w.zenzo.know(w.i.ghost, "大量"),
+                    w.zenzo.be("need", "手助け"),
+                    w.zenzo.meet(w.machiko),
                     True),
                 # chapter8
                 ("chapter8", self.chap8,
