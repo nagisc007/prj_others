@@ -110,6 +110,10 @@ INFOS = (
         ("kii_reason", "黄衣の事情"),
         # chapter 7
         ("propose", "プロポーズ"),
+        # chapter 8
+        ("murako_dead", "邑子の死"),
+        ("firstlove", "初恋"),
+        ("machiko_reason", "真千子の事情"),
         )
 
 

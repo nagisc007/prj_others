@@ -57,6 +57,9 @@ class StoryTest(unittest.TestCase):
         self.chap7ep2 = chap07.ep_ghostworld(self.w)
         self.chap7ep3 = chap07.ep_anotherbuster(self.w)
         self.chap8 = chap08.story(self.w)
+        self.chap8ep1 = chap08.ep_avant(self.w)
+        self.chap8ep2 = chap08.ep_bounded(self.w)
+        self.chap8ep3 = chap08.ep_secretfirstlove(self.w)
         self.chap9 = chap09.story(self.w)
         self.chap10 = chap10.story(self.w)
 
@@ -111,6 +114,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter7-B", self.chap7ep3, self.w.zenzo, self.w.machiko),
                 # chapter8
                 ("chapter8", self.chap8, self.w.zenzo, self.w.machiko),
+                ("chapter8-avant", self.chap8ep1, self.w.zenzo, self.w.machiko),
+                ("chapter8-A", self.chap8ep2, self.w.zenzo, self.w.machiko),
+                ("chapter8-B", self.chap8ep3, self.w.zenzo, self.w.machiko),
                 # chapter9
                 ("chapter9", self.chap9, self.w.zenzo, self.w.murako),
                 # chapter10
@@ -308,6 +314,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.hear(w.machiko, w.flag.secret_murako),
                     w.zenzo.deal("search", w.murako),
                     w.zenzo.deal(w.machiko, "監禁"),
+                    True),
+                ("chapter8-avant", self.chap8ep1,
+                    w.zenzo.know(w.machiko, "$want"),
+                    w.zenzo.do(w.machiko, "救出"),
+                    w.zenzo.go(w.machiko, "ついていく"),
+                    w.zenzo.be("監禁"),
+                    True),
+                ("chapter8-A", self.chap8ep2,
+                    w.zenzo.go("逃げ出す"),
+                    w.zenzo.be("監禁"),
+                    w.zenzo.ask(w.machiko, w.i.machiko_reason),
+                    w.zenzo.know(w.i.firstlove, "関係している"),
+                    True),
+                ("chapter8-B", self.chap8ep3,
+                    w.zenzo.know(w.murako, "$must"),
+                    w.zenzo.remember(w.i.firstlove, w.murako),
+                    w.zenzo.ask(w.machiko),
+                    w.zenzo.know(w.i.murako_dead),
                     True),
                 # chapter9
                 ("chapter9", self.chap9,
