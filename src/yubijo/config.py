@@ -23,7 +23,7 @@ CHARAS = (
         ("beniko", "紅沢紅子", 35, "female", "幽霊", "me:私"),
         ("mia", "青井未青", 22, "female", "幽霊", "me:みぃ"),
         ("kii", "黄川田黄衣", 17, "female", "幽霊", "me:アタイ"),
-        # chapter 8
+        # chapter 7
         ("machiko", "田村真千子", 35, "female", "退魔師", "me:私"),
         )
 
