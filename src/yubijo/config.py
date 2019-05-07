@@ -117,6 +117,7 @@ INFOS = (
         # chapter 9
         ("murako_reason", "邑子の事情"),
         ("murako_ghost", "邑子が幽霊"),
+        ("zenzo_ghost", "善蔵が幽霊"),
         )
 
 

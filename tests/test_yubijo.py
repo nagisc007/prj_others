@@ -362,7 +362,7 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.know("check", w.i.murako_reason),
                     w.zenzo.know(w.i.murako_ghost),
                     w.zenzo.talk(w.murako),
-                    w.zenzo.know("自分が幽霊"),
+                    w.zenzo.know(w.i.zenzo_ghost),
                     True),
                 # chapter10
                 ("chapter10", self.chap10,

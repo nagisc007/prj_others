@@ -12,12 +12,14 @@ from storybuilder.builder import world as wd
 # episodes
 def ep_avant(w: wd.World):
     return [w.chaptertitle("上司が幽霊でも問題ない？"),
-            w.zenzo.be(w.stage.ghostworld, w.day.meet4, "監禁"),
+            w.zenzo.be(w.stage.murakohome, w.day.meet4, "監禁"),
             w.machiko.talk(w.zenzo, w.murako),
             w.machiko.ask(w.zenzo, w.flag.case_murako),
             w.zenzo.hear(w.machiko, w.flag.case_murako),
             w.zenzo.remember(w.flag.case_murako),
-            w.zenzo.be(w.stage.office, w.day.meet4, w.murako),
+            w.zenzo.go("脱出"),
+            w.zenzo.meet(w.murako),
+            w.murako.come(w.stage.murakohome),
             ]
 
 
@@ -29,12 +31,20 @@ def ep_facemurako(w: wd.World):
             w.zenzo.meet(w.murako),
             w.zenzo.know(w.flag.secret_zenzo),
             w.zenzo.be(w.stage.office, w.day.meet4, w.murako),
+            w.zenzo.know(w.i.murako_dead),
+            w.zenzo.know("check", w.murako, w.i.ghost),
+            w.zenzo.meet(w.murako),
+            w.zenzo.do(w.murako, "幽霊と告白"),
             ]
 
 
 def ep_whichghost(w: wd.World):
     return [w.chaptertitle("どちらが幽霊？"),
             w.zenzo.be(w.stage.office, w.day.meet4, w.murako),
+            w.zenzo.know(w.i.murako_ghost),
+            w.zenzo.know("check", w.i.murako_reason),
+            w.zenzo.talk(w.murako),
+            w.zenzo.know(w.i.zenzo_ghost),
             ]
 
 
