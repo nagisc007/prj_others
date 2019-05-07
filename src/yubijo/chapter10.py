@@ -12,20 +12,28 @@ from storybuilder.builder import world as wd
 # episodes
 def ep_avant(w: wd.World):
     return [w.chaptertitle("幽霊でもいい"),
+            w.zenzo.be(w.stage.murakohome, w.day.meet4, w.murako),
             w.zenzo.do(w.murako, "もう一度殺す", "$must"),
             w.zenzo.know(w.murako, "原因"),
-            w.zenzo.go(w.stage.ghosttonnel, w.day.meet4),
+            w.zenzo.go(w.stage.ghosttonnel),
             w.zenzo.meet(w.cap),
             w.zenzo.meet(w.murako),
-            w.zenzo.be(w.stage.murakohome, w.day.meet4, w.murako),
+            w.zenzo.know(w.i.zenzo_ghost),
+            w.zenzo.think(w.i.goheaven),
+            w.zenzo.talk(w.murako),
+            w.zenzo.talk("告白", w.murako),
             ]
 
 def ep_ghostworld(w: wd.World):
     return [w.chaptertitle("世界が幽霊でも問題？"),
+            w.zenzo.be(w.stage.ghostworld, w.day.meet4),
             w.zenzo.ask(w.murako, w.flag.case_murako),
             w.zenzo.know(w.deflag.case_murako),
             w.murako.reply(w.zenzo, "恩人"),
-            w.zenzo.be(w.stage.murakohome, w.day.meet4, w.murako),
+            w.zenzo.know(w.i.world_crisis),
+            w.zenzo.talk(w.murako, "この世界"),
+            w.zenzo.look(w.i.ghost_world),
+            w.zenzo.think(w.i.goheaven, "$not"),
             ]
 
 def ep_noproblem(w: wd.World):
@@ -33,7 +41,13 @@ def ep_noproblem(w: wd.World):
             w.murako.talk(w.zenzo, w.flag.secret_zenzo),
             w.zenzo.remember(w.deflag.secret_zenzo),
             w.zenzo.do(w.murako, w.i.goheaven),
-            w.zenzo.be(w.stage.murakohome, w.day.meet4, w.murako),
+            w.zenzo.be(w.stage.ghostworld, w.day.meet4),
+            w.zenzo.know(w.i.crisis_cause),
+            w.zenzo.think(w.murako, w.i.goheaven),
+            w.zenzo.talk(w.murako, "何とかなる"),
+            w.zenzo.do(w.murako, w.i.goheaven),
+            w.cap.come(w.stage.office),
+            w.cap.talk(w.zenzo, w.murako),
             ]
 
 
