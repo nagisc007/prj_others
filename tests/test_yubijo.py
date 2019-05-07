@@ -61,6 +61,9 @@ class StoryTest(unittest.TestCase):
         self.chap8ep2 = chap08.ep_bounded(self.w)
         self.chap8ep3 = chap08.ep_secretfirstlove(self.w)
         self.chap9 = chap09.story(self.w)
+        self.chap9ep1 = chap09.ep_avant(self.w)
+        self.chap9ep2 = chap09.ep_facemurako(self.w)
+        self.chap9ep3 = chap09.ep_whichghost(self.w)
         self.chap10 = chap10.story(self.w)
 
     def test_is_all_actions(self):
@@ -119,6 +122,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter8-B", self.chap8ep3, self.w.zenzo, self.w.machiko),
                 # chapter9
                 ("chapter9", self.chap9, self.w.zenzo, self.w.murako),
+                ("chapter9-avant", self.chap9ep1, self.w.zenzo, self.w.murako),
+                ("chapter9-A", self.chap9ep2, self.w.zenzo, self.w.murako),
+                ("chapter9-B", self.chap9ep3, self.w.zenzo, self.w.murako),
                 # chapter10
                 ("chapter10", self.chap10, self.w.zenzo, self.w.cap),
                 ])
@@ -339,6 +345,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.hear(w.machiko, w.flag.case_murako),
                     w.zenzo.talk(w.murako),
                     w.zenzo.know(w.flag.secret_zenzo),
+                    True),
+                ("chapter9-avant", self.chap9ep1,
+                    w.zenzo.go("脱出"),
+                    w.zenzo.be("監禁"),
+                    w.zenzo.meet(w.murako),
+                    w.murako.come(w.stage.murakohome),
+                    True),
+                ("chapter9-A", self.chap9ep2,
+                    w.zenzo.know("check", w.murako, w.i.ghost),
+                    w.zenzo.know(w.i.murako_dead),
+                    w.zenzo.meet(w.murako),
+                    w.zenzo.do(w.murako, "幽霊と告白"),
+                    True),
+                ("chapter9-B", self.chap9ep3,
+                    w.zenzo.know("check", w.i.murako_reason),
+                    w.zenzo.know(w.i.murako_ghost),
+                    w.zenzo.talk(w.murako),
+                    w.zenzo.know(w.i.zenzo_ghost),
                     True),
                 # chapter10
                 ("chapter10", self.chap10,

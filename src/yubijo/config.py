@@ -114,6 +114,10 @@ INFOS = (
         ("murako_dead", "邑子の死"),
         ("firstlove", "初恋"),
         ("machiko_reason", "真千子の事情"),
+        # chapter 9
+        ("murako_reason", "邑子の事情"),
+        ("murako_ghost", "邑子が幽霊"),
+        ("zenzo_ghost", "善蔵が幽霊"),
         )
 
 
