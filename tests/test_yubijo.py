@@ -65,6 +65,9 @@ class StoryTest(unittest.TestCase):
         self.chap9ep2 = chap09.ep_facemurako(self.w)
         self.chap9ep3 = chap09.ep_whichghost(self.w)
         self.chap10 = chap10.story(self.w)
+        self.chap10ep1 = chap10.ep_avant(self.w)
+        self.chap10ep2 = chap10.ep_ghostworld(self.w)
+        self.chap10ep3 = chap10.ep_noproblem(self.w)
 
     def test_is_all_actions(self):
         self.assertTrue(utl.is_all_actions_in(self.story))
@@ -127,6 +130,9 @@ class StoryTest(unittest.TestCase):
                 ("chapter9-B", self.chap9ep3, self.w.zenzo, self.w.murako),
                 # chapter10
                 ("chapter10", self.chap10, self.w.zenzo, self.w.cap),
+                ("chapter10-avant", self.chap10ep1 ,self.w.zenzo, self.w.murako),
+                ("chapter10-A", self.chap10ep2 ,self.w.zenzo, self.w.murako),
+                ("chapter10-B", self.chap10ep3 ,self.w.zenzo, self.w.murako),
                 ])
 
     def test_has_outline_infos(self):
@@ -369,6 +375,24 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.do(w.murako, "もう一度殺す", "$must"),
                     w.zenzo.know(w.murako, "原因"),
                     w.zenzo.meet(w.murako),
+                    w.zenzo.do(w.murako, w.i.goheaven),
+                    True),
+                ("chapter10-avant", self.chap10ep1,
+                    w.zenzo.think(w.i.goheaven),
+                    w.zenzo.know(w.i.zenzo_ghost),
+                    w.zenzo.talk(w.murako),
+                    w.zenzo.talk("告白", w.murako),
+                    True),
+                ("chapter10-A", self.chap10ep2,
+                    w.zenzo.know(w.i.world_crisis),
+                    w.zenzo.talk(w.murako),
+                    w.zenzo.look(w.i.ghost_world),
+                    w.zenzo.think(w.i.goheaven, "$not"),
+                    True),
+                ("chapter10-B", self.chap10ep3,
+                    w.zenzo.think(w.murako, w.i.goheaven),
+                    w.zenzo.know(w.i.crisis_cause),
+                    w.zenzo.talk(w.murako, "何とかなる"),
                     w.zenzo.do(w.murako, w.i.goheaven),
                     True),
                 ])
