@@ -118,6 +118,10 @@ INFOS = (
         ("murako_reason", "邑子の事情"),
         ("murako_ghost", "邑子が幽霊"),
         ("zenzo_ghost", "善蔵が幽霊"),
+        # chapter 10
+        ("world_crisis", "世界の危機"),
+        ("ghost_world", "幽霊だらけの世界"),
+        ("crisis_cause", "危機の原因"),
         )
 
 
