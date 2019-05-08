@@ -168,7 +168,7 @@ class StoryTest(unittest.TestCase):
                     w.zenzo.do(w.akebi, w.i.kiss, "$want"),
                     w.zenzo.be(w.akebi, w.i.gosteady),
                     w.zenzo.know(w.akebi),
-                    w.zenzo.know(w.akebi, w.i.ghost),
+                    w.zenzo.know(w.i.buster_method),
                     True),
                 # chapter2
                 ("chapter2", self.chap2,

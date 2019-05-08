@@ -87,6 +87,7 @@ INFOS = (
         # chapter 1
         ("moreusual", "いつもより多い客"),
         ("rumor_ghostdead", "幽霊死の噂"),
+        ("rumor_ghosthouse", "幽霊屋敷の噂"),
         ("allupbusiness", "商売上がったり"),
         ("zenzolove", "善蔵の恋愛遍歴"),
         ("hittruck", "トラックに轢かれる"),
@@ -94,6 +95,12 @@ INFOS = (
         ("akebi_history", "山女の恋愛履歴"),
         ("shojo", "処女"),
         ("nohuman", "人間離れ"),
+        ("akebi_reason", "山女の事情"),
+        ("akebi_happy", "山女が元気に"),
+        ("ghost_absorb", "幽霊は精気を吸収する"),
+        ("akebi_buster", "山女の除霊"),
+        ("buster_method", "除霊方法"),
+        ("break_love", "失恋"),
         # chapter 2
         ("lostlife", "生命力を奪われる"),
         ("betogether", "一緒に居る"),
