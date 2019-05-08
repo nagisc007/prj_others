@@ -62,40 +62,78 @@ def ep_avant(w: wd.World):
 
 def ep_meetbijo(w: wd.World):
     z = w.zenzo
+    akebi = w.akebi
+    scenes = [
+            w.scene("目覚めたら美女",
+                z.look(w.akebi, "美女"),
+                z.look(w.stage.ghosthome, w.day.meet),
+                z.meet(w.akebi),
+                z.ask(akebi, "自分はどうしてここに？"),
+                akebi.talk(w.zenzo, "家の前で寝ていた"),
+                z.ask(w.akebi, "彼女のこと"),
+                w.tag.comment("先月死んだがそれを仄かに読み取らせる"),
+                akebi.reply("仕事はやめた"),
+                akebi.talk("大好きな人にフラレて"),
+                z.feel("同情"),
+                z.talk(akebi, "励ます"),
+                akebi.reply("あなたみたいな人なら良かったのに"),
+                z.do(w.akebi, "love", "$want"),
+                akebi.reply(w.zenzo, "照れる"),
+                akebi.ask("ご飯食べます？"),
+                akebi.go("台所"),
+                ),
+            w.scene("そこは幽霊屋敷",
+                z.look("家を見て回る"),
+                z.look("木造家屋", "二階建て"),
+                z.look("ベランダからの景色", "見覚え"),
+                z.know("二階"),
+                akebi.come("犬粥"),
+                z.ask("どうやって二階まで？"),
+                akebi.reply("普通に"),
+                akebi.do("鍋落とす"),
+                z.look("鍋浮かんでいる"),
+                akebi.talk("ごめんなさい"),
+                akebi.do("鍋", "浮かべて運ぶ"),
+                z.think(w.akebi, "能力者"),
+                z.ask(w.akebi, "能力？"),
+                akebi.reply(w.zenzo, "no"),
+                akebi.talk(w.zenzo, w.i.akebi_history),
+                ),
+            w.scene("告白したら幽霊だった",
+                z.know(w.akebi, w.i.shojo),
+                z.talk(w.akebi, w.i.gosteady),
+                z.do(w.akebi, w.i.gosteady, "yes"),
+                ),
+            ]
     return [w.chaptertitle("美女に出会った"),
-            w.zenzo.look(w.akebi, "美女"),
-            w.zenzo.look(w.stage.ghosthome, w.day.meet),
-            w.zenzo.meet(w.akebi),
-            w.akebi.talk(w.zenzo, "家の前で寝ていた"),
-            w.zenzo.ask(w.akebi, "彼女のこと"),
-            w.akebi.do(w.zenzo, "ベッドに浮かべて運ぶ"),
-            w.zenzo.think(w.akebi, "能力者"),
-            w.zenzo.do(w.akebi, "love", "$want"),
-            w.akebi.reply(w.zenzo, "照れる"),
-            w.zenzo.ask(w.akebi, "彼氏"),
-            w.akebi.reply(w.zenzo, "no"),
-            w.akebi.talk(w.zenzo, w.i.akebi_history),
-            w.zenzo.know(w.akebi, w.i.shojo),
-            w.zenzo.talk(w.akebi, w.i.gosteady),
-            w.zenzo.do(w.akebi, w.i.gosteady, "yes"),
-            # TODO:
-            z.know(w.i.moreusual.deflag(), w.i.allupbusiness.deflag()),
+            *scenes,
             ]
 
 
 def ep_bijoghost(w: wd.World):
-    return [w.chaptertitle("幽霊が美女なら問題ないよね"),
+    z = w.zenzo
+    akebi = w.akebi
+    scenes = [
+            w.scene("幽霊が美女なら問題ない",
             w.zenzo.be(w.stage.ghosthome, w.day.meet),
             w.zenzo.be(w.akebi, w.i.gosteady),
             w.zenzo.ask(w.akebi, "本当に？"),
             w.akebi.reply("yes"),
             w.zenzo.feel("happy"),
+                ),
+            w.scene("退魔師も美女",
             w.zenzo.do(w.akebi, w.i.kiss, "$want"),
             w.zenzo.know(w.akebi, "色々なこと"),
             w.zenzo.think(w.akebi, w.i.nohuman.flag()),
             w.zenzo.ask(w.akebi, w.i.ghost),
             w.akebi.reply(w.zenzo, "yes", w.i.nohuman.deflag()),
             w.zenzo.know(w.akebi, w.i.ghost),
+            # TODO:
+            z.know(w.i.moreusual.deflag(), w.i.allupbusiness.deflag()),
+                ),
+            ]
+    return [w.chaptertitle("幽霊が美女なら問題ないよね"),
+            *scenes,
             ]
 
 
