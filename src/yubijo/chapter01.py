@@ -107,7 +107,7 @@ def story(w: wd.World):
 
 
 def main(): # pragma: no cover
-    from . import story as mainstory
+    import src.yubijo.story as mainstory
     w = mainstory.world()
     return w.build(story(w))
 
