@@ -8,9 +8,9 @@ sys.path.append('storybuilder')
 
 
 CHARAS = (
-        ("zenzo", "畠中善蔵", 20, "male", "退魔師", "me:オレ", "幽霊が美少女に見える男"),
+        ("zenzo", "畠中善蔵", 26, "male", "退魔師", "me:オレ", "幽霊が美少女に見える男"),
         ("akebi", "山野井山女", 17, "female", "幽霊", "me:わたし", "自殺した女子高生"),
-        ("murako", "田村邑子", 33, "female", "退魔師", "me:私"),
+        ("murako", "田村邑子", 27, "female", "退魔師", "me:私"),
         ("cap", "柊聖文", 56, "male", "所長", "me:僕:zenzo:善ちゃん:murako:ムラムラちゃん"),
         # chapter 1
         ("truckdriver", "トラック運転手", 35, "male", "運送配達員", "me:俺"),
@@ -35,6 +35,7 @@ STAGES = (
         ("chineseshop", "中華飯店"),
         # chapter 1,2
         ("street", "通り"),
+        ("bookstore", "本屋"),
         ("ghosthome", "幽霊屋敷"),
         # chapter 4,5
         ("ghostschool", "幽霊廃校"),
@@ -84,6 +85,10 @@ INFOS = (
         ("ghost_real", "幽霊の本当の姿"),
         ("crisis", "危機"),
         # chapter 1
+        ("moreusual", "いつもより多い客"),
+        ("rumor_ghostdead", "幽霊死の噂"),
+        ("allupbusiness", "商売上がったり"),
+        ("zenzolove", "善蔵の恋愛遍歴"),
         ("hittruck", "トラックに轢かれる"),
         ("gosteady", "付き合う"),
         ("akebi_history", "山女の恋愛履歴"),
