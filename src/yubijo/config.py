@@ -8,13 +8,16 @@ sys.path.append('storybuilder')
 
 
 CHARAS = (
-        ("zenzo", "畠中善蔵", 26, "male", "退魔師", "me:オレ", "幽霊が美少女に見える男"),
+        ("zenzo", "畠中善蔵", 26, "male", "退魔師",
+            "me:オレ:part_mikami:三上さん",
+            "幽霊が美少女に見える男"),
         ("akebi", "山野井山女", 17, "female", "幽霊", "me:わたし", "自殺した女子高生"),
         ("murako", "田村邑子", 27, "female", "退魔師", "me:私"),
         ("cap", "柊聖文", 56, "male", "所長", "me:僕:zenzo:善ちゃん:murako:ムラムラちゃん"),
         # chapter 1
         ("truckdriver", "トラック運転手", 35, "male", "運送配達員", "me:俺"),
         ("tencho", "店長", 44, "male", "中華屋店長", "me:オレ"),
+        ("mikami", "三上佐織", 29, "female", "バイト", "me:私:zenzo:畠中君"),
         # chapter 4
         ("minako", "水辺水菜子", 28, "female", "幽霊", "me:ワタシ"),
         # chapter 5
@@ -64,6 +67,8 @@ ITEMS = (
         # chapter 1
         ("GAnovel", "GA文庫"),
         ("truck", "トラック"),
+        # names
+        ("na_zenzo", "善蔵"),
         )
 
 
