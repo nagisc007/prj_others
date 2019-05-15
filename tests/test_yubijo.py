@@ -14,6 +14,7 @@ from src.yubijo import chapter07 as chap07
 from src.yubijo import chapter08 as chap08
 from src.yubijo import chapter09 as chap09
 from src.yubijo import chapter10 as chap10
+from src.yubijo.config import THEMES
 
 
 _FILENAME = "yubijo.story.py"
@@ -397,3 +398,7 @@ class StoryTest(unittest.TestCase):
                     True),
                 ])
 
+    def test_has_themes(self):
+        for k, v in THEMES.items():
+            with self.subTest(k=k, v=v):
+                self.assertTrue(utl.has_the_keyword_in(self.story, THEMES[k]))

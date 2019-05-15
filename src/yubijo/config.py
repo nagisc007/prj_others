@@ -8,13 +8,17 @@ sys.path.append('storybuilder')
 
 
 CHARAS = (
-        ("zenzo", "畠中善蔵", 26, "male", "退魔師", "me:オレ", "幽霊が美少女に見える男"),
+        ("zenzo", "畠中善蔵", 26, "male", "退魔師",
+            "me:オレ:part_mikami:三上さん",
+            "幽霊が美少女に見える男"),
         ("akebi", "山野井山女", 17, "female", "幽霊", "me:わたし", "自殺した女子高生"),
         ("murako", "田村邑子", 27, "female", "退魔師", "me:私"),
         ("cap", "柊聖文", 56, "male", "所長", "me:僕:zenzo:善ちゃん:murako:ムラムラちゃん"),
+        ("natsume", "夏目未来", 25, "female", "演歌歌手", "me:ウチ"),
         # chapter 1
         ("truckdriver", "トラック運転手", 35, "male", "運送配達員", "me:俺"),
-        ("tencho", "店長", 44, "male", "中華屋店長", "me:オレ"),
+        ("tencho", "店長", 44, "male", "中華屋店長", "me:オレ:hata:畠中"),
+        ("mikami", "三上佐織", 29, "female", "バイト", "me:私:zenzo:畠中君"),
         # chapter 4
         ("minako", "水辺水菜子", 28, "female", "幽霊", "me:ワタシ"),
         # chapter 5
@@ -62,8 +66,13 @@ DAYS = (
 ITEMS = (
         ("wallet", "財布"),
         # chapter 1
+        ("GAtitle", "異世界ダンジョンにハーレムを求めるのは間違っているけれど俺の妹が囚われの姫となったので大人しく転生します"),
+        ("GAshorttitle", "ダンとら"),
         ("GAnovel", "GA文庫"),
         ("truck", "トラック"),
+        # names
+        ("hero", "善蔵"),
+        ("na_zenzo", "善蔵"),
         )
 
 
@@ -147,3 +156,5 @@ FLAGS = (
         ("secret_zenzo", "善蔵の秘密"), # 邑子の恩人だった
         )
 
+THEMES = {
+        }
