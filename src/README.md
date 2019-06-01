@@ -6,6 +6,7 @@ Web応募の可否に関わらず、メジャーサイト以外で開催、募�
 
 | Number | Title | Contest |
 | --- | --- | --- |
+| [#nvup](noplot/README.md) | 先生プロットがありません！ | [第1回ノベルアッププラス大賞](https://novelup.plus/) |
 | [#ga12](yubijo/README.md) | 幽霊が美少女なら問題ないよね？ | [第12回GA文庫大賞](https://ga.sbcr.jp/novel/taisyo/guide.html) |
 
 ## Description
