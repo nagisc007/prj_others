@@ -24,6 +24,7 @@ def world():
 
 def story(w: wd.World):
     return (w.maintitle("先生プロットがありません！"),
+            w.ayame.be(w.stage.office, w.day.current, w.dazai),
             )
 
 def main(): # pragma: no cover
