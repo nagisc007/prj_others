@@ -3,6 +3,8 @@
 """
 import unittest
 import test_yubijo
+import test_noplot
+
 
 def suite():
     '''Packing all tests.
@@ -15,6 +17,8 @@ def suite():
     suite.addTests((
         # GA
         unittest.makeSuite(test_yubijo.StoryTest),
+        # novelup
+        unittest.makeSuite(test_noplot.StoryTest),
         # novema
         ))
 
