@@ -4,6 +4,7 @@
 import unittest
 import test_yubijo
 import test_noplot
+import test_kyoko
 
 
 def suite():
@@ -20,6 +21,8 @@ def suite():
         # novelup
         unittest.makeSuite(test_noplot.StoryTest),
         # novema
+        # cobalt
+        unittest.makeSuite(test_kyoko.StoryTest),
         ))
 
     return suite
