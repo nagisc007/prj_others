@@ -12,6 +12,9 @@ CHARAS = (
         ("kyoko", "明日川,今日子", 27, "female", "無職", "me:わたし"),
         ("hiiragi", "柊,秋雄", 30, "male", "会社員", "me:僕"),
         # sub
+        # family
+        ("himam", "柊,母", 58, "female", "農家"),
+        ("hidad", "柊,父", 59, "male", "役所")
         )
 
 
@@ -24,14 +27,22 @@ STAGES = (
 DAYS = (
         # main
         ("current", "現在"),
+        # sub
         )
 
 
 ITEMS = (
+        # main
+        ("hisfambox", "彼の実家からのダンボール"),
+        # sub
         )
 
 
 INFOS = (
+        # main
+        ("myreason", "彼にとって自分が何なのか"), # NOTE: main theme
+        ("departing", "別離の不安"),
+        # sub
         )
 
 
@@ -42,5 +53,6 @@ THEMES = {
         }
 
 MOTIFS = {
+        "existence": "存在",
         }
 
