@@ -37,10 +37,10 @@ class StoryTest(unittest.TestCase):
         utl.exists_outline_infos_by_data(self,
                 [
                     ("story", self.story,
-                        w.kyoko.be(),
-                        w.kyoko.be(),
-                        w.kyoko.be(),
-                        w.kyoko.be(),
+                        w.kyoko.think(w.i.departing),
+                        w.kyoko.look(w.hisfambox),
+                        w.kyoko.think(w.i.myreason),
+                        w.kyoko.meet(w.hiiragi),
                         True)
                 ])
 
