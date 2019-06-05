@@ -3,7 +3,7 @@
 """
 import unittest
 from storybuilder.builder import testutils as utl
-from src.kyoko.story import world, story
+from src.kyoko.story import world, story, episode_basics, episode_outlines
 from src.kyoko.config import THEMES, MOTIFS
 
 
@@ -27,10 +27,11 @@ class StoryTest(unittest.TestCase):
         self.assertTrue(utl.followed_all_flags_with_error_info(self, self.story))
 
     def test_has_basic_infos(self):
+        w = self.w
         utl.exists_basic_infos_by_data(self,
                 [
-                    ("story", self.story, self.w.kyoko, self.w.hiiragi),
-                ])
+                    ("story", self.story, w.kyoko, w.hiiragi),
+                ] + episode_basics(w))
 
     def test_has_outline_infos(self):
         w = self.w
@@ -42,7 +43,7 @@ class StoryTest(unittest.TestCase):
                         w.kyoko.think(w.i.myreason),
                         w.kyoko.meet(w.hiiragi),
                         True)
-                ])
+                ] + episode_outlines(w))
 
     def test_has_themes(self):
         for k,v in THEMES.items():

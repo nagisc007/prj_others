@@ -34,6 +34,7 @@ DAYS = (
 ITEMS = (
         # main
         ("hisfambox", "彼の実家からのダンボール"),
+        ("famphoto", "家族写真"),
         # sub
         )
 
@@ -42,7 +43,11 @@ INFOS = (
         # main
         ("myreason", "彼にとって自分が何なのか"), # NOTE: main theme
         ("departing", "別離の不安"),
+        ("anxiety", "言いようのない不安"),
+        ("sink", "溶ける"),
         # sub
+        ("hisgone", "いつか彼が実家に帰る"),
+        ("break_anxiety", "不安を破壊する"),
         )
 
 
