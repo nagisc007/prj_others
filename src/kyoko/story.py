@@ -89,7 +89,16 @@ def sc_breaker(w: wd.World):
     kyoko, hiiragi = w.kyoko, w.hiiragi
     return w.scene("破壊衝動",
             kyoko.be(w.stage.apart, w.day.current),
+            kyoko.feel("コート女を怖れ"),
+            kyoko.look("彼が別の女と楽しげに"),
+            kyoko.think("醜い嫉妬だ"),
+            kyoko.look("女の笑み"),
+            kyoko.think("いつも羨ましい"),
+            kyoko.deal("女を沈める"),
             kyoko.talk(hiiragi, "なんでいないの"),
+            kyoko.look("次々知らない女になる"),
+            kyoko.deal("次々沈める"),
+            kyoko.do("暴れる"),
             kyoko.do("break"),
             kyoko.do("部屋を空っぽ"),
             )
@@ -98,16 +107,35 @@ def sc_sink(w: wd.World):
     kyoko, hiiragi = w.kyoko, w.hiiragi
     return w.scene("沈む世界",
             kyoko.be(w.stage.apart, w.day.current),
+            kyoko.look("沈めても沈めても消えない"),
+            kyoko.look("不安が形になる"),
             kyoko.look("空虚"),
+            kyoko.look("不安と彼がキスをする"),
+            kyoko.feel("ぷつ"),
             kyoko.think("別れ"),
             kyoko.do(w.i.sink),
+            kyoko.deal("床に沈む"),
+            kyoko.look("夕方の西日"),
             )
 
 def sc_hishand(w: wd.World):
     kyoko, hiiragi = w.kyoko, w.hiiragi
     return w.scene("彼の手",
             kyoko.be(w.stage.apart, w.day.current),
+            kyoko.look("心の澱の世界"),
+            kyoko.look("沢山の気持ちの死骸"),
+            kyoko.deal("自分ゾンビが抱きしめにくる"),
+            kyoko.look("夕焼けが遠のく"),
+            kyoko.hear("彼の声"),
+            kyoko.talk("答えたい"),
+            kyoko.hear("ゾンビの囁き"),
+            kyoko.think("このまま？"),
+            kyoko.deal("もがく"),
             w.kyoko.meet(w.hiiragi),
+            kyoko.deal("彼の手"),
+            kyoko.deal("救われる"),
+            kyoko.ask(hiiragi, "いつか帰るの？"),
+            hiiragi.reply("お盆に墓参りに", "一緒にくる？"),
             )
 
 # episodes
