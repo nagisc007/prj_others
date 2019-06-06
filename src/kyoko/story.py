@@ -15,27 +15,50 @@ def sc_gotojob(w: wd.World):
     kyoko, hiiragi = w.kyoko, w.hiiragi
     return w.scene("仕事に出掛けてしまった",
             w.kyoko.be(w.stage.apart, w.day.current, w.hiiragi),
+            kyoko.behav(hiiragi, "手を離さない"),
+            kyoko.ask("いつ帰ってくる"),
+            hiiragi.reply(kyoko),
+            kyoko.think("不安"),
+            kyoko.look("青すぎる空"),
             w.kyoko.do("wait", w.hiiragi),
             w.hiiragi.go("仕事に出た"),
             w.kyoko.be("部屋で一人"),
+            kyoko.feel("孤独"),
             w.kyoko.deal("宅配が届く"),
             )
 
 def sc_delivered(w: wd.World):
-    kyoko, hiiragi = w.kyoko, w.hiiragi
+    kyoko, hiiragi, deliverman = w.kyoko, w.hiiragi, w.deliverman
     return w.scene("宅配便",
             kyoko.be(w.stage.apart, w.day.current),
+            kyoko.feel("宅配に怯える"),
+            kyoko.deal("宅配応対"),
+            kyoko.think("居留守"),
+            deliverman.talk("柊の名"),
+            kyoko.talk("ちょっと待って"),
+            w.tag.comment("今日子外見とか服装の記述"),
+            kyoko.deal("外見と服装確認"),
+            kyoko.go("玄関"),
             kyoko.have(w.hisfambox),
             w.kyoko.look(w.hisfambox),
+            kyoko.deal("開ける", "破って"),
             kyoko.look(w.hiiragi, w.famphoto),
             kyoko.think(w.i.hisgone),
+            kyoko.feel("自分が泣いている"),
             )
 
 def sc_thinkfamily(w: wd.World):
     kyoko, hiiragi = w.kyoko, w.hiiragi
     return w.scene("彼の家族",
             kyoko.be(w.stage.apart, w.day.current),
+            kyoko.remember("彼の実家の話"),
+            kyoko.think("彼は長男"),
+            kyoko.think("幸せな家族"),
+            kyoko.think("子供好き"),
+            kyoko.think("自分とかけ離れている"),
+            hiiragi.talk("いつかは帰らなきゃ"),
             w.kyoko.think(w.i.departing),
+            kyoko.think("自分のことを話してない"),
             kyoko.think("どうすればいい？"),
             kyoko.do("涙"),
             )
@@ -43,11 +66,23 @@ def sc_thinkfamily(w: wd.World):
 def sc_herproblem(w: wd.World):
     kyoko, hiiragi = w.kyoko, w.hiiragi
     return w.scene("彼女の悩み",
+            w.tag.comment("ここから今日子幻想劇場突入"),
             kyoko.be(w.stage.apart, w.day.current),
             w.kyoko.think(w.i.myreason),
+            kyoko.remember("彼に拾われた時"),
+            kyoko.think("絶望から救ってくれた"),
+            kyoko.think("誰かがいないと立てない"),
+            kyoko.think("あのまま溶けていた"),
+            kyoko.think("世間の雨は酸性雨"),
+            kyoko.have("雨の飴玉"),
             w.kyoko.talk().d("私の存在"),
+            kyoko.think("少しだけ他人と違う"),
             kyoko.feel(w.i.anxiety),
             kyoko.think(w.i.break_anxiety),
+            kyoko.look("彼のコート"),
+            kyoko.have(w.coat),
+            kyoko.feel("彼の臭い"),
+            kyoko.look("コートが女の形になる"),
             )
 
 def sc_breaker(w: wd.World):

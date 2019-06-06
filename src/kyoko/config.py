@@ -14,15 +14,21 @@ CHARAS = (
         # sub
         # family
         ("himam", "柊,母", 58, "female", "農家"),
-        ("hidad", "柊,父", 59, "male", "役所")
+        ("hidad", "柊,父", 59, "male", "役所"),
+        # mob
+        ("deliverman", "宅配,届男", 32, "male", "宅配", "me:オレ"),
         )
-
 
 STAGES = (
-        # main
+        # Area
+        # Place
         ("apart", "アパート"),
+        # Part
+        ("living", "リビング"),
+        ("kitchen", "キッチン"),
+        ("bathroom", "浴室"),
+        ("toilet", "トイレ"),
         )
-
 
 DAYS = (
         # main
@@ -30,14 +36,13 @@ DAYS = (
         # sub
         )
 
-
 ITEMS = (
         # main
         ("hisfambox", "彼の実家からのダンボール"),
         ("famphoto", "家族写真"),
         # sub
+        ("coat", "春物のコート"),
         )
-
 
 INFOS = (
         # main
