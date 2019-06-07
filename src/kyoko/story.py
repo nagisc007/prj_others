@@ -63,9 +63,10 @@ def sc_gotojob(w: wd.World):
                 "分厚い雷雲が掛かったままだというのに"),
             w.kyoko.do("wait", w.hiiragi),
             w.hiiragi.go("仕事に出た"),
-            w.kyoko.be("部屋で一人"),
+            w.kyoko.be("部屋で一人").d("このまま座り込んでいても$hiiragiは帰ってきてはくれない。",
+                    "そんなため息と共に立ち上がろうとした時だった"),
             kyoko.feel("孤独"),
-            w.kyoko.deal("宅配が届く"),
+            w.kyoko.deal("宅配が届く").d("無機質なインタフォンが鳴らされた"),
             )
 
 def sc_delivered(w: wd.World):
