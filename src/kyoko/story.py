@@ -192,7 +192,10 @@ def sc_thinkfamily(w: wd.World):
     kyoko, hiiragi = w.kyoko, w.hiiragi
     return w.scene("彼の家族",
             kyoko.be(w.stage.apart, w.day.current),
-            kyoko.remember("彼の実家の話"),
+            kyoko.remember("彼の実家の話").d("$hiiragiにはちゃんとした実家がある。",
+                "それは彼が$meと違う人間で",
+                "比較的まともな人生を歩んできた側に所属しているということでもある"),
+            kyoko.think().d("でも彼は$meがそれを口にすることを酷く嫌う"),
             kyoko.think("彼は長男"),
             kyoko.think("幸せな家族"),
             kyoko.think("子供好き"),
