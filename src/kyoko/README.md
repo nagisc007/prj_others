@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Develop | 2019.- | 2019.6.4 | Life, Dairy | 8K | [Non published](https://google.com/) | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
+| v0.1.0 | Applyed | 2019.6.10 | 2019.6.10 | Life, Dairy | 9K | [Non published](https://google.com/) | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 
 **「夕焼けは、いつも心を沈ませる」**
 
