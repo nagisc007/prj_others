@@ -27,11 +27,11 @@ class StoryTest(unittest.TestCase):
         self.assertTrue(utl.followed_all_flags_with_error_info(self, self.story))
 
     def test_has_basic_infos(self):
-        utl.exists_basic_infos_by_data(self, story_baseinfo(w))
+        utl.exists_basic_infos_by_data(self, story_baseinfo(self.w))
 
     def test_has_outline_infos(self):
         w = self.w
-        utl.exists_outline_infos_by_data(self, story_outline(w))
+        utl.exists_outline_infos_by_data(self, story_outline(self.w))
 
     def test_has_themes(self):
         for k,v in THEMES.items():

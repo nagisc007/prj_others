@@ -9,14 +9,16 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("cameraman", "カメラマン", 30, "male", "作家", "me:私"),
-        ("koroshi", "異世界殺し", 27, "female", "殺人鬼", "me:わたし"),
+        ("hiiragi", "柊,桜介", 30, "male", "カメラマン", "me:私"),
+        ("sunami", "桜葉,砂美", 27, "female", "殺人鬼", "me:わたし"),
         # sub
+        ("kasagi", "笠木,慎吾", 39, "male", "編集者", "me:俺"),
         )
 
 
 STAGES = (
         # Area
+        ("Tokyo", "東京"),
         # Place
         ("cherryhill", "幻桜の丘"),
         # Part
@@ -31,10 +33,14 @@ DAYS = (
 
 
 ITEMS = (
+        ("camera", "一眼レフ"),
         )
 
 
 INFOS = (
+        ("isekoro", "異世界殺し"),
+        ("stop_isekoro", "異世界殺しを止めたい"),
+        ("truth", "異世界殺しの真実"),
         )
 
 
