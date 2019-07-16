@@ -7,7 +7,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append('storybuilder')
 
 from storybuilder.builder import world as wd
-from src.noplot import config as cnf
+from src.isekoro import config as cnf
 THM = cnf.THEMES
 
 
@@ -22,6 +22,7 @@ def sc_gotomyworld(w: wd.World):
 
 def sc_facetoface(w: wd.World):
     return w.scene("対峙",
+            w.hiiragi.come(w.stage.cherryhill, w.day.current),
             )
 
 def sc_confession(w: wd.World):
@@ -51,7 +52,7 @@ def ep_isekaikoroshi(w: wd.World):
     return (w.chaptertitle("異世界殺し"),
             sc_confession(w),
             sc_awake(w),
-                w.hiiragi.know(w.i.truth),
+                w.hiiragi.know(w.sunami, w.i.truth),
             )
 
 # outline
@@ -84,7 +85,9 @@ def world():
 
 def story(w: wd.World):
     return (w.maintitle("Re:異世界殺し"),
-            w.hiiragi.be(w.sunami, w.stage.cherryhill, w.day.current),
+            ep_intro(w),
+            ep_lastisekai(w),
+            ep_isekaikoroshi(w),
             )
 
 def main(): # pragma: no cover
