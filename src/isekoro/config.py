@@ -9,7 +9,7 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("hiiragi", "柊,桜介", 30, "male", "カメラマン", "me:私"),
+        ("hiiragi", "柊,桜介", 30, "male", "カメラマン", "me:私:sunami:砂美:kasagi:笠木さん"),
         ("sunami", "桜葉,砂美", 27, "female", "殺人鬼", "me:わたし"),
         # sub
         ("kasagi", "笠木,慎吾", 39, "male", "編集者", "me:俺"),
@@ -20,6 +20,7 @@ STAGES = (
         # Area
         ("Tokyo", "東京"),
         # Place
+        ("apart", "アパート"),
         ("cherryhill", "幻桜の丘"),
         # Part
         ("living", "リビング"),

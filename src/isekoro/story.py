@@ -13,7 +13,24 @@ THM = cnf.THEMES
 
 # scenes
 def sc_vanish(w: wd.World):
+    h, kasagi = w.hiiragi, w.kasagi
     return w.scene("また異世界が消えた",
+            h.be(w.stage.apart, w.day.current),
+            h.look("また異世界が消えた"),
+            h.deal("手に取ったスマートフォンのモニタには",
+                "すぐに同じフレーズで何十という呟きが流れる"),
+            h.talk("どうしてなんだ……なあ", "$sunami"),
+            h.deal("ほどなく編集の$n_kasagiから電話があった"),
+            h.talk("何ですか", "$kasagi"),
+            kasagi.talk("ツイート見たか？"),
+            h.talk("ええ"),
+            h.look("そう答えつつ",
+                "ノートパソコンの画面に映っていた原稿を一旦閉じてブラウザを表示する。",
+                "国内の主要なニュースサイトでは特に扱われていないが",
+                "一部",
+                "特にライトノベルやアニメーション関連のニュースを載せているサイトでは",
+                "最近よく見るワードが踊っていた"),
+            kasagi.talk("またなんだろうな……$isekoro"),
             )
 
 def sc_gotomyworld(w: wd.World):
