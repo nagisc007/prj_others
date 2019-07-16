@@ -31,23 +31,46 @@ def sc_vanish(w: wd.World):
                 "特にライトノベルやアニメーション関連のニュースを載せているサイトでは",
                 "最近よく見るワードが踊っていた"),
             kasagi.talk("またなんだろうな……$isekoro"),
+            # TODO: 異世界消えた現象と、作家ということ、そして異世界殺しは作品の主人公と提示
             )
 
 def sc_gotomyworld(w: wd.World):
+    h = w.hiiragi
     return w.scene("私の異世界に",
+            # TODO: パソコンに向かって書く、原稿世界に没入する、そして作中の人物を追い詰める、作品の簡易説明
+            )
+
+def sc_deadworld(w: wd.World):
+    h = w.hiiragi
+    return w.scene("死にゆく異世界",
+            h.look("頬を打った冷たさにゆっくりと目を開ける"),
+            h.look(""),
+            # TODO: 雪がどんどん積もる世界、異世界の死が近づいている
             )
 
 def sc_facetoface(w: wd.World):
+    h = w.hiiragi
     return w.scene("対峙",
             w.hiiragi.come(w.stage.cherryhill, w.day.current),
+            # TODO: 丘でやっと追いつく、そこにいると思った
             )
 
 def sc_confession(w: wd.World):
+    h = w.hiiragi
     return w.scene("告白",
+            # TODO: 彼女に真実を告げる、彼女の告白
+            )
+
+def sc_truth(w: wd.World):
+    h = w.hiiragi
+    return w.scene("真実",
+            # TODO: 真実の曝露、実は犯人は柊
             )
 
 def sc_awake(w: wd.World):
+    h = w.hiiragi
     return w.scene("そして目覚めた",
+            # TODO: 夢オチ？　パソコンに残された言葉
             )
 
 # episodes
@@ -59,6 +82,7 @@ def ep_intro(w: wd.World):
 def ep_lastisekai(w: wd.World):
     return (w.chaptertitle("最後の異世界に"),
             sc_gotomyworld(w),
+            sc_deadworld(w),
             sc_facetoface(w),
                 w.hiiragi.think(w.i.stop_isekoro),
                 w.hiiragi.know(w.i.isekoro),
@@ -68,6 +92,7 @@ def ep_lastisekai(w: wd.World):
 def ep_isekaikoroshi(w: wd.World):
     return (w.chaptertitle("異世界殺し"),
             sc_confession(w),
+            sc_truth(w),
             sc_awake(w),
                 w.hiiragi.know(w.sunami, w.i.truth),
             )
