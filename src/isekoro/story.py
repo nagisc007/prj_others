@@ -176,7 +176,7 @@ def sc_deadworld(w: wd.World):
                 "彼女は絶対にこの先にいると信じて",
                 "前に進む"),
             h.think("ただそれだけが",
-                    "今の$meの物語だった"),
+                    "今の$meの物語だった"),# TODO
             )
 
 def sc_facetoface(w: wd.World):
