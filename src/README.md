@@ -6,6 +6,7 @@ Web応募の可否に関わらず、メジャーサイト以外で開催、募�
 
 | Number | Title | Contest |
 | --- | --- | --- |
+| [#nvup3](yunow/README.md) | 勇者なう！ | [nothing](http://novelup.plus/) |
 | [#nvup2](isekoro/README.md) | Re:異世界殺し | [nothing](http://novelup.plus/) |
 | [#cvlt202](kyoko/README.md) | 今日子さんの夕沈み | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 | [#nvup1](noplot/README.md) | 先生プロットがありません！ | [第1回ノベルアッププラス大賞](https://novelup.plus/) |
