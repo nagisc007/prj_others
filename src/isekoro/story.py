@@ -17,6 +17,8 @@ def sc_vanish(w: wd.World):
     return w.scene("また異世界が消えた",
             # NOTE: 実は女性作者である（修正）
             h.be(w.stage.apart, w.day.current),
+            h.hear("どこか遠くでシャッター音が響いたような気がして",
+                "$meは意識を取り戻す"),
             h.look("また異世界が消えた"),
             h.deal("手に取ったスマートフォンのモニタには",
                 "すぐに同じフレーズで何十という呟きが流れる"),
