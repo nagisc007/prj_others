@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 ### Changed
-- Updated: submodule (directly description)
+
+## [0.2.0] - 2019-07-18
+### Added
+- Production: isekai koroshi
+### Changed
+- Updated: submodule (directly description/web format)
 
 ## [0.1.0] - 2019-06-10
 ### Added
@@ -23,6 +28,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Setup file for python.
 - Submodule: storybuilder is a library to build a story.
 
-[Unreleased]: https://github.com/nagisc007/prj_estar/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/nagisc007/prj_estar/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/nagisc007/prj_estar/releases/v0.2.0
 [0.1.0]: https://github.com/nagisc007/prj_estar/releases/v0.1.0
 [0.0.1]: https://github.com/nagisc007/prj_estar/releases/v0.0.1

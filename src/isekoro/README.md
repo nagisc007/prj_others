@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Develop | 2019.- | 2019.7.16 | Fantasy, Mystery | 5K | [Non published](https://novelup.plus/) | [nothing](https://novelup.plus/) |
+| v0.1.0 | Released | 2019.7.18 | 2019.7.18 | Fantasy, Mystery | 8K | [Site](https://novelup.plus/story/258270257) | [nothing](https://novelup.plus/) |
 
 **「だから、全ての異世界を殺そうと思ったんだ」**
 
