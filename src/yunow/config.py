@@ -9,11 +9,12 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("yusha", "勇者", 16, "male", "勇者", "me:俺"),
+        ("yusha", "勇者", 16, "male", "勇者", "me:俺:S:勇者"),
         # sub
         ("maou", "魔王", 36, "male", "魔族の王", "me:我"),
         # mob
         ("king", "王様", 58, "male", "王", "me:ワシ"),
+        ("barmaster", "酒場の店主", 45, "male", "店主", "me:オレ"),
         )
 
 
@@ -23,7 +24,10 @@ STAGES = (
         # Place
         ("hometown", "城下町"),
         ("homefield", "ジハーン近郊"),
+        ("castle1", "ジハーン城"),
+        ("bar1", "ルイージンの酒場"),
         # Part
+        ("castle1gate", "城門"),
         )
 
 
