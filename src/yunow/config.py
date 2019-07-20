@@ -25,6 +25,7 @@ STAGES = (
         ("hometown", "城下町"),
         ("homefield", "ジハーン近郊"),
         ("castle1", "ジハーン城"),
+        ("bar1", "ルイージンの酒場"),
         # Part
         ("castle1gate", "城門"),
         )
