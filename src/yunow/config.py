@@ -16,6 +16,7 @@ CHARAS = (
         # mob
         ("king", "王様", 58, "male", "王", "me:ワシ"),
         ("barmaster", "酒場の店主", 45, "male", "店主", "me:オレ"),
+        ("priest1", "クレルク", 42, "male", "神父", "me:私"),
         )
 
 
@@ -45,6 +46,7 @@ ITEMS = (
         # main
         ("phone", "スマフ"),
         # chapter 1
+        ("photo", "シャメ"),
         )
 
 
@@ -55,6 +57,8 @@ INFOS = (
         ("destroy_peace", "世界平和が脅かされた"),
         ("trouble", "困難"),
         # chapter 1
+        ("god", "ルルミス神"),
+        ("reset", "リセエトの儀"),
         )
 
 
