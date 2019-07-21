@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 ### Changed
 
+## [0.3.1] - 2019-07-21
+### Added
+- Production: Yusha now (ep2)
+
 ## [0.3.0] - 2019-07-21
 ### Added
 - Production: Yusha now (ep1)
@@ -32,7 +36,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Setup file for python.
 - Submodule: storybuilder is a library to build a story.
 
-[Unreleased]: https://github.com/nagisc007/prj_estar/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/nagisc007/prj_estar/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/nagisc007/prj_estar/releases/v0.3.1
 [0.3.0]: https://github.com/nagisc007/prj_estar/releases/v0.3.0
 [0.2.0]: https://github.com/nagisc007/prj_estar/releases/v0.2.0
 [0.1.0]: https://github.com/nagisc007/prj_estar/releases/v0.1.0
