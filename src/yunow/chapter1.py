@@ -12,7 +12,8 @@ THM = cnf.THEMES
 
 # titles
 TITLE = [
-        "勇者なう！",
+        "勇者なう",
+        "教会なう",
         ]
 
 # scenes
@@ -131,6 +132,30 @@ def sc_theend(w: wd.World):
                     "画像付きで瞬く間に世界に広められたのであった"),
             )
 
+## ep2 scenes
+def sc_awakechurch(w: wd.World):
+    yusha, yula = w.yusha, w.yula
+    return w.scene("教会で目覚めた",
+            yusha.be(w.stage.church1, w.day.firstawake),
+            yula.deal("目覚めなさい。",
+                "若者よ"),
+            yusha.hear("愛らしい女性の声が聞こえる"),
+            yusha.think("まさか……女神様！？"),
+            yusha.look("そう思って目を開けるとそこは城下町の教会だった"),
+            yusha.look("$Sは床に寝かされ",
+                "胸の上で手を組んでいるところに",
+                "ぼたぼたと何やら液体を落とされている"),
+            yula.talk("ひゃあ"),
+            yusha.talk("あんた$meに何してんの？"),
+            yusha.look(),# TODO: draft
+            )
+
+def sc_nomonery(w: wd.World):
+    yusha, yula = w.yusha, w.yula
+    return w.scene("一文無し",
+            # TODO: 金がない、そして警告ツイート回ってきて、盗賊だった
+            )
+
 # episodes
 def ep1(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -141,6 +166,12 @@ def ep1(w: wd.World):
             sc_Iamyusha(w),
             sc_strangetown(w),
             sc_theend(w),
+            )
+
+def ep2(w: wd.World):
+    return (w.chaptertitle(TITLE[1]),
+            sc_awakechurch(w),
+            sc_nomonery(w),
             )
 
 # outline
