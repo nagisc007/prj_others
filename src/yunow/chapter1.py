@@ -271,7 +271,7 @@ def story(w: wd.World):
                 w.yusha.know(w.i.destroy_peace),
                 w.yusha.deal(w.phone),
                 w.yusha.go(w.i.trouble),
-            #ep1(w),
+            ep1(w),
             ep2(w),
             )
 
