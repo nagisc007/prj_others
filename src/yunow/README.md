@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Develop | 2019.- | 2019.7.18 | Fantasy, Comedy | each 1K | [Site](https://novelup.plus/) | [nothing](https://novelup.plus/) |
+| v0.1.0 | Released | 2019.7.20 | 2019.7.21 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
 
 **「勇者は最強の武器ＳＮＳを手に入れた！」**
 
@@ -19,6 +19,12 @@
 ## Stages
 
 - 最初の島国……勇者が生まれ育った町
+
+## Features
+
+### Chapter01 旅立ち編
+
+1. 勇者なう
 
 ## License
 
