@@ -153,6 +153,7 @@ def sc_awakechurch(w: wd.World):
 def sc_nomonery(w: wd.World):
     yusha, yula = w.yusha, w.yula
     return w.scene("一文無し",
+            # TODO: 金がない、そして警告ツイート回ってきて、盗賊だった
             )
 
 # episodes
