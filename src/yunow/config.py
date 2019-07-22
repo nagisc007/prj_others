@@ -9,7 +9,7 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("yusha", "勇者", 16, "male", "勇者", "me:俺:S:勇者:yula:ユラ"),
+        ("yusha", "タロウ", 16, "male", "勇者", "me:俺:S:勇者:yula:ユラ"),
         # sub
         ("maou", "魔王", 36, "male", "魔族の王", "me:我"),
         ("yula", "ユラ", 16, "female", "盗賊", "me:アタシ:yusha:勇者"),
@@ -58,6 +58,7 @@ INFOS = (
         ("beat_maou", "魔王退治"),
         ("destroy_peace", "世界平和が脅かされた"),
         ("trouble", "困難"),
+        ("yen", "ギール"),
         # chapter 1
         ("god", "ルルミス神"),
         ("reset", "リセエトの儀"),
