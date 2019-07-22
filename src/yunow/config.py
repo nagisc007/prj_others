@@ -46,6 +46,7 @@ DAYS = (
 ITEMS = (
         # main
         ("phone", "スマフ"),
+        ("yumark", "勇者のしるし"),
         # chapter 1
         ("photo", "シャメ"),
         )
@@ -60,6 +61,7 @@ INFOS = (
         # chapter 1
         ("god", "ルルミス神"),
         ("reset", "リセエトの儀"),
+        ("matching", "賊シィ"),
         )
 
 
