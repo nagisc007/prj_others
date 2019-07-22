@@ -14,6 +14,7 @@ THM = cnf.THEMES
 TITLE = [
         "勇者なう",
         "教会なう",
+        "登録なう",
         ]
 
 # scenes
@@ -241,6 +242,20 @@ def sc_nomonery(w: wd.World):
                 "女の高笑いが響き渡った"),
             )
 
+## ep3 scenes
+def sc_baragain(w: wd.World):
+    yusha, bar, eada = w.yusha, w.barmaster, w.eada
+    h = yusha
+    return w.scene("酒場再び",
+            h.come(w.stage.bar1, w.day.firstawake),
+            )
+
+def sc_entryapply(w: wd.World):
+    yusha, bar, eada = w.yusha, w.barmaster, w.eada
+    h = yusha
+    return w.scene("登録しました",
+            )
+
 # episodes
 def ep1(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -253,6 +268,12 @@ def ep2(w: wd.World):
     return (w.chaptertitle(TITLE[1]),
             sc_awakechurch(w),
             sc_nomonery(w),
+            )
+
+def ep3(w: wd.World):
+    return (w.chaptertitle(TITLE[2]),
+            sc_baragain(w),
+            sc_entryapply(w),
             )
 
 # outline
@@ -273,6 +294,7 @@ def story(w: wd.World):
                 w.yusha.go(w.i.trouble),
             ep1(w),
             ep2(w),
+            ep3(w),
             )
 
 def main(): # pragma: no cover
