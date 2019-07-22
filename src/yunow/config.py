@@ -16,6 +16,7 @@ CHARAS = (
         # mob
         ("king", "王様", 58, "male", "王", "me:ワシ"),
         ("barmaster", "酒場の店主", 45, "male", "店主", "me:オレ"),
+        ("eada", "イーダ", 44, "female", "ホステス", "me:ウチ"),
         ("priest1", "クレルク", 42, "male", "神父", "me:私"),
         )
 
