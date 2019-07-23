@@ -366,6 +366,20 @@ def sc_entryapply(w: wd.World):
             bar.talk("これ高っ！"),
             )
 
+## ep4 scenes
+def sc_meetsoldier(w: wd.World):
+    h = yusha = w.yusha
+    return w.scene("戦士に出会った",
+            h.be(w.stage.townstreet1, w.day.firstawake),
+            # TODO: スマフ見ながら歩いて、猫情報、猫誘拐犯
+            )
+
+def sc_losecat(w: wd.World):
+    h = yusha = w.yusha
+    return w.scene("迷い猫",
+            # TODO: 事情を聞く、戦士を泊めてやることに
+            )
+
 # episodes
 def ep1(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -384,6 +398,12 @@ def ep3(w: wd.World):
     return (w.chaptertitle(TITLE[2]),
             sc_baragain(w),
             sc_entryapply(w),
+            )
+
+def ep4(w: wd.World):
+    return (w.chaptertitle(TITLE[3]),
+            sc_meetsoldier(w),
+            sc_losecat(w),
             )
 
 # outline
@@ -405,6 +425,7 @@ def story(w: wd.World):
             ep1(w),
             ep2(w),
             ep3(w),
+            ep4(w),
             )
 
 def main(): # pragma: no cover

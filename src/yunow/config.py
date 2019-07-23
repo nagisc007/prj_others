@@ -13,6 +13,7 @@ CHARAS = (
         # sub
         ("maou", "魔王", 36, "male", "魔族の王", "me:我"),
         ("yula", "ユラ", 16, "female", "盗賊", "me:アタシ:yusha:勇者"),
+        ("sol", "ソル", 18, "male", "戦士", "me:オレ:yusha:タロ吉"),
         # mob
         ("king", "王様", 58, "male", "王", "me:ワシ"),
         ("barmaster", "酒場の店主", 45, "male", "店主", "me:オレ"),
@@ -32,6 +33,7 @@ STAGES = (
         ("church1", "ジハーンの教会"),
         # Part
         ("castle1gate", "城門"),
+        ("townstreet1", "路地"),
         )
 
 
