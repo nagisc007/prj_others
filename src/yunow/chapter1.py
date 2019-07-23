@@ -15,7 +15,7 @@ TITLE = [
         "勇者なう",
         "教会なう",
         "登録なう",
-        "捨て猫なう",
+        "迷い猫なう",
         ]
 
 # scenes
@@ -510,9 +510,9 @@ def story(w: wd.World):
                 w.yusha.know(w.i.destroy_peace),
                 w.yusha.deal(w.phone),
                 w.yusha.go(w.i.trouble),
-            #ep1(w),
-            #ep2(w),
-            #ep3(w),
+            ep1(w),
+            ep2(w),
+            ep3(w),
             ep4(w),
             )
 
