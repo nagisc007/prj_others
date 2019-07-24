@@ -16,6 +16,7 @@ TITLE = [
         "教会なう",
         "登録なう",
         "迷い猫なう",
+        "身バレなう",
         ]
 
 # scenes
@@ -468,6 +469,20 @@ def sc_losecat(w: wd.World):
             yusha.talk("$meんち来ます？"),
             )
 
+## ep5 scenes
+def sc_myhome(w: wd.World):
+    h = yusha = w.yusha
+    sol, mam = w.sol, w.mother
+    return w.scene("我が家",
+            h.be(w.stage.myhome, w.day.firstawake),
+            )
+
+def sc_specify(w: wd.World):
+    h = yusha = w.yusha
+    sol, mam, mako = w.sol, w.mother, w.mako
+    return w.scene("特定しました",
+            )
+
 # episodes
 def ep1(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -494,6 +509,12 @@ def ep4(w: wd.World):
             sc_losecat(w),
             )
 
+def ep5(w: wd.World):
+    return (w.chaptertitle(TITLE[4]),
+            sc_myhome(w),
+            sc_specify(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -514,6 +535,7 @@ def story(w: wd.World):
             ep2(w),
             ep3(w),
             ep4(w),
+            ep5(w),
             )
 
 def main(): # pragma: no cover
