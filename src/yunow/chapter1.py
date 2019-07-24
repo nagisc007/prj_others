@@ -496,7 +496,7 @@ def sc_myhome(w: wd.World):
             yusha.talk("$sol", "あんたってひょっとして恐がりなのか？"),
             sol.talk("だ、だだ、誰が臆病もんだと！"),
             yusha.talk("ほれ"),
-            h.look("$solに見せた$phoneには誰かが描いた魔王の想像画がいっぱいに広がっていた"),
+            h.look("$solに見せた$phoneには誰かが描いたと思われるデタラメな魔王の肖像画がいっぱいに広がっていた"),
             sol.talk("ひゃぁぁぁぁ！"),
             h.hear("その大柄に似つかわしくない悲鳴を上げると",
                 "思い切り$Sに抱きつく。",
@@ -643,10 +643,10 @@ def story(w: wd.World):
                 w.yusha.know(w.i.destroy_peace),
                 w.yusha.deal(w.phone),
                 w.yusha.go(w.i.trouble),
-            #ep1(w),
-            #ep2(w),
-            #ep3(w),
-            #ep4(w),
+            ep1(w),
+            ep2(w),
+            ep3(w),
+            ep4(w),
             ep5(w),
             )
 
