@@ -55,6 +55,8 @@ ITEMS = (
         ("yumark", "勇者のしるし"),
         # chapter 1
         ("photo", "シャメ"),
+        ("scshot", "スクシヨ"),
+        ("doga", "ドーガ"),
         )
 
 
