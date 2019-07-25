@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Released | 2019.7.20 | 2019.7.21 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
+| v0.5.0 | Released | 2019.7.20 | 2019.7.25 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
 
 **「勇者は最強の武器ＳＮＳを手に入れた！」**
 
@@ -15,10 +15,13 @@
 ## Characters
 
 - 勇者……魔王を倒して世界平和を取り戻す者
+- ユラ……女盗賊。幾度となく勇者を騙す
+- ソル……赤髪の男戦士。体力バカだが臆病者
+- 魔子……謎の幼女的な魔法使い。スマフを手足のように操る
 
 ## Stages
 
-- 最初の島国……勇者が生まれ育った町
+- ジハーン王国……最初の島国。勇者が生まれ育った町
 
 ## Features
 
@@ -26,6 +29,9 @@
 
 1. 勇者なう
 2. 教会なう
+3. 登録なう
+4. 迷い猫なう
+5. 自宅なう
 
 ## License
 
