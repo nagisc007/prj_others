@@ -12,7 +12,7 @@ THM = cnf.THEMES
 
 # titles
 TITLE = [
-        "ストーカーなう",
+        "実況なう",
         "mamazonなう",
         ]
 
@@ -22,12 +22,37 @@ def sc_mystalker(w: wd.World):
     h = yusha = w.yusha
     sol, mam, mako = w.sol, w.mother, w.mako
     return w.scene("勇者のストーカー",
+            h.be(w.stage.myhome, w.day.firstawake),
+            mako.talk("$taroのこと特定しました"),
+            h.think("何……だと！？"),
+            h.look("$Sである少年は",
+                "目の前のどう考えても彼より五歳程度は若いだろうと思われるピンクのおかっぱ娘の笑みに",
+                "戦慄していた"),
+            yusha.talk("あの……どうして$meの名前を？"),
+            h.look("右側の膝が小刻みに震え始めたのを強引に手で押さえ込み",
+                "$Sは尋ねる"),
+            mako.talk("コレですよ"),
+            h.look("愛らしい声と絶えない笑顔で彼女が見せたのは",
+                "その小さな手にはやや余る$phoneと呼ばれる鉱石を加工した板状の道具だ。",
+                "それは同じものを持つ者同士", "どんなに離れていても文字や映像をやり取りできるという",
+                "不思議な能力があった"),
+            h.look("$n_yusha様のご自宅なう"),
+            h.look("そう書かれ",
+                "家の玄関のドアと彼女がはにかむ様子が映っていた"),
+            yusha.ask("……コレ",
+                "何してるの？"),
+            mako.talk("実況です"),
+            yusha.talk("じっきょう？"),
+            mako.talk("はい。", "$taro実況なうです"),
+            h.look(""),
+            # TODO: 魔子の話、説明、実況なう
             )
 
 def sc_threaten(w: wd.World):
     h = yusha = w.yusha
     sol, mam, mako = w.sol, w.mother, w.mako
     return w.scene("脅迫される勇者",
+            # TODO: ストーカーぶり、勇者とばらす、仲間増えたね
             )
 
 # episodes
