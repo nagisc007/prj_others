@@ -13,7 +13,10 @@ THM = cnf.THEMES
 # titles
 TITLE = [
         "実況なう",
-        "mamazonなう",
+        "診断なう",# NOTE: 診断メーカーからの乗っ取りツイート
+        "魔王なう",# NOTE: 魔王とは？　恨み
+        "無料なう",# NOTE: 重課金の罠
+        "mamazonなう",# NOTE: 何でもamazon
         ]
 
 # scenes
@@ -150,11 +153,27 @@ def sc_threaten(w: wd.World):
             h.look("大きく頷いて", "彼女はこの日一番の笑みを彼に向けたのだった"),
             )
 
+## ep7 scenes
+def sc_onthebed(w: wd.World):
+    return w.scene("ベッドの上で",
+            # TODO: マコ一旦帰る（宿）、ソル泊める、眠るが
+            )
+
+def sc_takeovertweet(w: wd.World):
+    return w.scene("乗っ取りツイート",
+            # TODO: 診断メーカー説明、乗っ取りで勝手につぶやきだす。そして魔王と名乗る
+            )
+
+
 # episodes
 def ep6(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
             sc_mystalker(w),
             sc_threaten(w),
+            )
+
+def ep7(w: wd.World):
+    return (w.chaptertitle(TITLE[1]),
             )
 
 # outline
@@ -170,6 +189,7 @@ def story_outline(w: wd.World):
 def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap1"]),
             ep6(w),
+            ep7(w),
             )
 
 def main(): # pragma: no cover
