@@ -39,6 +39,7 @@ STAGES = (
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
+        ("bedroom", "勇者の寝室"),
         )
 
 
