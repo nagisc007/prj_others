@@ -174,6 +174,8 @@ def ep6(w: wd.World):
 
 def ep7(w: wd.World):
     return (w.chaptertitle(TITLE[1]),
+            sc_onthebed(w),
+            sc_takeovertweet(w),
             )
 
 # outline
