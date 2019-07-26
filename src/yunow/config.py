@@ -35,6 +35,7 @@ STAGES = (
         ("bar1", "ルイージンの酒場"),
         ("church1", "ジハーンの教会"),
         ("myhome", "勇者の家"),
+        ("mainbank", "ドツボ銀行"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
