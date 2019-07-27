@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.6.0 | Released | 2019.7.20 | 2019.7.26 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
+| v0.7.0 | Released | 2019.7.20 | 2019.7.27 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
 
 **「勇者は最強の武器ＳＮＳを手に入れた！」**
 
@@ -33,6 +33,7 @@
 4. 迷い猫なう
 5. 自宅なう
 6. 実況なう
+7. 診断なう
 
 ## License
 
