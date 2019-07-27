@@ -262,6 +262,16 @@ def sc_takeovertweet(w: wd.World):
                     "あっという間に罵詈雑言に恨みつらみの文字で彼の$phoneは埋め尽くされたのであった"),
             )
 
+## ep8 scene
+def sc_maodistress(w: wd.World):
+    return w.scene("魔王の苦悩",
+            # TODO: 魔王側、苦悩、部下の文句、陰口を裏カウントで見つけて憤慨
+            )
+
+def sc_makemao(w: wd.World):
+    return w.scene("魔王メーカー",
+            # TODO: 診断アプリを作り、そこに操作ボット仕込む、みんなが魔王になっていい気味
+            )
 
 # episodes
 def ep6(w: wd.World):
@@ -274,6 +284,12 @@ def ep7(w: wd.World):
     return (w.chaptertitle(TITLE[1]),
             sc_onthebed(w),
             sc_takeovertweet(w),
+            )
+
+def ep8(w: wd.World):
+    return (w.chaptertitle(TITLE[2]),
+            sc_maodistress(w),
+            sc_makemao(w),
             )
 
 # outline
@@ -290,6 +306,7 @@ def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap1"]),
             ep6(w),
             ep7(w),
+            ep8(w),
             )
 
 def main(): # pragma: no cover
