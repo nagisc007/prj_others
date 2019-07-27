@@ -288,6 +288,8 @@ def ep7(w: wd.World):
 
 def ep8(w: wd.World):
     return (w.chaptertitle(TITLE[2]),
+            sc_maodistress(w),
+            sc_makemao(w),
             )
 
 # outline
