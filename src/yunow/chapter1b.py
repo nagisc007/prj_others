@@ -16,6 +16,7 @@ TITLE = [
         "診断なう",# NOTE: 診断メーカーからの乗っ取りツイート
         "魔王なう",# NOTE: 魔王とは？　恨み
         "無料なう",# NOTE: 重課金の罠
+        "出品なう",# NOTE: 勇者のしるし出品して金策だ
         "mamazonなう",# NOTE: 何でもamazon
         ]
 
@@ -355,6 +356,33 @@ def sc_makemao(w: wd.World):
             m.hear("彼女の高笑いが", "闇にこだましたのであった"),
             )
 
+## ep9 scenes
+def sc_findgame(w: wd.World):
+    h = yusha = w.yusha
+    return w.scene("面白そうなゲームを見つけた",
+            h.be(w.stage.bedroom, w.day.firstawake),
+            # NOTE: 魔王なうを何とか切り抜けて、解除した
+            h.look("ゲーム見つける"),
+            # NOTE: 有名スマホゲーもじる
+            h.deal("その中からをやる"),
+            h.explain("ゲーム簡易説明"),
+            h.think("ぶち殺されて攻略できない"),
+            )
+
+def sc_heavybilling(w: wd.World):
+    h = yusha = w.yusha
+    sol = w.sol
+    return w.scene("課金兵",
+            h.deal("課金してアイテム購入"),
+            h.deal("ガチャで良い精霊手に入れようとするが出ない"),
+            h.deal("そして夜が明けた"),
+            h.look("画面を見て敗北感"),
+            sol.ask("あれ？", "お前寝なかったのか？",
+                "……てか何だよその顔。", "まるでモンスターみたいな顔色だぞ？"),
+            h.think("彼は知らなかった。",
+                "$Sが一晩で小さな国一つ分の借金を背負ってしまっていたことを"),
+            )
+
 # episodes
 def ep6(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -374,6 +402,12 @@ def ep8(w: wd.World):
             sc_makemao(w),
             )
 
+def ep9(w: wd.World):
+    return (w.chaptertitle(TITLE[3]),
+            sc_findgame(w),
+            sc_heavybilling(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -389,6 +423,7 @@ def story(w: wd.World):
             ep6(w),
             ep7(w),
             ep8(w),
+            ep9(w),
             )
 
 def main(): # pragma: no cover

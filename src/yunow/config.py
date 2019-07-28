@@ -40,6 +40,7 @@ STAGES = (
         ("myhome", "勇者の家"),
         ("mainbank", "ドツボ銀行"),
         ("maocastle", "魔王城"),
+        ("freema", "モウカリ"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
@@ -78,6 +79,11 @@ INFOS = (
         ("god", "ルルミス神"),
         ("reset", "リセエトの儀"),
         ("matching", "賊シィ"),
+        # games
+        ("game1", "勇者ブルーファンタジィ"),
+        ("game2", "勇者グランオーダー"),
+        ("game3", "パズル勇者ドラゴン"),
+        ("darkgame", "黒ガチャと勇者ウィズ"),
         )
 
 
