@@ -16,12 +16,15 @@ CHARAS = (
         ("sol", "ソル", 18, "male", "戦士", "me:オレ:yusha:タロ吉"),
         ("mako", "魔子", 16, "female", "魔法使い", "me:僕:yusha:勇者様:taro:タロウ様"),
         ("mother", "母", 36, "female", "内職", "me:あたし:yusha:タロウ"),
+        ("maneko", "マネ子", 99, "female", "魔王軍参謀", "me:私:maou:魔王様:full:オモイマネー・ノミコ"),
+        ("goken", "ゴーケン", 99, "male", "陸戦大将", "me:儂"),
         # mob
         ("king", "王様", 58, "male", "王", "me:ワシ"),
         ("barmaster", "酒場の店主", 45, "male", "店主", "me:オレ"),
         ("eada", "イーダ", 44, "female", "ホステス", "me:ウチ"),
         ("priest1", "クレルク", 42, "male", "神父", "me:私"),
         ("mas_soldier", "ライアス", 58, "male", "戦士"),
+        ("minion", "魔王の部下", 99, "male", "魔王の部下", "me:オレ:mane:軍参謀"),
         )
 
 
@@ -36,6 +39,7 @@ STAGES = (
         ("church1", "ジハーンの教会"),
         ("myhome", "勇者の家"),
         ("mainbank", "ドツボ銀行"),
+        ("maocastle", "魔王城"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
