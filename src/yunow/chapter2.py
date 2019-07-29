@@ -460,6 +460,19 @@ def sc_heavybilling(w: wd.World):
                 "$Sが一晩で小さな国一つ分の借金を背負ってしまっていたことを"),
             )
 
+## ep10 scenes
+def sc_debtyusha(w: wd.World):
+    h = yusha = w.yusha
+    sol = w.sol
+    return w.scene("借金勇者",
+            )
+
+def sc_exhibition(w: wd.World):
+    h = yusha = w.yusha
+    sol = w.sol
+    return w.scene("そして出品する",
+            )
+
 # episodes
 def ep6(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -485,6 +498,12 @@ def ep9(w: wd.World):
             sc_heavybilling(w),
             )
 
+def ep10(w: wd.World):
+    return (w.chaptertitle(TITLE[4]),
+            sc_debtyusha(w),
+            sc_exhibition(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -501,6 +520,7 @@ def story(w: wd.World):
             ep7(w),
             ep8(w),
             ep9(w),
+            ep10(w),
             )
 
 def main(): # pragma: no cover
