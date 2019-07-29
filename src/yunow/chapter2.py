@@ -460,6 +460,57 @@ def sc_heavybilling(w: wd.World):
                 "$Sが一晩で小さな国一つ分の借金を背負ってしまっていたことを"),
             )
 
+## ep10 scenes
+def sc_debtyusha(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, mam = w.sol, w.mako, w.mother
+    return w.scene("借金勇者",
+            h.be(w.stage.bedroom, w.day.firstawake2),
+            h.explain("借金してしまった説明"),
+            h.deal("$solに相談する"),
+            sol.reply("けど$me金もってねえしなあ"),
+            mako.come("$makoやってくる"),
+            mako.talk("おはようございます$taro"),
+            h.look("$makoはなんか血色良い。機嫌も良さそう"),
+            h.explain("$makoに状況説明"),
+            mako.talk("借金なんて踏み倒せば？"),
+            yusha.talk("$st_mainbankの取り立ては恐ろしいんだよ！",
+                "地獄の果てまで追いかけてくるんだぞ？"),
+            mako.talk("地獄くらいならいいじゃない"),
+            mam.talk("$yusha何か届いてるわよ"),
+            h.look("それは督促状だった"),
+            yusha.talk("どどどどうしよう？"),
+            sol.talk("臓器売るしかないな"),
+            mako.deal("何か$phoneでしている"),
+            mako.talk("$freemaよ。知らない？"),
+            )
+
+def sc_exhibition(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, mam = w.sol, w.mako, w.mother
+    return w.scene("そして出品する",
+            h.deal("出品するものを探す"),
+            h.deal("$makoが手続きとかしてくれる"),
+            h.deal("$solがこれもあれもと次々出品する"),
+            h.deal("全然売れないものばかり"),
+            yusha.talk("うんこれもう無理だわ"),
+            sol.talk("これなんか売れそうじゃね？"),
+            h.look("彼が手にしたのは$yumarkだった"),
+            yusha.talk("な、何言ってんだよ！",
+                "それは$meが$Sの証なんだぞ"),
+            mako.talk("けど勇者ってバレたら困るとか言ってなかった？"),
+            sol.talk("よし決まりだな。これ出品"),
+            h.deal("価格はあっという間に跳ね上がり"),
+            h.look("落札されました"),
+            yusha.talk("せっかくの$yumark……売ってしまった"),
+            sol.talk("これで晴れてただの無職だな！"),
+            yusha.talk("はぁ！？", "せめて冒険者と呼んでくれよ！"),
+            w.tag.br(),
+            mam.behav("その賑やかな様子に",
+                "何故か母は扉の向こう側で泣いていた"),
+            mam.talk("あの子にお友達ができるなんて……"),
+            )
+
 # episodes
 def ep6(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -485,6 +536,12 @@ def ep9(w: wd.World):
             sc_heavybilling(w),
             )
 
+def ep10(w: wd.World):
+    return (w.chaptertitle(TITLE[4]),
+            sc_debtyusha(w),
+            sc_exhibition(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -501,6 +558,7 @@ def story(w: wd.World):
             ep7(w),
             ep8(w),
             ep9(w),
+            ep10(w),
             )
 
 def main(): # pragma: no cover
