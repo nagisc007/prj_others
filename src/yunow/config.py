@@ -53,6 +53,7 @@ DAYS = (
         ("current", "現在"),
         ("callyusha", "勇者の称号を得た日"),
         ("firstawake", "最初に死に戻りした日"),
+        ("firstawake2", "死に戻り１の翌日"),
         )
 
 
