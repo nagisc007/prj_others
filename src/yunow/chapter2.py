@@ -619,10 +619,10 @@ def story_outline(w: wd.World):
 # main
 def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap1"]),
-            #ep6(w),
-            #ep7(w),
-            #ep8(w),
-            #ep9(w),
+            ep6(w),
+            ep7(w),
+            ep8(w),
+            ep9(w),
             ep10(w),
             )
 
