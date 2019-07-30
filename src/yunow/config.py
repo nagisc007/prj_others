@@ -11,7 +11,8 @@ CHARAS = (
         # main
         ("yusha", "タロウ", 16, "male", "勇者", "me:俺:S:勇者:yula:ユラ:mako:マコ:sol:ソル"),
         # sub
-        ("maou", "魔王", 36, "male", "魔族の王", "me:我"),
+        ("maou", "魔王", 36, "female", "魔族の王", "me:我"),
+        ("daimaou", "大魔王", 99, "male", "魔族の王", "me:我"),
         ("yula", "ユラ", 16, "female", "盗賊", "me:アタシ:yusha:勇者"),
         ("sol", "ソル", 18, "male", "戦士", "me:オレ:yusha:タロ吉"),
         ("mako", "魔子", 16, "female", "魔法使い", "me:僕:yusha:勇者様:taro:タロウ様"),
@@ -41,10 +42,12 @@ STAGES = (
         ("mainbank", "ドツボ銀行"),
         ("maocastle", "魔王城"),
         ("freema", "モウカリ"),
+        ("amazon", "mamazon"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
         ("bedroom", "勇者の寝室"),
+        ("myliving", "勇者の家のリビング"),
         )
 
 

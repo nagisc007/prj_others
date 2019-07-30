@@ -17,7 +17,6 @@ TITLE = [
         "魔王なう",# NOTE: 魔王とは？　恨み
         "無料なう",# NOTE: 重課金の罠
         "出品なう",# NOTE: 勇者のしるし出品して金策だ
-        "mamazonなう",# NOTE: 何でもamazon
         ]
 
 # scenes
