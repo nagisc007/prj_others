@@ -26,6 +26,8 @@ CHARAS = (
         ("priest1", "クレルク", 42, "male", "神父", "me:私"),
         ("mas_soldier", "ライアス", 58, "male", "戦士"),
         ("minion", "魔王の部下", 99, "male", "魔王の部下", "me:オレ:mane:軍参謀"),
+        ("muramasa", "ムラサメ", 58, "male", "刀鍛冶", "me:ワシ"),
+        ("idol", "ユカリン", 40, "female", "アイドル"),
         )
 
 
