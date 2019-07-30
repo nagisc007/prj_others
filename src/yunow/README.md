@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.9.0 | Released | 2019.7.20 | 2019.7.29 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
+| v0.10.0 | Released | 2019.7.20 | 2019.7.30 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
 
 **「勇者は最強の武器ＳＮＳを手に入れた！」**
 
@@ -36,6 +36,7 @@
 7. 診断なう
 8. 魔王なう　※魔王
 9. 無料なう
+10. 出品なう
 
 ## License
 
