@@ -10,13 +10,13 @@ sys.path.append('storybuilder')
 CHARAS = (
         # main
         ("yusha", "タロウ", 16, "male", "勇者", "me:俺:S:勇者:yula:ユラ:mako:マコ:sol:ソル"),
+        ("sol", "ソル", 18, "male", "戦士", "me:オレ:yusha:タロ吉:mako:マコ"),
+        ("mako", "魔子", 16, "female", "魔法使い", "me:僕:yusha:勇者様:taro:タロウ様"),
         # sub
         ("maou", "魔王", 36, "female", "魔族の王", "me:我"),
         ("daimaou", "大魔王", 99, "male", "魔族の王", "me:我"),
         ("yula", "ユラ", 16, "female", "盗賊", "me:アタシ:yusha:勇者"),
-        ("sol", "ソル", 18, "male", "戦士", "me:オレ:yusha:タロ吉"),
-        ("mako", "魔子", 16, "female", "魔法使い", "me:僕:yusha:勇者様:taro:タロウ様"),
-        ("mother", "母", 36, "female", "内職", "me:あたし:yusha:タロウ"),
+        ("mother", "母", 36, "female", "内職", "me:あたし:yusha:タロウ:mako:マコちゃん:sol:ソル君"),
         ("maneko", "マネ子", 99, "female", "魔王軍参謀", "me:私:maou:魔王様:full:オモイマネー・ノミコ"),
         ("goken", "ゴーケン", 99, "male", "陸戦大将", "me:儂"),
         # mob
@@ -26,6 +26,8 @@ CHARAS = (
         ("priest1", "クレルク", 42, "male", "神父", "me:私"),
         ("mas_soldier", "ライアス", 58, "male", "戦士"),
         ("minion", "魔王の部下", 99, "male", "魔王の部下", "me:オレ:mane:軍参謀"),
+        ("muramasa", "ムラサメ", 58, "male", "刀鍛冶", "me:ワシ"),
+        ("idol", "ユカリン", 40, "female", "アイドル"),
         )
 
 
