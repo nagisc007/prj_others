@@ -13,7 +13,6 @@ THM = cnf.THEMES
 # titles
 TITLE = [
         "mamazonなう",# NOTE: 何でもamazon
-        "代行なう",# NOTE: 代行業を依頼
         "全滅なう",# NOTE: 旅立ち編終了、ラストで死に戻り体験
         ]
 
@@ -138,11 +137,76 @@ def sc_mamazon(w: wd.World):
                 "戸惑う彼女に変わって$Sは『注文』を押したのだった"),
             )
 
+## ep12 scenes
+def sc_defeatmaou(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, mam, daima = w.sol, w.mako, w.mother, w.daimaou
+    return w.scene("魔王退治",
+            h.be(w.stage.bedroom, w.day.firstawake2),
+            h.explain("前回の説明"),
+            h.explain("$st_amazonを使い様々な物資を調達した$Sたちであったが",
+                "その中に『魔王退治』を見つけて注文したのだった"),
+            yusha.talk("これで魔王退治できたら", "結局$Sなんていらなかったってことだよな？"),
+            sol.talk("いくらクマモンてのが便利だからって",
+                "流石に魔王退治まではしてくれねえ……だろ？"),
+            mako.talk("……そもそも魔王退治なんてされたら困るんですけど"),
+            h.be("しばらく待ってみたが何も起こらない"),
+            h.think("いや", "妙な地響きを感じた"),
+            yusha.talk("な、何が起こってるんだ？"),
+            h.look("その時、空が光った"),
+            )
+
+def sc_daimaou(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, mam, daima = w.sol, w.mako, w.mother, w.daimaou
+    return w.scene("大魔王",
+            mako.talk("なんか、変よ"),
+            h.look("今までに見せたことのない神妙な顔つきになる"),
+            mam.talk("なんか外が騒がしいわねえ"),
+            h.move("みんなで外に出てみる"),
+            h.look("街中の人間が家の外に出て何やら騒いでいる"),
+            h.look("中央広場は人混みになっていた"),
+            h.look("札が立てられ", "人が殺到している"),
+            sol.talk("何だって？"),
+            h.look("$solは目がよかった"),
+            sol.talk("いや、なんか『魔王が退治されて平和が戻った』とか書いてあんだよ"),
+            mako.talk("え？"),
+            h.hear("その声をあげたのは$n_makoだった"),
+            mako.talk("退治とか、そんなの有り得ないのに……"),
+            yusha.talk("まあホントに退治されたんなら", "ありがたいじゃないか。",
+                "魔王退治の旅に出なくても済むし"),
+            h.deal("喜ぶ町の人々の顔"),
+            h.look("何故か悲しそうな$n_makoの顔"),
+            yusha.talk("そんなに$meと旅したかったなら", "これから平和になった世界を旅すればいいじゃないか"),
+            h.deal("そう声を掛けるが", "表情は変わらない"),
+            h.look("と、空が急に暗くなる"),
+            h.look("黒雲に覆われたかと思えばそこが裂けるようになって",
+                "真っ赤に燃えていた。",
+                "その天の炎が柱となって城に突き刺さる"),
+            h.look("誰もが悲鳴を上げた"),
+            yusha.talk("何だありゃ……"),
+            h.look("城は半壊し", "燃えていた"),
+            h.hear("そこに声が響き渡る"),
+            daima.talk("魔王は倒された。",
+                "その代わりに今後は$meが世界を恐怖に震え上がらせてやろう。",
+                "我が名は大魔王。",
+                "世界に絶望と混沌をもたらす最凶の闇"),
+            h.explain("その日", "世界は闇に覆われた"),
+            yusha.talk("まじかよ……$st_amazonすげえな"),
+            sol.talk("感心するとこソコかよ！"),
+            )
+
 # episodes
 def ep11(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
             sc_preparation(w),
             sc_mamazon(w),
+            )
+
+def ep12(w: wd.World):
+    return (w.chaptertitle(TITLE[1]),
+            sc_defeatmaou(w),
+            sc_daimaou(w),
             )
 
 # outline
@@ -158,6 +222,7 @@ def story_outline(w: wd.World):
 def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap1"]),
             ep11(w),
+            ep12(w),
             )
 
 def main(): # pragma: no cover
