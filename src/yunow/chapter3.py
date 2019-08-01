@@ -227,6 +227,92 @@ def sc_daimaou(w: wd.World):
             sol.talk("感心するとこソコじゃねえだろ！"),
             )
 
+## ep13 scenes
+def sc_destruction(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, mam, daima = w.sol, w.mako, w.mother, w.daimaou
+    return w.scene("全滅",
+            h.be(w.stage.hometown, w.day.firstawake2),
+            h.look("誰もがその光景に震え上がっていた"),
+            h.deal("中央広場に集まった人々は最初声を失っていたが徐々に騒ぎ出し、"),
+            h.hear().t("死にたくねえ！"),
+            h.deal("誰かが声を上げたのを合図に一目散に自宅へと駆け込んでいく"),
+            sol.talk("魔王ですら無理なのに大魔王とかアリかよ！"),
+            mako.talk("……こんなの", "絶対おかしい"),
+            yusha.talk("魔王の次は大魔王かよ……"),
+            h.look("他の二人が唖然とする中",
+                "$Sだけは寧ろ大魔王の出現を楽しんでいるかのような得意げな表情を浮かべている"),
+            h.think("だが彼が得意げに腰に手を当てていられたのもごく僅かな間だけだった"),
+            sol.talk("おい……ありゃ何だ？"),
+            h.look("$solが指したのは遥か遠くの山の上だ。",
+                "そこに小さな黒い靄のようなものが生まれ",
+                "どうやらそれは徐々に大きくなっている"),
+            mako.talk("ちょっと待ってね。",
+                "今確認してみるから"),
+            h.look("$n_makoはそう言って$phoneを向ける"),
+            mako.talk("拡大したら何か分かるかも"),
+            h.look("切り取ったその風景が", "彼女の指の動きでどんどん巨大になっていく。",
+                "まるで虫眼鏡を何重にも重ねたみたいだと$Sは思ったが",
+                "実際にそれをするとぼやけて見えなくなるだけだった"),
+            mako.talk("これって……"),
+            sol.talk("ああ……"),
+            h.look("それはどう見ても大量の翼を持ったモンスターたちだった。",
+                "鳥型のものもいるが", "それらの背後には$Sが$gameの中でだけ遭遇したあの伝説のドラゴンらしき影も映っていた"),
+            sol.talk("おい。",
+                "こんなのきたらただじゃ済まないぞ"),
+            yusha.talk("……既にただじゃ済んでないみたいだな"),
+            h.look("そう言って$Sは二人に自分の$phoneを見せる。",
+                "そこに表示されていたのは――"),
+            h.look().emphasis("全滅なう"),
+            h.look("次々と阿鼻叫喚の断末魔の如くに『全滅なう』が流れていく"),
+            mako.talk("次々に町が壊滅してるのね……なんてことを"),
+            )
+
+def sc_theend(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, mam, daima = w.sol, w.mako, w.mother, w.daimaou
+    return w.scene("そして終わり？",
+            h.look("その断末魔はやがて近隣の町や村にまで迫ってくる"),
+            sol.talk("どうすんだよ", "なあ$yusha"),
+            yusha.talk("どうするって……やるしかないんじゃね？",
+                "だって$me", "$Sだし"),
+            h.look("そう言って親指を立てた$Sに$solはニヤリとして「そうだな」と答える"),
+            mako.talk("あんたらバカじゃないの？",
+                "仮に全員魔王だったとして", "あれだけの数相手にどうにかできるなんてのは妄想でしかないわよ"),
+            h.look("$n_makoは辛辣な意見と共に鋭い目線を二人に投げる。",
+                "既に広場から人はいなくなり",
+                "彼らだけが立っていた"),
+            h.look("そこに", "奇妙なざわざわとした音が迫ってくる"),
+            yusha.talk("え……この音って"),
+            mako.talk("そうよ。", "やつらの羽音よ"),
+            h.look("まだ遠くの空が黒い靄で覆われているだけなのに",
+                "それはどんどん大きくなってくる"),
+            sol.talk("$meちっさい頃から虫だけはダメなんだわ。",
+                "悪い$yusha。", "逃げるわ"),
+            yusha.talk("は？", "何言ってんだよ$sol！", "おいちょっと待てって！"),
+            h.deal("だが伸ばした手は届かず",
+                "赤髪の大男はあっという間に駆けていってしまった"),
+            yusha.talk("何だよあいつは……晩メシおごってやった恩を忘れたのかよ！"),
+            h.be("$n_makoと二人だけになる"),
+            yusha.talk("$makoも逃げていいんだぞ"),
+            mako.talk("$meは常に$taroと共にありますから……それに",
+                "ちょっと確かめたいことがあって"),
+            h.deal("そう答えた$n_makoは自分の$phoneで必死に何かしている"),
+            h.look("いよいよ羽音が空気を満たすほどとなり",
+                "燃えている空が黒い絨毯によって覆われた"),
+            yusha.talk("来るなら来い！"),
+            h.think("何故だろう。",
+                "この時の彼は恐れや怯えといった感情とは無関係だった。",
+                "ただ剣を構えて自分がこの世界を救うというその一心だけが支配していた"),
+            h.hear("そんな二人に向け",
+                "どのモンスターのものかは分からない唸り声が響き",
+                "一気に黒が落ちてくる"),
+            h.deal("やってやるぜと意気込んだ$Sの気持ち虚しく",
+                "一気に落ちてきた黒い集団によって彼は意識ごと押しつぶされた"),
+            h.deal("全滅なう"),
+            h.deal("誰かがそれを見て$phoneで呟き", "ケタケタと笑い声をあげた"),
+            )
+
 # episodes
 def ep11(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -238,6 +324,12 @@ def ep12(w: wd.World):
     return (w.chaptertitle(TITLE[1]),
             sc_defeatmaou(w),
             sc_daimaou(w),
+            )
+
+def ep13(w: wd.World):
+    return (w.chaptertitle(TITLE[2]),
+            sc_destruction(w),
+            sc_theend(w),
             )
 
 # outline
@@ -254,6 +346,7 @@ def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap1"]),
             ep11(w),
             ep12(w),
+            ep13(w),
             )
 
 def main(): # pragma: no cover
