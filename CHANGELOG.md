@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.3.2] - 2019-08-01
 ### Added
-- Production: Yusha now (ep3 to ep13)
+- Production: Yusha now (ep3 to ep12)
 
 ## [0.3.1] - 2019-07-21
 ### Added
