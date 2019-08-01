@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.10.0 | Released | 2019.7.20 | 2019.7.30 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
+| v0.12.0 | Released | 2019.7.20 | 2019.8.1 | Fantasy, Comedy | each 2K | [Site](https://novelup.plus/story/656073991) | [nothing](https://novelup.plus/) |
 
 **「勇者は最強の武器ＳＮＳを手に入れた！」**
 
@@ -37,6 +37,8 @@
 8. 魔王なう　※魔王
 9. 無料なう
 10. 出品なう
+11. mamazonなう
+12. 魔王退治なう
 
 ## License
 
