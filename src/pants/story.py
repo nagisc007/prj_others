@@ -15,10 +15,10 @@ THM = cnf.THEMES
 # outline
 def story_baseinfo(w: wd.World):
     return [
-            ("story", story(w), w.hero, w.ery),
+            ("story", story(w), w.hero, w.hero),
             ] + chap01.story_baseinfo(w)
 
-def story_outlineinfo(w: wd.World):
+def story_outline(w: wd.World):
     return [
             ("story", story(w),
                 w.hero.be(),
