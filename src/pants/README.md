@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Develop | 2019.- | 2019.7.15 | Fantasy, Love, Comedy | 100K | [小説家になろう](https://syosetu.com/) | [第1回アース・スターノベル文庫大賞](https://www.es-novel.jp/esn-award01/) |
+| v0.1.0 | Develop | 2019.- | 2019.8.2 | Fantasy, Love, Comedy | 100K | [ノベルアッププラス](https://novelup.plus/) | [第1回ノベルアッププラス小説大賞](https://novelup.plus/event/1st-novel-contest/) |
 
 **「この感覚こそ、アタシがずっと求めて止まないものだったの！？」**
 
