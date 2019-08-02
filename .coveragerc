@@ -3,6 +3,9 @@
 source = src
 omit =
     # projects
+    src/pants/ch01/*
+    src/pants/chapter01bak.py
+    src/pants/chapter02bak.py
     # markdown
     *.md
 

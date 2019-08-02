@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- Project: The sage pants
 ### Changed
 
 ## [0.3.2] - 2019-08-01
