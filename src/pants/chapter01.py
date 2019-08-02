@@ -50,7 +50,7 @@ def sc_hardday(w: wd.World):
             hero.think().d("痴漢",
                 "という言葉が真っ先に浮かんで",
                 "$meはそっと体を捩りながらそっち足を進める"),
-            hero.think("$i_herword001"),
+            hero.think().emphasis("$i_herword001"),
             hero.think("そう言っていつも憤っていた元彼女は",
                 "満員電車のない土地で元気にしているだろうか"),
             hero.look().d("男の手はその女性の臀部をまさぐっているのか",
