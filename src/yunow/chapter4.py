@@ -13,7 +13,13 @@ THM = cnf.THEMES
 # titles
 TITLE = [
         "Re: 教会なう",# NOTE:再び教会も、世界がループしていると認識
-        "",
+        "旅支度なう・その１",# NOTE: 旅って何が必要？まずは金策だ！
+        "勇チューバーなう",# NOTE:yutuberだ
+        "旅支度なう・その２",# NOTE: ランキングサイトを使って安く買え？
+        "スライムなう",# NOTE:初戦闘、スライムに苦しむ
+        "はじめてのおつかいなう",# NOTE:初クエスト
+        "洞窟なう",# NOTE:洞窟内で
+        "野営なう",# NOTE:野宿編１から
         ]
 
 # scenes
@@ -156,12 +162,61 @@ def sc_reunion(w: wd.World):
             h.deal("こうして$Sは頼りない赤頭の戦士と頭のおかしいピンクおかっぱの少女と共に",
                 "この世界を知る旅に出る決意をしたのであった"),
             )
+## ep15 scenes
+def sc_gotoshop(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    return w.scene("質屋に行こう",
+            h.be(w.stage.hometown, w.day.awake2),
+            h.move("街中を歩いていた"),
+            h.deal("旅支度をしないといけないという"),
+            sol.talk("旅のことなら$meにまかせろ"),
+            yusha.talk("でも手持ちの金ほとんどないからなあ"),
+            mako.talk("借りればいいじゃないの"),
+            yusha.talk("どこに後ろ盾もないただの未成年に大金貸してくれるところがあるんだよ……"),
+            mako.talk("じゃあ$meが$taroに貸しますよ。半永久的に無利子で。ただし条件付きです。今すぐ結婚しましょう"),
+            yusha.talk("などと訳の分からないことを申しており"),
+            sol.talk("地道に稼ぐしかねえんだよ。$meらみたいなのは。何か仕事探すべ"),
+            mako.talk("仕方ないですね。それじゃあコレなんてどうですか？"),
+            h.look("彼女が見せてくれたのは$phoneを使って大金を稼ぐ方法という実に怪しげなものだった"),
+            h.deal("そこからいくつか選んでやってみる"),
+            h.deal("商品紹介"),
+            h.deal("ポイントサイト"),
+            h.deal("転売"),
+            yusha.talk("どれも無理だよ！"),
+            sol.talk("これとかいいんじゃね？"),
+            h.deal("$solが言ってきたのは$doga投稿というやつだった"),
+            )
+
+def sc_gathermoney(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    return w.scene("動画やろうぜ",
+            h.explain("$dogaとは"),
+            h.deal("準備"),
+            h.deal("撮影開始"),
+            yusha.talk("はいどもー！"),
+            sol.talk("もっとテンション高く！"),
+            yusha.talk("は、はは……はーいどもー！"),
+            yusha.talk("とりあえず炭酸薬草ジュース一気のみいきまーす！"),
+            h.deal("飲む。盛大に吹く"),
+            sol.talk("ちょっと！　止めて！"),
+            yusha.talk("炭酸……無理ぃ"),
+            mako.talk("これ絶対ダメなやつ……"),
+            h.look("撮影された$dogaを見て$n_makoは首を振っていた"),
+            )
 
 # episodes
 def ep14(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
             sc_awaking(w),
             sc_reunion(w),
+            )
+
+def ep15(w: wd.World):
+    return (w.chaptertitle(TITLE[1]),
+            sc_gotoshop(w),
+            sc_gathermoney(w),
             )
 
 # outline
@@ -177,6 +232,7 @@ def story_outline(w: wd.World):
 def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap2"]),
             ep14(w),
+            ep15(w),
             )
 
 def main(): # pragma: no cover
