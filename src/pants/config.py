@@ -44,6 +44,7 @@ DAYS = (
         # main
         ("deadman", "死んだ日", 8,2, 2019),# パンツの日
         ("firstmeet", "最初の遭遇日"),
+        ("transfer1", "転生した日"),
         ("current", "現在"),
         # sub
         ("departher", "彼女と別れた日", 6,6, 2016),
