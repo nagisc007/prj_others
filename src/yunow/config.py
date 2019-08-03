@@ -72,6 +72,8 @@ ITEMS = (
         ("scshot", "スクシヨ"),
         ("doga", "ドーガ"),
         ("game", "ゲエム"),
+        # chapter 2
+        ("yutuber", "勇チューバー"),
         )
 
 
