@@ -168,6 +168,12 @@ def sc_gotoshop(w: wd.World):
     sol, mako = w.sol, w.mako
     return w.scene("質屋に行こう",
             h.be(w.stage.hometown, w.day.awake2),
+            h.look("$Sたち一行は城下町の中央広場前へとやってきた。",
+                "そこには市が開かれていて",
+                "建国のモニュメントの周囲を取り囲むようにして露店がひしめいている"),
+            yusha.talk("いざ魔王退治の旅に出ようと言っても何を準備しておけばいいか",
+                "全然考えてなかったわ"),
+            h.look(""),
             h.move("街中を歩いていた"),
             h.deal("旅支度をしないといけないという"),
             sol.talk("旅のことなら$meにまかせろ"),
