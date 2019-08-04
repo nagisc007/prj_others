@@ -284,6 +284,19 @@ def sc_gathermoney(w: wd.World):
             yusha.talk("は、はは、はーいどもー！！"),
             )
 
+## ep16 scenes
+def sc_yutuber(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    return w.scene("勇者チューバーでいこう",
+            )
+
+def sc_(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    return w.scene("",
+            )
+
 # episodes
 def ep14(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -295,6 +308,10 @@ def ep15(w: wd.World):
     return (w.chaptertitle(TITLE[1]),
             sc_gotoshop(w),
             sc_gathermoney(w),
+            )
+
+def ep16(w: wd.World):
+    return (w.chaptertitle(TITLE[2]),
             )
 
 # outline
@@ -311,6 +328,7 @@ def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap2"]),
             ep14(w),
             ep15(w),
+            ep16(w),
             )
 
 def main(): # pragma: no cover
