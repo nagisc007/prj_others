@@ -8,6 +8,8 @@ import test_kyoko
 import test_koroshi
 import test_yunow
 import test_pants
+import test_zebra
+
 
 def suite():
     '''Packing all tests.
@@ -28,6 +30,7 @@ def suite():
         # novema
         # cobalt
         unittest.makeSuite(test_kyoko.StoryTest),
+        unittest.makeSuite(test_zebra.StoryTest),
         ))
 
     return suite

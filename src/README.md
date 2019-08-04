@@ -6,6 +6,7 @@ Web応募の可否に関わらず、メジャーサイト以外で開催、募�
 
 | Number | Title | Contest |
 | --- | --- | --- |
+| [#cvlt203](zebra/README.md) | ぜぶらぶら | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 | [#nvup2](pants/README.md) | 大賢者さまのパンツ！ | [第1回ノベルアッププラス大賞](https://novelup.plus/) |
 | [#nvup3](yunow/README.md) | 勇者なう！ | [nothing](http://novelup.plus/) |
 | [#nvup2](isekoro/README.md) | Re:異世界殺し | [nothing](http://novelup.plus/) |
