@@ -1,30 +1,24 @@
-# 今日子さんの夕沈み
+# ぜぶらぶら
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Applyed | 2019.6.10 | 2019.6.10 | Life, Dairy | 9K | [Non published](https://google.com/) | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
+| v0.1.0 | Develop | 2019.8.- | 2019.8.4 | Love | 10K | [Non published](https://google.com/) | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 
-**「夕焼けは、いつも心を沈ませる」**
+**「その縞模様だけが、私の好きを縛り付けていた」**
 
-今日子さんは今日も憂鬱を持て余して、自堕落な妄想に耽る。けれど、それは不安を助長して、いつも泣いてしまう。
+*in preparation*
 
 ## Description
 
-午睡から目覚めた今日子は、同棲中の柊さんがいないことに気づいて、寂しくなる。  
-彼の存在の証拠を探して部屋を回り、彼の存在を抱き締めて安心する。  
-そんな今日子のことを不安にさせないようにと柊さんは努めてくれるが、それがまた不安にさせる。  
-ある日、彼の実家から荷物が届く。  
-その家族の温もりを見て、自分にはないものだと嫉妬して、泣いてしまう。  
-情緒不安定な彼女の気持ちは、夕焼けに溶けていく。
+*in preparation*
 
 ## Characters
 
-- 今日子……主人公。色々と問題を抱え、奇行をしている風に周りからは見られているが。
-- 柊……今日子の同棲相手。優しい。今日子のことを尊重してくれる。ただ真面目でもある。
+*in preparation*
 
 ## Stages
 
-- アパート……二人の生活の場。
+*in preparation*
 
 ## License
 
