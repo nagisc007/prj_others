@@ -288,13 +288,47 @@ def sc_gathermoney(w: wd.World):
 def sc_yutuber(w: wd.World):
     h = yusha = w.yusha
     sol, mako = w.sol, w.mako
-    return w.scene("勇者チューバーでいこう",
+    return w.scene("勇チューバーでいこう",
+            h.be(w.stage.bedroom, w.day.awake2),
+            yusha.talk("はーいどもー！！", ""),
+            h.look(""),
+            # NOTE: 基本的なこといろいろやってみるが、視聴数のびない。三日目で飽きてやめる
             )
 
-def sc_(w: wd.World):
+def sc_nothingmoney(w: wd.World):
     h = yusha = w.yusha
     sol, mako = w.sol, w.mako
-    return w.scene("",
+    return w.scene("儲からない！",
+            # NOTE: 儲からないと気づく
+            yusha.talk("こんなことをしてる場合じゃなーい！",
+                "$meたちは魔王退治の旅に出る為の準備をしようとしていたのに",
+                "何故こんなことになっているんだ？"),
+            h.look("やっと気づいたのか", "という目線を$n_makoは二人の能天気な男子に向けている"),
+            sol.talk("いや元々$yushaが言い出したんだろ？", "旅支度する金がないとかって"),
+            yusha.talk("でも$yutuberやろうっていうのは$solだろ？"),
+            sol.talk("$meは比較的楽に稼げそうなやつを探しててだな……"),
+            mako.talk("ああもう！",
+                "それじゃあ$meが魔王退治の旅のスポンサーになってあげるから",
+                "お金のことはそれで解決してよ！"),
+            h.look("取っ組み合いを始めそうな二人の間に割って入った$n_makoにそう言われたが",
+                "二人とも「スポンサーって何だ？」という表情で彼女を見ている"),
+            mako.talk("あのね。",
+                "スポンサーっていうのは君たちがやることに対して興味があるから支援してお金を出してあげようという",
+                "お金持ちのことよ"),
+            sol.talk("嬢ちゃんそんな金持ちなのか？"),
+            mako.talk("金持ちというか……国をどうこうするくらい朝飯前的な？"),
+            h.look("今度は奇異な目を男子二人が彼女に向ける番だった"),
+            sol.talk("嬢ちゃんも冗談って言うんだな", "ハハハハ"),
+            yusha.talk("そんな無理しなくても$meたちで旅費くらい何とかするって。",
+                "だからそのスポンサーだなんだってのはやんなくていいよ"),
+            mako.talk("ぼ、$meはね", "ホントに……！"),
+            h.look("何か言おうとした$n_makoに背を向けて",
+                "$Sと$solは二人で肩を寄せ合って「でもどうする。いざ金儲けるっても大変だぞ」などと内緒話を始めていた"),
+            mako.talk("……ホントなのに"),
+            h.look("一人仲間はずれにされた疎外感の中",
+                "$n_makoは自分の$phoneで自宅の一部の画像を呼び出した。",
+                "それは薄暗い石造りの地下室の一画を写したもののようだったが",
+                "そんな中でも鈍く光る金塊が山となっている様を確認することが出来たのだった"),
             )
 
 # episodes
@@ -312,6 +346,8 @@ def ep15(w: wd.World):
 
 def ep16(w: wd.World):
     return (w.chaptertitle(TITLE[2]),
+            sc_yutuber(w),
+            sc_nothingmoney(w),
             )
 
 # outline
