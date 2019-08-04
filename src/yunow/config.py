@@ -11,7 +11,7 @@ CHARAS = (
         # main
         ("yusha", "タロウ", 16, "male", "勇者", "me:俺:S:勇者:yula:ユラ:mako:マコ:sol:ソル"),
         ("sol", "ソル", 18, "male", "戦士", "me:オレ:yusha:タロ吉:mako:マコ"),
-        ("mako", "魔子", 16, "female", "魔法使い", "me:僕:yusha:勇者様:taro:タロウ様"),
+        ("mako", "魔子", 16, "female", "魔法使い", "me:僕:yusha:勇者様:taro:タロウ様:sol:ソル"),
         # sub
         ("maou", "魔王", 36, "female", "魔族の王", "me:我"),
         ("daimaou", "大魔王", 99, "male", "魔族の王", "me:我"),
@@ -74,6 +74,8 @@ ITEMS = (
         ("game", "ゲエム"),
         # chapter 2
         ("yutuber", "勇チューバー"),
+        ("drag_mentos", "メンタス"),
+        ("healdrink", "薬草ジュース"),
         )
 
 
@@ -94,6 +96,8 @@ INFOS = (
         ("game2", "勇者グランオーダー"),
         ("game3", "パズル勇者ドラゴン"),
         ("darkgame", "黒ガチャと勇者ウィズ"),
+        # chapter 2
+        ("mentosgeyser", "メンタスゲイザー"),
         )
 
 
