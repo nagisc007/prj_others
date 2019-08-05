@@ -720,6 +720,7 @@ def story(w: wd.World):
             ep2(w),
             ep3(w),
             ep4(w),
+            ep5(w),
             )
 
 def main(): # pragma: no cover
