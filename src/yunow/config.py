@@ -60,6 +60,7 @@ DAYS = (
         ("firstawake", "最初に死に戻りした日"),
         ("firstawake2", "死に戻り１の翌日"),
         ("awake2", "二回目死に戻り日"),
+        ("buying", "旅の買い物日"),
         )
 
 
@@ -76,6 +77,7 @@ ITEMS = (
         ("yutuber", "勇チューバー"),
         ("drag_mentos", "メンタス"),
         ("healdrink", "薬草ジュース"),
+        ("otokudotcom", "爆買いドットコム"),
         )
 
 
