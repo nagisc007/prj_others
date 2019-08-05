@@ -411,6 +411,15 @@ def sc_letsbuying(w: wd.World):
     sol, mako = w.sol, w.mako
     return w.scene("さて買い物だ",
             h.be(w.stage.hometown, w.day.buying),
+            yusha.talk("今", "帰ったぜ"),
+            h.look("自宅の玄関のドアを開けた少年の顔は泥で汚れ",
+                "一週間前には貧相に見えた体つきも多少筋肉質になっているようにその少女の目には映った"),
+            mako.talk("お勤め", "ご苦労様です。", "$taro"),
+            h.look("丁寧に頭を下げた彼女を見て", "$Sである彼は満足そうに頷くと",
+                "そのまま膝から崩れて倒れてしまったのだった"),
+            mako.talk("$taro？", "大丈夫ですか！？", "$taro！！"),
+            w.tag.br(),# TODO
+            h.think(""),
             h.deal("$Sと$solが雑用をして何とか一万Ｇを稼ぎ出した"),
             h.move("三人は再び旅支度を整える為と商店街に足を運んだ"),
             h.look("城下町の商店街は中央から南側の通りに沿って広がっている"),
@@ -512,9 +521,9 @@ def story_outline(w: wd.World):
 # main
 def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap2"]),
-            ep14(w),
-            ep15(w),
-            ep16(w),
+            #ep14(w),
+            #ep15(w),
+            #ep16(w),
             ep17(w),
             )
 
