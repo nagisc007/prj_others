@@ -2,11 +2,11 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Develop | 2019.8.- | 2019.8.4 | Love | 10K | [Non published](https://google.com/) | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
+| v0.1.0 | Develop | 2019.8.- | 2019.8.6 | Love | 10K | [Non published](https://google.com/) | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 
 **「その縞模様だけが、私の好きを縛り付けていた」**
 
-*in preparation*
+小さい頃から想いを寄せる男性が自分のオリジナルブランドを立ち上げて、色々と試着させてくれる。その中で今度下着にチャレンジすることにしたとゼブラ柄の下着を貰ったが、彼女はゼブラ柄が大嫌いだった。
 
 ## Description
 
@@ -14,11 +14,12 @@
 
 ## Characters
 
-*in preparation*
+- 普通の女子高生
+- 近所のオリジナルブランド兄貴
 
 ## Stages
 
-*in preparation*
+- 千葉県
 
 ## License
 
