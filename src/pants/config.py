@@ -53,7 +53,7 @@ DAYS = (
 ITEMS = (
         # main
         ("pants", "パンツ"),
-        ("sagerobe", "聖紫法衣"),
+        ("sagerobe", "聖紫法衣"),# Yomi: せいしほうい
         # sub
         )
 
