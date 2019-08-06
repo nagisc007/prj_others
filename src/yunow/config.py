@@ -28,6 +28,7 @@ CHARAS = (
         ("minion", "魔王の部下", 99, "male", "魔王の部下", "me:オレ:mane:軍参謀"),
         ("muramasa", "ムラサメ", 58, "male", "刀鍛冶", "me:ワシ"),
         ("idol", "ユカリン", 40, "female", "アイドル"),
+        ("gatekeeper", "門番", 28, "male", "兵士", "me:私"),
         # monster
         ("slime", "スライム", 99, "male", "モンスター", "me:ボク"),
         )
