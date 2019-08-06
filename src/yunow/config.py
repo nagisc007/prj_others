@@ -81,6 +81,7 @@ ITEMS = (
         ("drag_mentos", "メンタス"),
         ("healdrink", "薬草ジュース"),
         ("otokudotcom", "爆買いドットコム"),
+        ("shortsword", "ショートソード"),
         )
 
 
