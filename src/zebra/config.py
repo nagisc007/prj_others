@@ -9,7 +9,7 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("emi", "槙坂,笑美", 15, "female", "高校生", "me:わたし"),
+        ("emi", "槙坂,笑美", 15, "female", "高校生", "me:わたし:ken:ケン"),
         ("ken", "陣野,ケン", 21, "male", "アパレル経営", "me:オレ"),
         # sub
         # family

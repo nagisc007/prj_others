@@ -12,7 +12,12 @@ THM = cnf.THEMES
 
 
 # scenes
-# TODO: scene structure
+def sc_mybra(w: wd.World):
+    h = emi = w.emi
+    return w.scene("私の下着",
+            h.be(w.stage.myroom, w.day.current),
+            h.deal("ブラを身につける。そこに自分が$kenとは違う生き物なのだと感じる"),
+            )
 
 # episodes
 def ep_intro(w: wd.World):
