@@ -28,6 +28,8 @@ CHARAS = (
         ("minion", "魔王の部下", 99, "male", "魔王の部下", "me:オレ:mane:軍参謀"),
         ("muramasa", "ムラサメ", 58, "male", "刀鍛冶", "me:ワシ"),
         ("idol", "ユカリン", 40, "female", "アイドル"),
+        # monster
+        ("slime", "スライム", 99, "male", "モンスター", "me:ボク"),
         )
 
 
@@ -61,6 +63,7 @@ DAYS = (
         ("firstawake2", "死に戻り１の翌日"),
         ("awake2", "二回目死に戻り日"),
         ("buying", "旅の買い物日"),
+        ("firstfield", "初めて町の外に出た日"),
         )
 
 

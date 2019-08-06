@@ -544,6 +544,26 @@ def sc_discounting(w: wd.World):
                 "安物買いの銭失いという格言を大昔の偉人が残してくれていることを"),
             )
 
+## ep18 scenes
+def sc_gofield(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    slime = w.slime
+    return w.scene("いざ町の外へ",
+            h.be(w.stage.myliving, w.day.firstfield),
+            # TODO: 母親に送り出される、仲間と共に門の外側へ
+            h.be(w.stage.homefield),
+            # TODO: 初めてのフィールド、情景、冒険が始まるワクワク感、なうしまくり、スライム登場
+            )
+
+def sc_meetslime(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    slime = w.slime
+    return w.scene("さあスライムを倒そう",
+            # TODO: 勇者だけが倒そうとする、何故？厄介者でみんな避ける相手。弱いが面倒。知らないの？勇者死す
+            )
+
 # episodes
 def ep14(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -569,6 +589,10 @@ def ep17(w: wd.World):
             sc_discounting(w),
             )
 
+def ep18(w: wd.World):
+    return (w.chaptertitle(TITLE[4]),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -585,6 +609,7 @@ def story(w: wd.World):
             ep15(w),
             ep16(w),
             ep17(w),
+            ep18(w),
             )
 
 def main(): # pragma: no cover
