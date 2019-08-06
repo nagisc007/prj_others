@@ -28,6 +28,9 @@ CHARAS = (
         ("minion", "魔王の部下", 99, "male", "魔王の部下", "me:オレ:mane:軍参謀"),
         ("muramasa", "ムラサメ", 58, "male", "刀鍛冶", "me:ワシ"),
         ("idol", "ユカリン", 40, "female", "アイドル"),
+        ("gatekeeper", "門番", 28, "male", "兵士", "me:私"),
+        # monster
+        ("slime", "スライム", 99, "male", "モンスター", "me:ボク"),
         )
 
 
@@ -35,6 +38,7 @@ STAGES = (
         # Area
         ("homeregion", "ジハーン"),
         # Place
+        ("homemount", "アルチハン山脈"),
         ("hometown", "城下町"),
         ("homefield", "ジハーン近郊"),
         ("castle1", "ジハーン城"),
@@ -45,6 +49,7 @@ STAGES = (
         ("maocastle", "魔王城"),
         ("freema", "モウカリ"),
         ("amazon", "mamazon"),
+        ("town2", "クレーベ"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
@@ -61,6 +66,7 @@ DAYS = (
         ("firstawake2", "死に戻り１の翌日"),
         ("awake2", "二回目死に戻り日"),
         ("buying", "旅の買い物日"),
+        ("firstfield", "初めて町の外に出た日"),
         )
 
 
@@ -78,6 +84,7 @@ ITEMS = (
         ("drag_mentos", "メンタス"),
         ("healdrink", "薬草ジュース"),
         ("otokudotcom", "爆買いドットコム"),
+        ("shortsword", "ショートソード"),
         )
 
 
