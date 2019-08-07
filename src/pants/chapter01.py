@@ -774,6 +774,7 @@ def sc_prisoner(w: wd.World):
     h = hero = w.hero
     ery = w.ery
     return w.scene("我は囚人である",
+            h.know(w.i.destroy_sage.deflag()),
             hero.talk().t("ちょっと待て。",
                 "$meは何もしてないし",
                 "そもそもただのパンツだぞ。",
