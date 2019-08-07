@@ -15,25 +15,130 @@ THM = cnf.THEMES
 def sc_mybra(w: wd.World):
     h = emi = w.emi
     return w.scene("私の下着",
+            w.tag.comment("笑美の一人称"),
             h.be(w.stage.myroom, w.day.current),
             h.deal("ブラを身につける。そこに自分が$kenとは違う生き物なのだと感じる"),
+            h.look("姿見に映る自分を好きな人は羨ましい"),
+            h.look("女の子の部屋だろうか。殺風景。本棚、ベッド、勉強机。テレビもパソコンもない。スマートフォンだけが情報源"),
+            h.look("画面に映った大好きな$kenさんのオリジナルブランド。$i_brandname"),
+            h.think("そこにはゼブラ柄のシャツやパンツ、スカート"),
+            h.look("ハンガーに掛けられたゼブラ柄のＴシャツ"),
+            h.think("でも$meはゼブラ柄は大嫌いだった"),
+            )
+
+def sc_myfavorite(w: wd.World):
+    h = emi = w.emi
+    return w.scene("私の好きなものたち",
+            h.be(w.stage.classroom),
+            h.look("学校に行けばみんな同じ服を使っている。",
+                "それなのに目に映るのは違って見える。輝いている子、暗い子、スタイルのいい子。いろいろだ"),
+            h.think("服を変えなくても、その人はその人らしいんだと思う。けど$kenはそんなこと言わない。"),
+            h.think("小さい頃からハーフで色黒だとバカにされたからか、気づいたら髪を黒くしてみたり、白粉で真っ白にしたり、そんな奇行が目立つ人だった"),
+            # TODO: 学校の不満、制服、同じにしようとすることと実態の差への不満
+            )
+
+def sc_firstmeet(w: wd.World):
+    h = emi = w.emi
+    ken = w.ken
+    return w.scene("彼との出会い",
+            # NOTE: ちょっと回想
+            h.think("$meは自分の容姿に自信はなくて、でもそこまで酷いと思ってなかったけど、ある日、突然男子から「お前ちょっときもいよな」って言われて"),
+            h.think("その言葉がどれだけ乙女心を傷つけたのかも知らない彼は、逃げるように転校してしまったけれど、あの傷だけは未だに心に残っている"),
+            h.think("そんな$meを変えてくれたのが$kenだった"),
+            # TODO: 場所考える。ちょっと変わったところがいい
+            ken.ask("どうしたの？"),
+            h.look("その時の彼の着ていたのが自作のシャツだった。なんか動物愛護団体みたいなものかと思った。アイラブシマウマって書いてあったけれど英語だとシマウマじゃないよなと思ったことを覚えている"),
+            h.think("普通ならこういう時は大人の人が$meに驕ってくれるものかと思っていたけれど、結局全額$meが出した"),
+            h.think("あとで聞くと、近所の子だと分かったから話しかけてくれたらしい。金を借りるつもりだったのだとか"),
+            h.think("それ以来、結構頻繁に一緒に話すようになり、$kenがオリジナルブランドを作っているのだと知った"),
+            ken.talk("だってあんな奇妙な配色", "シマウマかパンダくらいなもんだろ？"),
+            h.think("その言葉が、$meが欲しかった感情かも知れない"),
+            )
+
+def sc_presentbra(w: wd.World):
+    h = emi = w.emi
+    ken = w.ken
+    return w.scene("下着のプレゼント",
+            h.be(w.stage.hisshop),
+            h.look("一画だけ間借りさせてもらっているそうだ。地元野菜の並びにゼブラ服があるのは奇妙だったが、これが意外と売れているらしい"),
+            ken.talk("ありがとう。こっち持ってきて"),
+            h.deal("$meは休日には仕事を少し手伝ったりした。当然アルバイト代なんてない。でも一緒にいる時間が貴重だ"),
+            h.think("同じ学校の男子には感じない何かがある。それを知りたかった"),
+            # TODO: てらいなくゼブラを着るおじさんおばさん、自分はどうも苦手、理由が不明
+            )
+
+def sc_disliked(w: wd.World):
+    h = emi = w.emi
+    return w.scene("嫌いなものたち",
+            h.be(w.stage.dyning),
+            # TODO: 食事風景、嫌いなものばかり、大人になると増えていく？
+            )
+
+def sc_lookingmind(w: wd.World):
+    h = emi = w.emi
+    return w.scene("気持ちが行方不明",
+            h.be(w.stage.myroom),
+            h.deal("部屋に戻った$me"),
+            h.look("もらった$zebrabraを見て悩ましい"),
+            h.deal("一応着けてみる"),
+            h.look("姿見で見る"),
+            h.think("まるでコスプレのお姉さんみたいだ"),
+            h.think("でもちょっとだけ、自分じゃない自分が鏡の向こうにいる気がした"),
+            h.think("その$meが笑った気がした"),
+            )
+
+def sc_model(w: wd.World):
+    h = emi = w.emi
+    ken, mam = w.ken, w.mamken
+    return w.scene("写真モデルになってって",
+            h.be(w.stage.kenapart),
+            h.look("久しぶりに$kenの家。狭いアパートに母親と二人暮らし"),
+            mam.talk("いつも悪いわね。手伝ってもらって"),
+            mam.talk("なんかもううちの子みたいね。結婚する？"),
+            h.think("相手の母親から結婚という言葉が出るのはどうなんだ"),
+            emi.talk("そういうのじゃ、ないんで"),
+            ken.talk("こんなおっさん困るだけだよ。ねえ"),
+            ken.talk("それよりちょっと頼みがあるんだ"),
+            h.deal("今度下着もHPに載せたいけど、顔とか出さないモデルをしてもらえないかと"),
+            ken.talk("$emiスタイルいいし、絶対にしてほしいんだ"),
+            )
+
+def sc_takephoto(w: wd.World):
+    h = emi = w.emi
+    return w.scene("写真撮影",
+            )
+
+def sc_confession(w: wd.World):
+    h = emi = w.emi
+    return w.scene("私の告白",
             )
 
 # episodes
 def ep_intro(w: wd.World):
     return (w.chaptertitle("思春期と下着について"),
+            sc_mybra(w),
             )
 
 def ep_mylover(w: wd.World):
     return (w.chaptertitle("大好きな人"),
+            sc_myfavorite(w),
+            sc_firstmeet(w),
+            sc_presentbra(w),
+            sc_disliked(w),
+            # NOTE: 好きな人との関係、ブラを貰う、困惑
             )
 
 def ep_underwear(w: wd.World):
     return (w.chaptertitle("大嫌いな下着"),
+            sc_model(w),
+            sc_takephoto(w),
+            sc_confession(w),
+            # NOTE: モデルに写真撮影させてほしいと頼まれ、困惑
             )
 
 def ep_mymind(w: wd.World):
     return (w.chaptertitle("私の気持ち"),
+            # NOTE: 本音を打ち明ける
             )
 
 # outline

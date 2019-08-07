@@ -9,11 +9,11 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("emi", "槙坂,笑美", 15, "female", "高校生", "me:わたし:ken:ケン"),
-        ("ken", "陣野,ケン", 21, "male", "アパレル経営", "me:オレ"),
+        ("emi", "槙坂,笑美", 15, "female", "高校生", "me:わたし:S:わたし:ken:ケンさん"),
+        ("ken", "陣野,ケン", 21, "male", "アパレル経営", "me:オレ:emi:エミちゃん"),
         # sub
         # family
-        ("mamken", "ケンのママ", 42, "female", "パート", "me:私"),
+        ("mamken", "ケンのママ", 42, "female", "パート", "me:私i:ken:ケン:emi:笑美ちゃん"),
         # mob
         )
 
@@ -24,9 +24,12 @@ STAGES = (
         # Place
         ("myhome", "槙坂家"),
         ("kenapart", "ケンのアパート"),
+        ("hisshop", "ケンの店"),
         # Part
+        ("myroom", "笑美の部屋"),
         ("living", "リビング"),
         ("dyning", "食堂"),
+        ("classroom", "教室"),
         )
 
 DAYS = (
