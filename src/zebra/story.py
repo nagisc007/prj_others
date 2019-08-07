@@ -157,12 +157,14 @@ def ep_mylover(w: wd.World):
             sc_firstmeet(w),
             sc_presentbra(w),
             sc_disliked(w),
+            sc_lookingmind(w),
             # NOTE: 好きな人との関係、ブラを貰う、困惑
             )
 
 def ep_underwear(w: wd.World):
     return (w.chaptertitle("大嫌いな下着"),
             sc_model(w),
+            sc_whyme(w),
             sc_takephoto(w),
             sc_confession(w),
             # NOTE: モデルに写真撮影させてほしいと頼まれ、困惑
