@@ -101,16 +101,48 @@ def sc_model(w: wd.World):
             ken.talk("それよりちょっと頼みがあるんだ"),
             h.deal("今度下着もHPに載せたいけど、顔とか出さないモデルをしてもらえないかと"),
             ken.talk("$emiスタイルいいし、絶対にしてほしいんだ"),
+            h.deal("顔は写さないから。こんなことは君にしか頼めない"),
+            h.think("$meは考えさせてくださいと言って一旦自宅に戻った"),
+            )
+
+def sc_whyme(w: wd.World):
+    h = emi = w.emi
+    return w.scene("私の意味",
+            h.be(w.stage.myroom),
+            h.look("下着を試着した自分を眺めて"),
+            h.think("顔は写らない。でも撮影時は見られる。下着姿だ"),
+            h.think("何も分かっていない。お腹の肉だって、腕だって、何もかも気になる"),
+            h.think("ひょっとして好きだと分かっていて頼んでいるのだろうか。断れないから"),
+            h.think("この時点で自分の中に「断る」という選択肢がないって気づいた"),
             )
 
 def sc_takephoto(w: wd.World):
     h = emi = w.emi
+    ken, masa = w.ken, w.masa
     return w.scene("写真撮影",
+            h.be(w.stage.studio),
+            h.deal("撮影日。緊張してやってきたが、まだ着替えていない"),
+            ken.talk("今日とってくれる$n_masa。気軽に$masaって呼んでやって"),
+            masa.talk("どうも宜しく"),
+            h.deal("握手をすると自分の手が冷や汗だらけと気づく"),
+            h.deal("彼はそれを拭っていた"),
+            h.look("$meが着替えるいくつかの種類の下着が並んでいた"),
+            ken.talk("後でプレゼントするよ"),
+            h.think("そう言ってくれたけれどこれを自分が履くと思うと、それを晒すと思うと、どうしても無理だ"),
+            h.move("下着になった"),
+            h.move("でも撮影に耐えられず、逃げ出した。上着だけはおって"),
             )
 
 def sc_confession(w: wd.World):
     h = emi = w.emi
+    ken = w.ken
     return w.scene("私の告白",
+            h.be(w.stage.myroom),
+            h.deal("電話に向かって話す"),
+            # NOTE: 自分がゼブラ嫌いだったこと、ただ好きだから付き合っただけなこと
+            # NOTE: $kenは自分を認めてくれていたと思いこんでいた。でもそれだけ。好きとかはない。
+            h.think("$meが黒ならあの人は白。一生混ざり合うことなく、人生のしまもようになっただけ"),
+            h.deal("下着を捨てた。明日、新しいのを買いに行こう。ゼブラ柄じゃないやつを"),
             )
 
 # episodes
