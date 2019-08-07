@@ -18,6 +18,7 @@ TITLE = [
         "旅支度なう・その２",# NOTE: ランキングサイトを使って安く買え？
         "旅立ちなう",
         "スライムなう",# NOTE:初戦闘、スライムに苦しむ
+        "Re:Re: 教会なう",# NOTE: 死に戻りを意識
         "はじめてのおつかいなう",# NOTE:初クエスト
         "洞窟なう",# NOTE:洞窟内で
         "野営なう",# NOTE:野宿編１から
@@ -717,6 +718,31 @@ def sc_meetslime(w: wd.World):
                     "やがて$Sは自分の骨が砕ける音だけを聞いた"),
             )
 
+## ep20 scenes
+def sc_re_church(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, pri = w.sol, w.mako, w.priest1
+    return w.scene("教会、ふたたび",
+            h.be(w.stage.church1, w.day.awake3),
+            h.think("息が吸えない！"),
+            h.look("そう思って目を剥くようにして起き上がる"),
+            yusha.talk("ぶはぁ！！", "息が！", "できる！"),
+            pri.talk("いきなり何だね$yusha", "びっくりするじゃあないか"),
+            h.look("耳慣れた穏やかな$n_priest1神父の声に",
+                "改めて周囲を確認すると",
+                "高い天井に修復の跡が見える木の板を張り付けた壁",
+                "申し訳程度のステンドグラスが精霊画を床に薄く映し出している"),
+            yusha.talk("また", "教会……？"),
+            pri.talk("あなたが勝手に入って寝ていたのでしょうね。",
+                "既に朝のお祈りは済ませてしまいましたが", "祈っていきますか？"),
+            h.look("紺色のローブを羽織った神父は鍔のない小さな帽子を直しながら",
+                "聖典を手に$Sに尋ねた"),
+            yusha.talk("お祈りの前に一つ訊きたいことがあるんですが"),
+            pri.talk("質問とは珍しいですね。", "何でしょう？"),
+            yusha.ask(""),
+            # TODO: 死に戻りと気づく
+            )
+
 # episodes
 def ep14(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -752,6 +778,11 @@ def ep19(w: wd.World):
             sc_meetslime(w),
             )
 
+def ep20(w: wd.World):
+    return (w.chaptertitle(TITLE[6]),
+            sc_re_church(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -770,6 +801,7 @@ def story(w: wd.World):
             ep17(w),
             ep18(w),
             ep19(w),
+            ep20(w),
             )
 
 def main(): # pragma: no cover
