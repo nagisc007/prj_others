@@ -66,6 +66,9 @@ def sc_myfavorite(w: wd.World):
     h = emi = w.emi
     return w.scene("私の好きなものたち",
             h.be(w.stage.classroom),
+            h.feel("十月も終わるというのに", "冬服のセーラーだと黒に近い紺色だからか",
+                "じっとりと汗が滲んでくる"),
+            h.look(""),# TODO: continue
             h.look("学校に行けばみんな同じ服を使っている。",
                 "それなのに目に映るのは違って見える。輝いている子、暗い子、スタイルのいい子。いろいろだ"),
             h.think("服を変えなくても、その人はその人らしいんだと思う。けど$kenはそんなこと言わない。"),
