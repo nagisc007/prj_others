@@ -31,6 +31,7 @@ CHARAS = (
         ("gatekeeper", "門番", 28, "male", "兵士", "me:私"),
         # monster
         ("slime", "スライム", 99, "male", "モンスター", "me:ボク"),
+        ("goblin", "ゴブリン", 99, "male", "モンスター", "me:ワイ"),
         )
 
 
