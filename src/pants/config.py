@@ -29,7 +29,7 @@ STAGES = (
         ("lemurian", "エル・レム・リアン"),
         # Place
         ("island_prison", "監獄島"),
-        ("prison", "監獄"),
+        ("prison", "監獄迷宮"),
         ("station", "駅"),
         ("forest1", "大森林"),
         ("herhome", "エリィの家"),
