@@ -26,7 +26,7 @@ CHARAS = (
 
 STAGES = (
         # Area
-        ("lemurian", "エル・レム・リア"),
+        ("lemurian", "エル・レム・リアン"),
         # Place
         ("island_prison", "監獄島"),
         ("prison", "監獄"),
