@@ -35,7 +35,7 @@ STAGES = (
         ("station", "駅"),
         ("forest1", "大森林"),
         ("herhome", "エリィの家"),
-        ("udon", "おくやま"),
+        ("udon", "饂飩おくやま"),
         # Part
         ("train", "列車内"),
         ("sta_home", "駅のホーム"),
