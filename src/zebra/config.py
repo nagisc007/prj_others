@@ -28,6 +28,7 @@ STAGES = (
         ("myhome", "槙坂家"),
         ("kenapart", "ケンのアパート"),
         ("hisshop", "ケンの店"),
+        ("temple", "巌詠寺"),
         # Part
         ("myroom", "笑美の部屋"),
         ("living", "リビング"),
@@ -54,6 +55,7 @@ ITEMS = (
 INFOS = (
         # main
         ("brandname", "KenKen"),
+        ("Ilove", "アイラブシマウマ"),
         )
 
 
