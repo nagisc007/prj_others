@@ -88,6 +88,7 @@ ITEMS = (
         ("healdrink", "薬草ジュース"),
         ("otokudotcom", "爆買いドットコム"),
         ("shortsword", "ショートソード"),
+        ("karebasho", "今ソコなう"),
         )
 
 
