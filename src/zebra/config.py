@@ -17,6 +17,7 @@ CHARAS = (
         # family
         ("mamken", "ケンのママ", 42, "female", "パート", "me:私i:ken:ケン:emi:笑美ちゃん"),
         # mob
+        ("teacher", "先生", 50, "male", "高校教師", "me:私"),
         )
 
 STAGES = (
