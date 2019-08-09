@@ -51,6 +51,7 @@ STAGES = (
         ("freema", "モウカリ"),
         ("amazon", "mamazon"),
         ("town2", "クレーベ"),
+        ("forest1", "クレーベ周辺の森"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
@@ -87,6 +88,7 @@ ITEMS = (
         ("healdrink", "薬草ジュース"),
         ("otokudotcom", "爆買いドットコム"),
         ("shortsword", "ショートソード"),
+        ("karebasho", "今ソコなう"),
         )
 
 
