@@ -39,8 +39,10 @@ STAGES = (
         # Part
         ("train", "列車内"),
         ("sta_home", "駅のホーム"),
-        ## ch01-04
+        ## chapter1
         ("out_prison", "監獄の外"),
+        ## chapter2
+        ("prison1", "監獄迷宮最下層"),
         )
 
 DAYS = (
@@ -49,6 +51,7 @@ DAYS = (
         ("firstmeet", "最初の遭遇日"),
         ("transfer1", "転生した日"),
         ("current", "現在"),
+        ("outprison", "脱獄した日"),
         # sub
         ("departher", "彼女と別れた日", 6,6, 2016),
         )
