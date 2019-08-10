@@ -9,15 +9,16 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("emi", "槙坂,笑美", 16, "female", "高校生", "me:わたし:S:わたし:ken:ケンさんi:yumi:遊美"),
+        ("emi", "槙坂,笑美", 16, "female", "高校生", "me:わたし:S:わたし:ken:ケンさんi:yumi:遊美:kmam:リアさん"),
         ("ken", "陣野,ケン", 21, "male", "アパレル経営", "me:オレ:emi:エミちゃん:masa:マサ"),
         # sub
         ("masa", "鈴村,マサト", 27, "male", "カメラマン", "me:俺"),
         ("yumi", "武田,遊美", 16, "female", "高校生", "me:あたし:emi:エミ"),
         # family
-        ("mamken", "ケンのママ", 42, "female", "パート", "me:私i:ken:ケン:emi:笑美ちゃん"),
+        ("mamken", "陣野,リア", 42, "female", "パート", "me:私i:ken:ケン:emi:笑美ちゃん"),
         # mob
         ("teacher", "先生", 50, "male", "高校教師", "me:私"),
+        ("murata", "村田,健吾", 67, "male", "農家", "me:僕"),
         )
 
 STAGES = (
