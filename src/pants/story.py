@@ -9,6 +9,7 @@ sys.path.append('storybuilder')
 from storybuilder.builder import world as wd
 from src.pants import config as cnf
 from src.pants import chapter01 as chap01
+from src.pants import chapter02 as chap02
 THM = cnf.THEMES
 
 
@@ -16,7 +17,8 @@ THM = cnf.THEMES
 def story_baseinfo(w: wd.World):
     return [
             ("story", story(w), w.hero, w.hero),
-            ] + chap01.story_baseinfo(w)
+            ] + chap01.story_baseinfo(w) \
+                + chap02.story_baseinfo(w)
 
 def story_outline(w: wd.World):
     return [
@@ -26,7 +28,8 @@ def story_outline(w: wd.World):
                 w.hero.be(),
                 w.hero.be(),
                 True),
-            ] + chap01.story_outline(w)
+            ] + chap01.story_outline(w) \
+                + chap02.story_outline(w)
 
 # main
 def world():
@@ -39,6 +42,7 @@ def world():
 def story(w: wd.World):
     return (w.maintitle("大賢者さまのパンツ！"),
             chap01.story(w),
+            chap02.story(w),
             )
 
 
