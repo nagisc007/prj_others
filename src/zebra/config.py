@@ -15,6 +15,7 @@ CHARAS = (
         ("masa", "鈴村,マサト", 27, "male", "カメラマン", "me:俺:ken:ケン"),
         ("yumi", "武田,遊美", 16, "female", "高校生", "me:あたし:emi:エミ"),
         # family
+        ("mother", "槙坂,母", 40, "female", "パート", "me:私:emi:笑美"),
         ("mamken", "陣野,リア", 42, "female", "パート", "me:私i:ken:ケン:emi:笑美ちゃん"),
         # mob
         ("teacher", "先生", 50, "male", "高校教師", "me:私"),
