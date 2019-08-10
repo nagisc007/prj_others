@@ -267,6 +267,53 @@ def sc_smartrunaway(w: wd.World):
                     "$karebashoは相手も使うことができるということを"),
             )
 
+## ep23 scenes
+def sc_gooutmonsters(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    return w.scene("敵から逃亡せよ！",
+            h.be(w.stage.forest1, w.day.awake3),
+            h.explain("森の中で$n_goblinに囲まれてしまった$S一行であったが",
+                "$n_makoが見つけた$phoneのアプリ『$karebasho』により",
+                "敵の位置を把握することができるということに気づいたことで",
+                "この窮地を脱する為の妙案を思いついたのであった"),
+            sol.talk("なーに物語の解説っぽく語ってるんだよ！"),
+            yusha.talk("いやだって", "これから$n_goblin包囲網突破して湖に逃げ込もうっていうんだから",
+                "それなりに心の準備ってもんが必要だろ？"),
+            h.look("$Sは自分の$phoneにそれを語り終えてから「なう」と呟くと",
+                "板の上には彼の言葉が森の画像付きで流れた"),
+            h.deal("それを見て満足そうにした$Sは",
+                "$phoneを肩から掛けたズタ袋に仕舞うと",
+                "やっと$shortswordを構えて茂みを割って現れた二匹の$n_goblinに対峙する"),
+            sol.talk("低級モンスターとはいえ油断はすんなよ$yusha"),
+            yusha.talk("分かってる"),
+            h.deal("とはいえ$Sにとっては初めてのモンスターとのちゃんとした戦闘である。",
+                "一歩踏み出そうとした右足の膝が小刻みに震え",
+                "上手く前に足を出せない"),
+            mako.talk("$taro？", "やっぱり$meが倒しますよ？"),
+            h.look("その様子に背後で見ていたピンク髪の魔法使い$n_makoが",
+                "右の人差し指を立ててその先端に小さな炎を灯したが、"),
+            yusha.talk("いや", "ここは$meの本気の見せ所だから"),
+            h.deal("そう言って空いている左手で彼女を制すと",
+                "やっと震えの収まった右足から大地を蹴って",
+                "棍棒を振り上げて向かってくる$n_goblinに$shortswordを向けた"),
+            yusha.talk("来いや！"),
+            h.deal("右手でしっかりと握った$shortswordを振り下ろされた相手の太い棍棒にぶつける"),
+            yusha.talk("痛っ！！"),
+            h.deal("だが案の定$Sの力では太刀打ちできず",
+                "右手から$shortswordは跳ね飛ばされて", "大きく仰け反る形になった"),
+            sol.talk("何やってんだ", "全く！"),
+            h.deal("応戦していた$solは何とか目の前の$n_goblinの胴体を引き裂いて",
+                "$Sを助けに向かおうとする"),
+            h.look("けれどそれよりも早く$Sの額へと$n_goblinの第二撃目が降り注ぎ――"),
+            mako.talk("$taro！"),
+            h.deal("ぶつかる！？", "と感じて彼が目を閉じたのとほぼ同時に",
+                "$n_goblinの首を風の刃が切り裂いていった"),
+            mako.talk("危なかったですね", "$taro"),
+            yusha.talk("う、うん……"),
+            # TODO: 戦闘後、湖に抜けて、あとで合流しよう。そして水没し、水中なう、で死んでいく
+            )
+
 # episodes
 def ep21(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -277,6 +324,11 @@ def ep21(w: wd.World):
 def ep22(w: wd.World):
     return (w.chaptertitle(TITLE[1]),
             sc_smartrunaway(w),
+            )
+
+def ep23(w: wd.World):
+    return (w.chaptertitle(TITLE[2]),
+            sc_gooutmonsters(w),
             )
 
 # outline
@@ -293,6 +345,7 @@ def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap2"]),
             ep21(w),
             ep22(w),
+            ep23(w),
             )
 
 def main(): # pragma: no cover
