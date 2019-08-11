@@ -397,7 +397,7 @@ def sc_whyme(w: wd.World): # NOTE: omit the scene
             h.think("何も分かっていない。お腹の肉だって、腕だって、何もかも気になる"),
             h.think("ひょっとして好きだと分かっていて頼んでいるのだろうか。断れないから"),
             h.think("この時点で自分の中に「断る」という選択肢がないって気づいた"),
-            ).omit
+            ).omit()
 
 def sc_takephoto(w: wd.World):
     h = emi = w.emi
