@@ -51,6 +51,7 @@ STAGES = (
         ("freema", "モウカリ"),
         ("amazon", "mamazon"),
         ("town2", "クレーベ"),
+        ("town3", "ナズム"),
         ("forest1", "クレーベ周辺の森"),
         # Part
         ("castle1gate", "城門"),
@@ -70,6 +71,7 @@ DAYS = (
         ("buying", "旅の買い物日"),
         ("firstfield", "初めて町の外に出た日"),
         ("awake3", "三回目死に戻り日"),
+        ("awake4", "4回目死に戻り日"),
         )
 
 
