@@ -22,6 +22,8 @@ CHARAS = (
         # chapter 2
         ("gater1", "番人1", 28, "female", "番兵"),
         ("gater2", "番人2", 30, "female", "番兵"),
+        ("kerberos1", "ケル", 99, "male", "番犬"),
+        ("kerberos2", "ベロス", 99, "male", "番犬"),
         )
 
 STAGES = (

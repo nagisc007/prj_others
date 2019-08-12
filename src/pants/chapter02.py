@@ -146,10 +146,43 @@ def sc_intheprison(w: wd.World):
                     "どう見ても普通の犬とは思えない影を$meに見せた"),
             )
 
+## ep10 scenes
+def sc_maddog(w: wd.World):
+    h = hero = w.hero
+    ery = w.ery
+    return w.scene("魔獣がペット",
+            h.be(w.stage.prison1, w.day.outprison),
+            h.hear("大型犬のような吠え声の主は",
+                "$eryの手から出た光で照らされた通路の突き当りに巨大な影を作っていた"),
+            hero.talk("一つ訊いておくのを忘れたんだが",
+                "この迷宮にはおかしな仕掛けとか番をする怪物とか",
+                "そういったものはあるのか？"),
+            ery.talk("基本的には$i_energyが高い者を封じ込めておく為の檻でしかないから",
+                "最深部のあの特殊な牢屋以外は長く複雑な迷宮になっているだけだ。",
+                "ただ", "何もいないというのも心許ないからな。",
+                "一応$meのペットを数匹", "野放しにはしておいたぞ"),
+            h.look("ペットおいう言葉があることは安心しつつも",
+                "どうやらそれは$meが住んでいたアパートで飼ったりできる類の可愛らしい生き物ではないことは確かだった"),
+            h.look("巨大になった影はその輪郭がはっきりとし",
+                "やがて$meたちの前にそのガリガリに痩せて細くなった四本足で姿を現した"),
+            ery.talk("おお。", "やはり$n_kerberos1と$n_kerberos2か。",
+                "よくぞ五百年も無事に生き延びておったな"),
+            h.look("$n_kerberos1と$n_kerberos2と呼ばれたその二匹は",
+                "首が三つとそれぞれに赤い目玉が六つずつという",
+                "$meの常識からすれば恐ろしい容貌の犬に似た何かだった"),
+            h.deal("明らかに"),
+            # NOTE: 番犬は元ペット、だが制御できず戦う、何か妙だ？　となる
+            )
+
 # episodes
 def ep9(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
             sc_intheprison(w),
+            )
+
+def ep10(w: wd.World):
+    return (w.chaptertitle(TITLE[1]),
+            sc_maddog(w),
             )
 
 # outline
@@ -165,6 +198,7 @@ def story_outline(w: wd.World):
 def story(w: wd.World):
     return (w.maintitle(cnf.TITLES["chap02"]),
             ep9(w),
+            ep10(w),
             )
 
 def main(): # pragma: no cover
