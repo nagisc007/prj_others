@@ -51,6 +51,7 @@ STAGES = (
         ("freema", "モウカリ"),
         ("amazon", "mamazon"),
         ("town2", "クレーベ"),
+        ("town3", "ナズム"),
         ("forest1", "クレーベ周辺の森"),
         # Part
         ("castle1gate", "城門"),
