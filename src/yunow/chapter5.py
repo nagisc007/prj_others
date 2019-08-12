@@ -431,6 +431,29 @@ def sc_gooutmonsters2(w: wd.World):
             h.deal("$Sは水中で泡と共に叫びを絞り出しながら", "暗い暗い意識の底へと沈んでいった"),
             )
 
+## ep25 scenes
+def sc_churchagain4(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    pri = w.priest1
+    return w.scene("４度目の教会",
+            h.be(w.stage.church1, w.day.awake4),
+            yusha.talk("溺れる！"),
+            h.look("思わず出た大声にびっくりして",
+                "$Sは起き上がった"),
+            h.deal("よく見れば教会の礼拝堂の長椅子の上で",
+                "彼は横たえられている"),
+            pri.talk("おや。", "お目覚めのようですね"),
+            h.look(""),
+            )
+
+def sc_avoidgoblin(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    return w.scene("ゴブリン回避",
+            # NOTE: 最初からアプリ使ってゴブリン回避、大きく迂回する経路
+            )
+
 # episodes
 def ep21(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -453,6 +476,11 @@ def ep24(w: wd.World):
             sc_gooutmonsters2(w),
             )
 
+def ep25(w: wd.World):
+    return (w.chaptertitle(TITLE[4]),
+            sc_churchagain4(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -469,6 +497,7 @@ def story(w: wd.World):
             ep22(w),
             ep23(w),
             ep24(w),
+            ep25(w),
             )
 
 def main(): # pragma: no cover
