@@ -17,6 +17,7 @@ TITLE = [
         "逃走中なう・その２",# NOTE: 逃げる
         "水中なう",# NOTE: 溺死で四度目
         "Re:Re:Re:教会なう",# NOTE: 四度目教会、最初からGPS使ってモンスターから距離取りつつ森を抜ける
+        "ゴーゴンマップなう",# NOTE: スマフマップ使うで
         "宿屋なう",# NOTE: 隣町、宿の主人から色々聞くことに
         "はじめてのおつかいなう",# NOTE:初クエスト
         "洞窟なう",# NOTE:洞窟内で
@@ -549,6 +550,36 @@ def sc_avoidgoblin(w: wd.World):
                     "その後を追うもう一つの影には誰も気づいていなかった"),
             )
 
+## ep26 scenes
+def sc_vanishriver(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    return w.scene("消え去った川",
+            h.be(w.stage.river1, w.day.awake4),
+            h.look("$Sたち一行は街道を逸れて地図上に描かれていた$st_river1という",
+                "$st_homeregionの西側を南北に蛇行しながら流れている川があるはずの場所へとやってきたのだが",
+                "三人は誰もが口を開けたまま", "その場で固まっていた"),
+            yusha.talk("川なんてなかった"),
+            sol.talk("いや待てよ！", "これでも最新の地図を手に入れてきたんだぞ？",
+                "こんなに力強く描かれている川が", "そう簡単に消えると思うか？"),
+            h.look("渡れるんだからいいじゃないか",
+                "といつになく楽観的な$Sに対して", "そのそそり立つ赤髪を掻き毟りながら$solが「おかしいだろ！」と文句をつける"),
+            sol.talk("こういう明らかに大きな変化があった時ってのはな",
+                "近くに危険が迫っていることが多いんだよ！",
+                "噴火するとか地面に穴が開くとか",
+                "見たこともないようなモンスターが悪さしてるとか",
+                "ほんとシャレになんねんだって！"),
+            h.deal("何か相当嫌なことでも経験したのだろう。",
+                "$Sはああだこうだと力説する$solの顔に$phoneを向けると、"),
+            yusha.talk(""),# TODO
+            )
+
+def sc_gogonmap(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako = w.sol, w.mako
+    return w.scene("マップアプリだ",
+            )
+
 # episodes
 def ep21(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -577,6 +608,12 @@ def ep25(w: wd.World):
             sc_avoidgoblin(w),
             )
 
+def ep26(w: wd.World):
+    return (w.chaptertitle(TITLE[5]),
+            sc_vanishriver(w),
+            sc_gogonmap(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -594,6 +631,7 @@ def story(w: wd.World):
             ep23(w),
             ep24(w),
             ep25(w),
+            ep26(w),
             )
 
 def main(): # pragma: no cover

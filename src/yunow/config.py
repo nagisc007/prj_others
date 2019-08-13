@@ -53,6 +53,7 @@ STAGES = (
         ("town2", "クレーベ"),
         ("town3", "ナズム"),
         ("forest1", "クレーベ周辺の森"),
+        ("river1", "ポム川"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
@@ -91,6 +92,7 @@ ITEMS = (
         ("otokudotcom", "爆買いドットコム"),
         ("shortsword", "ショートソード"),
         ("karebasho", "今ソコなう"),
+        ("gmap", "ゴーゴンマップ"),
         )
 
 
