@@ -29,6 +29,7 @@ CHARAS = (
         ("muramasa", "ムラサメ", 58, "male", "刀鍛冶", "me:ワシ"),
         ("idol", "ユカリン", 40, "female", "アイドル"),
         ("gatekeeper", "門番", 28, "male", "兵士", "me:私"),
+        ("vilaman1", "村の男性", 45, "male", "村人", "me:私"),
         # monster
         ("slime", "スライム", 99, "male", "モンスター", "me:ボク"),
         ("goblin", "ゴブリン", 99, "male", "モンスター", "me:ワイ"),
@@ -115,6 +116,7 @@ INFOS = (
         ("darkgame", "黒ガチャと勇者ウィズ"),
         # chapter 2
         ("mentosgeyser", "メンタスゲイザー"),
+        ("selphy", "セルフィン"),
         )
 
 
