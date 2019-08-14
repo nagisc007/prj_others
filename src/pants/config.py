@@ -24,6 +24,8 @@ CHARAS = (
         ("gater2", "番人2", 30, "female", "番兵"),
         ("kerberos1", "ケル", 99, "male", "番犬"),
         ("kerberos2", "ベロス", 99, "male", "番犬"),
+        ("avy", "アヴィ", 22, "female", "番人", "me:アタシ"),
+        ("empu1", "エンプ", 99, "male", "巨大猿"),
         )
 
 STAGES = (
@@ -45,6 +47,7 @@ STAGES = (
         ("out_prison", "監獄の外"),
         ## chapter2
         ("prison1", "監獄迷宮最下層"),
+        ("pri_nest", "迷宮の巣"),
         )
 
 DAYS = (
@@ -95,6 +98,7 @@ INFOS = (
         # chapter 2
         ("ery_home", "エリィの家の場所"),
         ("language1", "レム語"),
+        ("ants", "蟻族"),
         # her phrase
         ("herword001", "パンツは知らない他人に触らせる為のものじゃないのよ"),
         ("herword002", "パンツというのは人類が最初に身に着けた服そのものであって決して下着なんて呼んでいい代物じゃないの"),
