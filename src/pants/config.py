@@ -47,6 +47,7 @@ STAGES = (
         ("out_prison", "監獄の外"),
         ## chapter2
         ("prison1", "監獄迷宮最下層"),
+        ("pri_nest", "迷宮の巣"),
         )
 
 DAYS = (

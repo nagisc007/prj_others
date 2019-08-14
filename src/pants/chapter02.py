@@ -18,6 +18,7 @@ TITLE = [
         "パンツを喰らう犬",# NOTE: 初めての戦闘、番犬ども
         "パンツにも穴はあるんだよな",
         "パンツにも痛みを",
+        "パンツだって感じちゃう",
         "門番とパンツ",# NOTE: 門番のミノタウロスとその使役者
         "崩壊パンツ",# NOTE: 迷宮崩壊
         "パンツとストッキング",# NOTE: 監獄迷宮出たら妹が待っていた
@@ -419,7 +420,7 @@ def sc_hairandpants(w: wd.World):
 def sc_gatekeeper(w: wd.World):
     h = hero = w.hero
     ery, avy = w.ery, w.avy
-    return w.scene("門番とその下僕",
+    return w.scene("むず痒さと共に",
             h.be(w.stage.prison1, w.day.outprison),
             h.feel("初めて触覚を得た生き物の感想というのを", "パンツである$meは猛烈に知りたくなった"),
             ery.talk("先程から何をもぞもぞとしておるか、$hero"),
@@ -507,7 +508,16 @@ def sc_gatekeeper(w: wd.World):
             ery.talk("何故？", "と尋ねておきながら",
                     "そなた事情を知っておるのだろう？"),
             h.deal("$eryは楽しげな声でそう言って",
-                    "薄汚れた布切れ一枚のエプロンを首から下げただけの半裸の女に笑いかけた"),
+                    "体の中央部分が黒光りした虫によく似た皮膚で覆われているだけの半裸とも思える女に笑いかけた"),
+            )
+
+## ep14 scenes
+def sc_antgroup(w: wd.World):
+    h = hero = w.hero
+    ery, avy = w.ery, w.avy
+    return w.scene("蟻の一族",
+            h.be(w.stage.pri_nest, w.day.outprison),
+            # NOTE: バトルで苦労しつつ、蟻の一族について、他にもいっぱいいる、人もその人族としている
             )
 
 # episodes
@@ -536,6 +546,10 @@ def ep13(w: wd.World):
             sc_gatekeeper(w),
             )
 
+def ep14(w: wd.World):
+    return (w.chaptertitle(TITLE[5]),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -553,6 +567,7 @@ def story(w: wd.World):
             ep11(w),
             ep12(w),
             ep13(w),
+            ep14(w),
             )
 
 def main(): # pragma: no cover
