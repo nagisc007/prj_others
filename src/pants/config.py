@@ -24,6 +24,8 @@ CHARAS = (
         ("gater2", "番人2", 30, "female", "番兵"),
         ("kerberos1", "ケル", 99, "male", "番犬"),
         ("kerberos2", "ベロス", 99, "male", "番犬"),
+        ("avy", "アヴィ", 22, "female", "番人", "me:アタシ"),
+        ("empu1", "エンプ", 99, "male", "巨大猿"),
         )
 
 STAGES = (
