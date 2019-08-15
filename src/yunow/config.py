@@ -30,6 +30,7 @@ CHARAS = (
         ("idol", "ユカリン", 40, "female", "アイドル"),
         ("gatekeeper", "門番", 28, "male", "兵士", "me:私"),
         ("vilaman1", "村の男性", 45, "male", "村人", "me:私"),
+        ("uru", "ウル", 68, "female", "宿屋の主人", "me:ワシ"),
         # monster
         ("slime", "スライム", 99, "male", "モンスター", "me:ボク"),
         ("goblin", "ゴブリン", 99, "male", "モンスター", "me:ワイ"),
