@@ -800,6 +800,37 @@ def sc_strangerumor(w: wd.World):
             h.deal("笑顔でそう言った$Sに「仕方ないなあ」という苦笑を二人は浮かべたのだった"),
             )
 
+## ep28 scenes
+def sc_vilainn(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    man = w.vilaman1
+    return w.scene("村の宿屋にて",
+            h.be(w.stage.town3, w.day.awake4),
+            h.deal("$st_town3村にやってきた$Sたち三人であったが",
+                "何故か村人の誰もが「魔王」を知らないと言う。",
+                "妙に思った$Sはこの村を少し調べてみようと言い出したのだった"),
+            yusha.talk("けどホントに誰も魔王を知らないんだな"),
+            h.think("再度", "一通り目に付いた村人に「魔王」のことを訊いて回ったが",
+                "やはりそんなものは知らないという返答が得られただけに終わった"),
+            sol.talk("まあ$meだって本当に魔王がいるのかって言われたら",
+                "そりゃあ実際この目で見てみないことには何とも言えねぇって思うけどさ"),
+            h.move("宿を探して歩きながら赤髪の長身の男$solは$Sに言う"),
+            mako.talk("でもここは魔王だけじゃなくて",
+                "モンスターのことについても特別困っている風なことを言ってませんでしたよね？"),
+            h.deal("その疑問を口にしたのはピンクのおかっぱ頭をした$n_makoだ。",
+                "先程から$Sの左腕を取り", "一緒に歩いている。",
+                "彼はそれを少し邪魔そうに見ながらも", "彼女の意見に同意した"),
+            yusha.talk("王様からも言われたんだよな。",
+                "$Sである$meには特別な力があるはずだから",
+                "行く先々で困っている人たちの力になってやって欲しいって。",
+                "それがやがては魔王やその軍勢を追い払う力になるだろうってね"),
+            h.deal("そもそも魔王退治と言ってみたところで",
+                "この世界の誰もその魔王の居場所どころか", "存在を目にした者はいないと云われている。",
+                "仮に居場所が分かったところでそこに辿り着けるかどうかも怪しいのだが",
+                ""),
+            )
+
 # episodes
 def ep21(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -840,6 +871,11 @@ def ep27(w: wd.World):
             sc_strangerumor(w),
             )
 
+def ep28(w: wd.World):
+    return (w.chaptertitle(TITLE[7]),
+            sc_vilainn(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -859,6 +895,7 @@ def story(w: wd.World):
             ep25(w),
             ep26(w),
             ep27(w),
+            ep28(w),
             )
 
 def main(): # pragma: no cover
