@@ -96,7 +96,6 @@ ITEMS = (
         ("shortsword", "ショートソード"),
         ("karebasho", "今ソコなう"),
         ("gmap", "ゴーゴンマップ"),
-        ("message", "メッセ"),
         )
 
 
@@ -120,6 +119,7 @@ INFOS = (
         # chapter 2
         ("mentosgeyser", "メンタスゲイザー"),
         ("selphy", "セルフィン"),
+        ("message", "メッセ"),
         )
 
 
