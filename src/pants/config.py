@@ -26,7 +26,7 @@ CHARAS = (
         ("kerberos2", "ベロス", 99, "male", "番犬"),
         ("avy", "アヴィ", 22, "female", "番人", "me:アタシ"),
         ("empu1", "エンプ", 99, "male", "巨大猿"),
-        ("antboss", "アルカラ", 34, "female", "me:アタイ"),
+        ("antboss", "アルカラ", 34, "female", "蟻族", "me:アタイ"),
         )
 
 STAGES = (
