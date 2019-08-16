@@ -56,6 +56,7 @@ STAGES = (
         ("town3", "ナズム"),
         ("forest1", "クレーベ周辺の森"),
         ("river1", "ポム川"),
+        ("lake2", "クレーベ湖"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
@@ -118,6 +119,7 @@ INFOS = (
         # chapter 2
         ("mentosgeyser", "メンタスゲイザー"),
         ("selphy", "セルフィン"),
+        ("message", "メッセ"),
         )
 
 
