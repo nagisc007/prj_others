@@ -96,6 +96,7 @@ ITEMS = (
         ("shortsword", "ショートソード"),
         ("karebasho", "今ソコなう"),
         ("gmap", "ゴーゴンマップ"),
+        ("smacache", "スマフ決済"),
         )
 
 
@@ -120,6 +121,7 @@ INFOS = (
         ("mentosgeyser", "メンタスゲイザー"),
         ("selphy", "セルフィン"),
         ("message", "メッセ"),
+        ("makoword001", "何でもはできませんよ。アプリがあるだけ"),
         )
 
 
