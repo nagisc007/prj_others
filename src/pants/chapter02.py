@@ -1144,6 +1144,13 @@ def sc_awakepants(w: wd.World):
             ery.talk("お主は$meの大事なパンツだから", "かな"),
             )
 
+## ep20 scenes
+def sc_collapsed(w: wd.World):
+    h = hero = w.hero
+    ery = w.ery
+    return w.scene("崩壊する迷宮",
+            )
+
 # episodes
 def ep9(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -1201,6 +1208,10 @@ def ep19(w: wd.World):
             sc_awakepants(w),
             )
 
+def ep20(w: wd.World):
+    return (w.chaptertitle(TITLE[11]),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -1224,6 +1235,7 @@ def story(w: wd.World):
             ep17(w),
             ep18(w),
             ep19(w),
+            ep20(w),
             )
 
 def main(): # pragma: no cover
