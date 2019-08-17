@@ -21,6 +21,7 @@ TITLE = [
         "村なう",
         "宿ゲットなう",# NOTE: 隣町、宿の主人から色々聞くことに
         "宿屋なう",
+        "キャンセルなう",
         "はじめてのおつかいなう",# NOTE:初クエスト
         "洞窟なう",# NOTE:洞窟内で
         "野営なう",# NOTE:野宿編１から
@@ -1037,7 +1038,8 @@ def sc_notfound(w: wd.World):
                 "$phoneの何とかって地図だと川がないとか森がないとかさ。",
                 "そもそもそいつの地図が間違ってるって考えんのが妥当だろうよ？"),
             h.think("$solの言うことも尤もかも知れないと思った$Sだったが",
-                "$n_makoの方はそんな気はないようで",
+                "$st_town3そのものは紙の方の地図にも書かれている。",
+                "$n_makoの方は$solの話を聞く気はないようで",
                 "ずっと自分の$phoneを操作しながら何か唸っている"),
             yusha.talk("とりあえず生スライムは諦めてここで食べ物を探そうよ、$mako"),
             mako.talk("それじゃあ注文した分", "全部キャンセルしますけどいいですか？"),
@@ -1073,10 +1075,11 @@ def sc_notfound(w: wd.World):
             h.look("$solと$n_makoも心配して男を覗き込んだが", "男は首を横に振り",
                     "$Sの服の裾を掴んでこう訴えた"),
             man.talk("なんか知らんが突然大量の$n_goblinに襲われたんだ。",
-                    "頼む！", "村長のところまで$meを連れてってくれ！"),
+                    "頼む！", "村長のところまで$myを連れてってくれ！"),
             h.deal("$n_goblinという言葉に$Sは$solと$n_makoの二人を見て", "苦笑を浮かべたのだった"),
             )
 
+## ep31 scenes
 def sc_gettrouble(w: wd.World):
     h = yusha = w.yusha
     sol, mako, yula = w.sol, w.mako, w.yula
@@ -1137,6 +1140,10 @@ def ep29(w: wd.World):
 def ep30(w: wd.World):
     return (w.chaptertitle(TITLE[9]),
             sc_notfound(w),
+            )
+
+def ep31(w: wd.World):
+    return (w.chaptertitle(TITLE[10]),
             sc_gettrouble(w),
             )
 
@@ -1162,6 +1169,7 @@ def story(w: wd.World):
             ep28(w),
             ep29(w),
             ep30(w),
+            ep31(w),
             )
 
 def main(): # pragma: no cover
