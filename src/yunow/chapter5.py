@@ -998,6 +998,26 @@ def sc_takeainn(w: wd.World):
                     "自分の$phoneに向かって「宿屋なう」と呟いたのだった"),
             )
 
+## ep30 scenes
+def sc_notfound(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    man, uru = w.vilaman1, w.uru
+    return w.scene("見つからない村",
+            h.be(w.stage.town3, w.day.awake4),
+            h.look("何とか$st_town3で宿を確保できた$Sたち一行は",
+                "あることを確認する為に村の入り口へと戻ってきていた"),
+            yusha.talk(""),
+            # NOTE: 確認、そこで村に男が飛び込んでくる、妙なものを目にしたと
+            )
+
+def sc_gettrouble(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    man, uru = w.vilaman1, w.uru
+    return w.scene("揉め事がやってきた",
+            )
+
 # episodes
 def ep21(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -1048,6 +1068,12 @@ def ep29(w: wd.World):
             sc_takeainn(w),
             )
 
+def ep30(w: wd.World):
+    return (w.chaptertitle(TITLE[9]),
+            sc_notfound(w),
+            sc_gettrouble(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -1069,6 +1095,7 @@ def story(w: wd.World):
             ep27(w),
             ep28(w),
             ep29(w),
+            ep30(w),
             )
 
 def main(): # pragma: no cover
