@@ -17,7 +17,7 @@ CHARAS = (
         ("rey", "ワムザ,レイ", 30, "female", "大賢者", "me:私"),
         ("pery", "ルナ,ペリィ", 27, "female", "公安特別部隊長", "me:ワタシ"),
         ("reiko", "沢森,麗子", 30, "female", "役場職員", "me:私"),
-        ("dran", "ヴァヴァル", 99, "female", "ドラゴン", "me:私"),
+        ("dran", "ヴァヴァル", 99, "female", "ドラゴン", "me:私:ery:エリィ:hero:タロちゃん"),
         # chapter 1-1
         ("sufferer1", "痴漢被害者", 27, "female", "会社員"),
         # chapter 2

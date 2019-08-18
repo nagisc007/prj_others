@@ -1249,6 +1249,57 @@ def sc_collapsed(w: wd.World):
                     "爬虫類の骸骨にも似たそれの目玉の部分の空洞に", "二つの紫の炎が灯った"),
             )
 
+## ep22 scenes
+def sc_bonedragon(w: wd.World):
+    h = hero = w.hero
+    ery, dran = w.ery, w.dran
+    return w.scene("骨だらけのドラゴン",
+            h.be(w.stage.pri_nest, w.day.outprison),
+            dran.talk("五百年ぶりだな"),
+            h.hear("それは空間に響いている声ではなかった。",
+                "どうやら直接$meたちに語りかけているらしい"),
+            h.look("$eryの手に灯した光が照らし出す恐竜の骨格標本の一部にも見えるそいつの頭と胴体は",
+                "パンツである$meからはその全容を伺い知ることはできなかった。",
+                "それでも頭部骸骨の眼窩部に灯った濃い紫色の炎は", "何度か$meを睨むように小さく細く潰された"),
+            h.think("$n_dranと紹介されたが", "見たこともない", "生き物と呼んでいいのかすら分からないその存在に",
+                "$meは息を潜めているつもりでじっと口を結んで相手を見ている。",
+                "もし仮にパンツでなかったとしたら", "呼吸を止めていてもおかしくない"),
+            ery.talk("多少痩せたか？"),
+            h.deal("だがそんな$meを置き去りにして$eryと$n_dranは言葉を交わしては意味の分からないところで笑い声を発する"),
+            dran.talk("すぐに脱獄するから待っていろと言った割にはいつまで経っても現れないから",
+                "このままミイラとして生きるのも悪くないなと思い始めていたところだ"),
+            h.look("確かに彼女は$meの知る生死の概念とこちらの世界では異なっている", "と言っていた。",
+                "だが内蔵や筋肉", "神経線維といったものが全く無さそうに見えるこの巨大な骨の塊にも",
+                "その生と呼べるような何かしらが存在しているというのを認めるには",
+                "$meのこの世界で生きた時間はまだ短すぎる"),
+            dran.talk("ところで$eryよ。",
+                "君の身につけているその奇妙な思考する物体は何なんだい？"),
+            h.deal("二人の懐かしい会話から唐突に$meの話題になる"),
+            ery.talk("これは……パンツだ"),
+            dran.talk("パン、つ？"),
+            h.look("$n_dranは「パンツ」という言葉がすんなりと喋れないようで",
+                "何度もパンツパンツと繰り返しては$meを見やる。",
+                "声に出している訳でもないのに上手く喋れないというのは",
+                "本当にこの世界にパンツというものが存在していない証拠なのだろう"),
+            h.think("パンツという概念の存在しない世界"),
+            h.think("もしそんな場所があると元彼女が知ったら何て言うだろうか"),
+            h.think("$meはふと元彼女の顔を思い出そうとして", "上手く目鼻や口といったパーツが浮かばないことに気づいた。",
+                "輪郭や髪型はすぐに浮かぶが", "肝心の顔そのものはうっすらとぼやけて霞みがかったようになっている"),
+            )
+
+def sc_outofprison(w: wd.World):
+    h = hero = w.hero
+    ery, dran = w.ery, w.dran
+    return w.scene("監獄の外側",
+            )
+
+## ep23 scenes
+def sc_watingmysister(w: wd.World):
+    h = hero = w.hero
+    ery, dran = w.ery, w.dran
+    return w.scene("妹が待っていた",
+            )
+
 # episodes
 def ep9(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -1311,6 +1362,17 @@ def ep20(w: wd.World):
             sc_collapsed(w),
             )
 
+def ep21(w: wd.World):
+    return (w.chaptertitle(TITLE[12]),
+            sc_bonedragon(w),
+            sc_outofprison(w),
+            )
+
+def ep22(w: wd.World):
+    return (w.chaptertitle(TITLE[13]),
+            sc_watingmysister(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -1335,6 +1397,8 @@ def story(w: wd.World):
             ep18(w),
             ep19(w),
             ep20(w),
+            ep21(w),
+            ep22(w),
             )
 
 def main(): # pragma: no cover
