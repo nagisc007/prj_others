@@ -31,6 +31,7 @@ CHARAS = (
         ("gatekeeper", "門番", 28, "male", "兵士", "me:私"),
         ("vilaman1", "村の男性", 45, "male", "村人", "me:私:my:俺"),
         ("uru", "ウル", 68, "female", "宿屋の主人", "me:ワシ"),
+        ("town3head", "村長", 70, "male", "村長", "me:わし"),
         # monster
         ("slime", "スライム", 99, "male", "モンスター", "me:ボク"),
         ("goblin", "ゴブリン", 99, "male", "モンスター", "me:ワイ"),
@@ -97,6 +98,7 @@ ITEMS = (
         ("karebasho", "今ソコなう"),
         ("gmap", "ゴーゴンマップ"),
         ("smacache", "スマフ決済"),
+        ("wikipedia", "生キペディア"),
         )
 
 
