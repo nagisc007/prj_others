@@ -15,6 +15,12 @@ TITLE = [
         # chapter3
         # NOTE: １話あたり2000から3000字程度、増えたら前後編
         "パンツとストッキング",# NOTE: 彼女の妹
+        "パンツとエプロン",# NOTE: 村編突入
+        "パンツ暮らし",
+        "パンツ復活",
+        "激突パンツとストッキング",
+        "パンツ覚醒",
+        "パンツの人権",
         ]
 
 # scenes
@@ -149,10 +155,49 @@ def sc_mysister(w: wd.World):
             h.hear("それはか細い女性の声だった"),
             )
 
+## ep24 scenes
+def sc_meetgirl(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
+    return w.scene("女性に出会った",
+            h.be(w.stage.left_prison, w.day.outprison),
+            mirei.talk("そちらですか？"),
+            h.hear("やや怯えを含んだ女性の声が",
+                "ガサゴソという葉を踏み締める音を伴って近づいてくる"),
+            h.think("訳も分からないものに恐怖心を覚える", "というのは実に人間らしい反応だ。",
+                "だから$meはその女性の危険度が低いだろうと推測を立てて更に声を出した"),
+            hero.talk("声が聞こえたんだな？",
+                "こっちだ。", "人が倒れてているんだ"),
+            h.think("うまく伝わるだろうか"),
+            h.hear("その声の主は茂みを掻き分けながら注意深く歩いているようで",
+                "落ち葉を踏むのとは別の音が間に挟まる"),
+            mirei.talk("あ！"),
+            h.look("どうやら$eryの体が視界に入ったらしい"),
+            h.hear("すぐに慌ただしい足音になり",
+                "$meの視界にもその姿を現した"),
+            mirei.talk("大丈夫ですか？"),
+            h.look(""),
+            # NOTE: パンツと知って驚いて、エプロンを見て驚く、とりあえず背負われて村に
+            )
+
+def sc_epronvila(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
+    return w.scene("エプロンの村",
+            h.be(w.stage.town1),
+            # NOTE: 女ばかりの世界、エリィを目覚めさせる為にすべきこと、脱がされる
+            )
+
 # episodes
 def ep23(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
             sc_mysister(w),
+            )
+
+def ep24(w: wd.World):
+    return (w.chaptertitle(TITLE[1]),
+            sc_meetgirl(w),
+            sc_epronvila(w),
             )
 
 # outlines
@@ -168,6 +213,7 @@ def story_outline(w: wd.World):
 def story(w: wd.World):
     return (w.maintitle(cnf.TITLES["chap03"]),
             ep23(w),
+            ep24(w),
             )
 
 def main(): # pragma: no cover

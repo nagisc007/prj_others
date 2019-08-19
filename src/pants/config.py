@@ -29,6 +29,7 @@ CHARAS = (
         ("avy", "アヴィ", 22, "female", "番人", "me:アタシ"),
         ("empu1", "エンプ", 99, "male", "巨大猿"),
         ("antboss", "アルカラ", 34, "female", "蟻族", "me:アタイ"),
+        # chapter 3
         )
 
 STAGES = (
@@ -53,6 +54,7 @@ STAGES = (
         ("pri_nest", "迷宮の巣"),
         ## chapter3
         ("left_prison", "迷宮跡地"),
+        ("town1", "ベグリ"),# NOTE: ベリグリ（三愛）
         )
 
 DAYS = (
