@@ -1427,7 +1427,7 @@ def sc_destruction(w: wd.World):
             mako.talk("次々に町が壊滅してるのね……なんてことを"),
             )
 
-def sc_theend(w: wd.World):
+def sc_theend2(w: wd.World):
     h = yusha = w.yusha
     sol, mako, mam, daima = w.sol, w.mako, w.mother, w.daimaou
     return w.scene("そして終わり？",
@@ -1549,7 +1549,7 @@ def ep12(w: wd.World):
 def ep13(w: wd.World):
     return (w.chaptertitle(TITLE[12]),
             sc_destruction(w),
-            sc_theend(w),
+            sc_theend2(w),
             )
 
 
