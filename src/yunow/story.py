@@ -8,9 +8,7 @@ sys.path.append('storybuilder')
 
 from storybuilder.builder import world as wd
 from src.yunow import config as cnf
-from src.yunow import chapter1 as chap1
-from src.yunow import chapter2 as chap2
-from src.yunow import chapter3 as chap3
+from src.yunow import chapter01 as chap1
 from src.yunow import chapter4 as chap4
 from src.yunow import chapter5 as chap5
 THM = cnf.THEMES
@@ -24,8 +22,6 @@ def story_baseinfo(w: wd.World):
     return [
             ("story", story(w), w.yusha, w.yusha),
             ] + chap1.story_baseinfo(w) \
-                + chap2.story_baseinfo(w) \
-                + chap3.story_baseinfo(w) \
                 + chap4.story_baseinfo(w) \
                 + chap5.story_baseinfo(w)
 
@@ -38,8 +34,6 @@ def story_outline(w: wd.World):
                 w.yusha.go(w.i.trouble),
                 True),
             ] + chap1.story_outline(w) \
-                + chap2.story_outline(w) \
-                + chap3.story_outline(w) \
                 + chap4.story_outline(w) \
                 + chap5.story_outline(w)
 
@@ -58,8 +52,6 @@ def world():
 def story(w: wd.World):
     return (w.maintitle("勇者なう！"),
             chap1.story(w),
-            chap2.story(w),
-            chap3.story(w),
             chap4.story(w),
             chap5.story(w),
             )
