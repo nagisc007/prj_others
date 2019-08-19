@@ -58,6 +58,8 @@ STAGES = (
         ("forest1", "クレーベ周辺の森"),
         ("river1", "ポム川"),
         ("lake2", "クレーベ湖"),
+        ("near_town3", "ナズム近郊"),
+        ("goblinnest", "ゴブリンの巣"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
@@ -76,6 +78,7 @@ DAYS = (
         ("buying", "旅の買い物日"),
         ("firstfield", "初めて町の外に出た日"),
         ("awake3", "三回目死に戻り日"),
+        # chapter 3
         ("awake4", "4回目死に戻り日"),
         )
 
