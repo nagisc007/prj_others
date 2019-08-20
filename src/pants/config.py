@@ -12,7 +12,7 @@ CHARAS = (
         ("hero", "パンツ,太郎", 30, "male", "パンツ", "me:オレ:I:太郎:ery:エリィ:lily:リリィ:dran:ヴァヴァルさん"),
         ("ery", "ステラ,エリザベート", 99, "female", "賢者", "me:我:my:私:I:わし:hero:タロウ:ery:エリィ:lily:リリィ"),
         ("lily", "ステラ,リリィ", 20, "female", "魔道士", "me:あたし:ery:お姉ちゃん"),
-        ("mirei", "澤森,ミレィ", 18, "female", "村人", "me:私"),
+        ("mirei", "澤森,ミレィ", 18, "female", "村人", "me:私:pants:パンツさん"),
         # sub
         ("robber", "パンティ,三郎", 42, "male", "パンツ", "me:ワシ"),
         ("rey", "ワムザ,レイ", 30, "female", "大賢者", "me:私"),
@@ -29,6 +29,7 @@ CHARAS = (
         ("avy", "アヴィ", 22, "female", "番人", "me:アタシ"),
         ("empu1", "エンプ", 99, "male", "巨大猿"),
         ("antboss", "アルカラ", 34, "female", "蟻族", "me:アタイ"),
+        # chapter 3
         )
 
 STAGES = (
@@ -53,6 +54,7 @@ STAGES = (
         ("pri_nest", "迷宮の巣"),
         ## chapter3
         ("left_prison", "迷宮跡地"),
+        ("town1", "ベグリ"),# NOTE: ベリグリ（三愛）
         )
 
 DAYS = (
