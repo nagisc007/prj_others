@@ -9,7 +9,7 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("hero", "パンツ,太郎", 30, "male", "パンツ", "me:オレ:I:太郎:ery:エリィ:lily:リリィ:dran:ヴァヴァルさん"),
+        ("hero", "パンツ,太郎", 30, "male", "パンツ", "me:オレ:I:太郎:ery:エリィ:lily:リリィ:dran:ヴァヴァルさん:mirei:ミレィ"),
         ("ery", "ステラ,エリザベート", 99, "female", "賢者", "me:我:my:私:I:わし:hero:タロウ:ery:エリィ:lily:リリィ"),
         ("lily", "ステラ,リリィ", 20, "female", "魔道士", "me:あたし:ery:お姉ちゃん"),
         ("mirei", "澤森,ミレィ", 18, "female", "村人", "me:私:pants:パンツさん"),
@@ -30,6 +30,8 @@ CHARAS = (
         ("empu1", "エンプ", 99, "male", "巨大猿"),
         ("antboss", "アルカラ", 34, "female", "蟻族", "me:アタイ"),
         # chapter 3
+        ("zones", "シルバ,ゾネス", 56, "female", "長", "me:儂"),# NOTE: シルバ（羅）森の意
+        ("mam_mirei", "ミレィ母", 54, "female", "村人", "me:私:mirei:ミレィ"),
         )
 
 STAGES = (
@@ -55,6 +57,7 @@ STAGES = (
         ## chapter3
         ("left_prison", "迷宮跡地"),
         ("town1", "ベグリ"),# NOTE: ベリグリ（三愛）
+        ("mirei_house", "ミレィの家"),
         )
 
 DAYS = (
