@@ -968,6 +968,40 @@ def sc_findnest(w: wd.World):
             h.look("だがそこには以前森で見た時のような$n_goblinの沢山の赤い点は一つしか見つけられなかったのだった"),
             )
 
+## ep34 scenes
+def sc_assultnest(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    man, uru, head = w.vilaman1, w.uru, w.town3head
+    return w.scene("ゴブリンの巣に突撃だ",
+            h.be(w.stage.goblinnest, w.day.awake4),
+            h.look("川の跡かと思っていたら", "どうやら$n_goblinたちが川を堰き止めてそこに巨大な壁のように見えるダムを建設していた"),
+            sol.talk("で、結局どうすんだよ？", "行くのか？", "行かねえのか？"),
+            h.look("赤髪の戦士$solは長身の為に身を屈めても奴らに発見されてしまいそうだったが",
+                "生憎と見張りに出てきた一匹には気づかれていないようだった"),
+            yusha.talk("これが使えないんじゃ", "特攻するしかない……"),
+            sol.talk("ハァ！？", "特攻って無駄死にしろってことか？",
+                "魔王に倒されましたならまだしも", "女性一人助ける為に$n_goblinの巣に突入してぶっ殺されましたって",
+                "流石にそんな最期は嫌だぞ$meは"),
+            h.deal("て言われてもなあ", "と$Sである少年は溜息をつく"),
+            h.look("彼は自分の$phoneを見て", "そこに表示された赤い点が全然動かないことに歯痒い思いをしていたのだ"),
+            mako.talk("$taro", "この『$karebasho』ってアプリは相手が$phoneを持ってないと意味がないんです。",
+                "あいつらは旧世代の$n_goblinだから$phoneなんて支給されてないんですよ", "きっと"),
+            h.look("草陰に座り込み", "尖り帽子を脱いでピンクのおかっぱ頭の髪を整えながら",
+                "魔法使いの$n_makoが言った。",
+                "彼女は自分の$phoneを手にするとやや苛立った様子で何度もその黒い板を叩く"),
+            mako.talk("それよりも聞いて下さいよ、$taro。",
+                "$meいつもこんなに走ったりしないから喉カラカラになってて",
+                "さっき$drink1注文したんですけど", "また村の時と同じで届かないんです"),
+            yusha.talk("じゃあとりあえず$meの水飲む？"),
+            h.deal("$Sが自分の水筒を差し出すと",
+                "途端に彼女の機嫌が直った"),
+            mako.talk("駄目って言われても飲みます"),
+            h.deal("そう言って分捕るように水筒を掴むと", "蓋を取って喉に流し入れる。",
+                "小さな唇の端に当たって溢れた僅かが顎を伝って喉の上を滑っていった"),
+            h.look(""),
+            )
+
 # episodes
 def ep25(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -1017,6 +1051,11 @@ def ep33(w: wd.World):
             sc_findnest(w),
             )
 
+def ep34(w: wd.World):
+    return (w.chaptertitle(TITLE[9]),
+            sc_assultnest(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -1038,6 +1077,7 @@ def story(w: wd.World):
             ep31(w),
             ep32(w),
             ep33(w),
+            ep34(w),
             )
 
 def main(): # pragma: no cover

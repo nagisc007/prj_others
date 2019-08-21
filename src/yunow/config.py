@@ -102,6 +102,9 @@ ITEMS = (
         ("gmap", "ゴーゴンマップ"),
         ("smacache", "スマフ決済"),
         ("wikipedia", "生キペディア"),
+        # chapter3
+        ("drink1", "ドクトルペップ"),
+        ("na_drink1", "ドクペ"),
         )
 
 
