@@ -1024,7 +1024,41 @@ def sc_assultnest(w: wd.World):
                 "何度見ても変わらない$n_goblinのおそらくリーダーだろう", "そいつの居場所を示す赤い点が一つしか灯っていない"),
             mako.talk("何度見ても同じですよ", "$taro？"),
             yusha.talk("赤い方じゃない。", "青い点だよ"),
-            h.look(""),
+            h.look("青？", "という目で$Sを見てから$solはその視線をもう一度$phoneに戻す"),
+            h.look("そこには赤い点は一つだが", "青い点は建物内に一つ", "他にも外に二つ灯っている"),
+            mako.talk("これ一つはその女性で", "残りは$meと$taroですよね……あ"),
+            h.deal("どうやら$n_makoの方も$Sが言わんとしていることに気づいたようだ"),
+            yusha.talk("$n_goblinの奴らはリーダー以外は$phoneを持っていないから",
+                    "一匹ずつ上手く処理して辿れば彼女を救出して無事に出てこられるんじゃないか",
+                    "ってことだよ"),
+            sol.talk("それってあいつらが$phone持ってれば瞬時に連絡取り合えるけど",
+                    "そうじゃないから上手くやれば仲間を呼んだりさせずに助けられるかも",
+                    "ってことだろ？"),
+            h.deal("$solが言い直した通りだったが「そうだ」と満足そうに$Sは頷く"),
+            mako.talk("それじゃあちょっと$meが試してみます"),
+            yusha.talk("え？"),
+            h.deal("$n_makoはそう言うなり小さな掌を見張りの$n_goblinへと向けると",
+                    "何の詠唱もなく炎の矢をそこから発射した"),
+            sol.talk("何やってんだよ、お嬢！？", "まだその作戦で行くとか決まってねえだろ？"),
+            mako.talk("これで大丈夫なら何とかなりますって"),
+            h.look("そう言っている間にも炎の矢は$n_goblinの喉元を射抜き", "短くて低い絶命の声を上げてそいつは階段から転げ落ちていった"),
+            yusha.talk("やっちゃった……"),
+            h.look("敢え無く死んでしまったその$n_goblinが立ち上がったりしないことを見届けると",
+                    "$Sは二人を見て", "何も言わずに頷く"),
+            h.move("$Sが背中を見せて歩き出すと", "その後に$solと$n_makoの二人も続いた"),
+            h.look("三人が入り口に続く狭い階段を登り始めても中から別の見張り役が現れる様子はなく",
+                    "そのまま何事もなく辿り着くと",
+                    "$Sは一度自分の$phoneをその中に向けて薄暗くなった内部を画像に収めた"),
+            yusha.talk("$n_goblinの巣なう"),
+            h.move("そう呟き", "細い丸太と土壁で造られたその$n_goblinダムへと足を踏み入れた"),
+            )
+
+## ep35 scenes
+def sc_lookforgirl(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    man, uru, head = w.vilaman1, w.uru, w.town3head
+    return w.scene("突入なう",
             # NOTE: 最初のやつを倒して、中に突入、部屋まで辿り着いて簡単に救出と思ったら、まこが捕まっていた
             )
 
@@ -1082,6 +1116,11 @@ def ep34(w: wd.World):
             sc_assultnest(w),
             )
 
+def ep35(w: wd.World):
+    return (w.chaptertitle(TITLE[10]),
+            sc_lookforgirl(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -1104,6 +1143,7 @@ def story(w: wd.World):
             ep32(w),
             ep33(w),
             ep34(w),
+            ep35(w),
             )
 
 def main(): # pragma: no cover
