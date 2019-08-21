@@ -30,6 +30,8 @@ CHARAS = (
         ("empu1", "エンプ", 99, "male", "巨大猿"),
         ("antboss", "アルカラ", 34, "female", "蟻族", "me:アタイ"),
         # chapter 3
+        ("zones", "シルバ,ゾネス", 56, "female", "長", "me:儂"),# NOTE: シルバ（羅）森の意
+        ("mam_mirei", "ミレィ母", 54, "female", "村人", "me:私"),
         )
 
 STAGES = (
@@ -55,6 +57,7 @@ STAGES = (
         ## chapter3
         ("left_prison", "迷宮跡地"),
         ("town1", "ベグリ"),# NOTE: ベリグリ（三愛）
+        ("mirei_house", "ミレィの家"),
         )
 
 DAYS = (
