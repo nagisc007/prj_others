@@ -67,6 +67,7 @@ DAYS = (
         ("transfer1", "転生した日"),
         ("current", "現在"),
         ("outprison", "脱獄した日"),
+        ("meetmirei", "ミレィと出会った日"),
         # sub
         ("departher", "彼女と別れた日", 6,6, 2016),
         )
@@ -77,6 +78,8 @@ ITEMS = (
         ("sagerobe", "聖紫法衣"),# Yomi: せいしほうい
         # sub
         ("udon_fav1", "冷やしとり天うどん"),
+        # chapter 3
+        ("bad_maekake", "悪心の衣"),
         )
 
 INFOS = (

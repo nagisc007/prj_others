@@ -18,6 +18,7 @@ TITLE = [
         "パンツとエプロン",# NOTE: 村編突入
         "パンツが下着でエプロンが服で",
         "パンツの思考",
+        "彼女がパンツを脱ぐとき",
         "パンツ復活",
         "激突パンツとストッキング",
         "パンツ覚醒",
@@ -515,6 +516,55 @@ def sc_herhouse(w: wd.World):
             zones.talk("それで元大賢者というのは……その小娘かい？"),
             )
 
+## ep27 scenes
+def sc_meetreader(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
+    zones, mam = w.zones, w.mam_mirei
+    return w.scene("長に出会う",
+            h.be(w.stage.mirei_house, w.day.meetmirei),
+            h.look("$mireiに連れられて家に入ってきたのは",
+                "灰色の髪の毛で体の前面を覆った老女だった。",
+                "$meの視界では下腹部まで覆われているように見えたが",
+                "それがどこまで続いているかまでは見られない"),
+            mam.talk("あら", "村長さま"),
+            h.deal("その声に$mireiの母親は顔を入り口の方へと向けたが",
+                "長の方は何も反応せず", "そのまま$eryの前まで歩いてきて",
+                "傍で屈んでいた母親は邪魔にならないようにと後ろに下がった"),
+            zones.talk("ふむ"),
+            h.look("長の老女は$eryを見て小さく唸ると",
+                "後ろを振り返って$mireiを手招きする"),
+            mirei.talk("何でしょうか"),
+            zones.talk("何の能力もないお前に何故この少女ごときが大賢者だと分かるのかねえ？",
+                "それとも……"),
+            h.look("眉毛のほとんどないその皺塗れの目を一瞬彼女の母親の方へと向けたが",
+                "$mireiはすぐにそれを否定する"),
+            mirei.talk("お母さんじゃありません。", "$meが大賢者さまの従者である$pantsから直接聞きました"),
+            zones.talk("ぱん、つ……さん？"),
+            h.think("何度となく繰り返された光景だったが",
+                "すんなりとパンツと発音できる人間はいないのだろうか"),
+            hero.talk("パンツ", "だよ。", "婆さん"),
+            h.deal("声を上げたところで最初は気づかれないだろうと高を括っていた。",
+                "けれど村の長というだけあってか", "その視線はすぐに$meを捉える"),
+            zones.talk("お前は……$i_humansではないな。", "何者だ？"),
+            h.look("長は二歩ほど後ずさると",
+                "$meに向かって右の掌を向けた。", "彼女も$eryと同じように不思議な力を扱えるのだろうか"),
+            hero.talk("$meはパンツだ。",
+                "パンツがどういうものかを理解してもらうのが難しいというのはよく分かっている。",
+                "それでも何かしら理解できるように説明するなら",
+                "そこの彼女", "$mireiさんが身につけている前掛けのような",
+                "衣類の一種ということになる"),
+            h.deal("ちらりと$mireiを見やってから", "長は$meに顰め面を向けた"),
+            zones.talk("そういうことかい……。",
+                "あんたらはこの$bad_maekakeを着けさせる為にこんな元大賢者だという偽物を準備して",
+                "$meを謀ろうというんだね？"),
+            mirei.talk("そんな！", "長さま。", "それは違います。",
+                "この方は$meとは何も関係ありませんし",
+                "こちらの女性は本当にあの大賢者さまなのです"),
+            h.look(""),
+            # NOTE: 彼女が面倒を見ることと、大賢者だと証明すると言い出す。そしてパンツが脱げる
+            )
+
 # episodes
 def ep23(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -537,6 +587,11 @@ def ep26(w: wd.World):
             sc_herhouse(w),
             )
 
+def ep27(w: wd.World):
+    return (w.chaptertitle(TITLE[4]),
+            sc_meetreader(w),
+            )
+
 # outlines
 def story_baseinfo(w: wd.World):
     return [
@@ -553,6 +608,7 @@ def story(w: wd.World):
             ep24(w),
             ep25(w),
             ep26(w),
+            ep27(w),
             )
 
 def main(): # pragma: no cover
