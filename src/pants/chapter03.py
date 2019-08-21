@@ -449,6 +449,13 @@ def sc_herhouse(w: wd.World):
     zones, mam = w.zones, w.mam_mirei
     return w.scene("彼女の家にて",
             h.be(w.stage.mirei_house),
+            h.deal("三角屋根の中は", "二メートルほど地面を掘って造られた大きな部屋になっていた"),
+            mirei.talk("粗末な家ですみません"),
+            h.deal("彼女はそう言って一段高くなったベッド代わりに使ってそうな場所に$eryを寝かせる"),
+            mam.talk("$mirei", "帰ってきたのかい？"),
+            h.hear("声がしたのは仕切りの壁で区切られた奥からだった"),
+            mirei.talk("母さん", "森で気を失っている人を助けたの"),
+            mam.talk("あらまあ。", "他にもお前みたいな人がいたのね？"),
             # NOTE: 村に入り、村長に会う、パンツを脱がなきゃいけないと言われる
             )
 
