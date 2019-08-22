@@ -20,8 +20,10 @@ TITLE = [
         "キャンセルなう",
         "村長なう",
         "ゴブリンに捕まったなう",# NOTE:初クエスト
-        "ゴブリンの巣なう",
+        "ゴブリンの巣なう・その１",
         "ゴブリンの巣なう・その２",
+        "ゴブリンから彼女を助けるなう・その１",
+        "ゴブリンから彼女を助けるなう・その２",
         "洞窟なう",# NOTE:洞窟内で
         "野営なう",# NOTE:野宿編１から
         ]
@@ -1062,7 +1064,23 @@ def sc_lookforgirl(w: wd.World):
     sol, mako, yula = w.sol, w.mako, w.yula
     man, uru, head = w.vilaman1, w.uru, w.town3head
     return w.scene("突入なう",
+            h.be(w.stage.goblinnest, w.day.awake4),
+            h.look("暗い。", "それはもう薄暗いというレベルではなく", "目の前を歩く$solの赤髪が黒髪に見えるくらいに暗かった"),
+            h.deal("それに臭い。",
+                "何が臭うのかは分からないが", "$n_goblinたちが築き上げたダムの内部に入ったすぐから",
+                "鼻が曲がってしまうくらい強烈に臭い"),
+            mako.talk("ねえ$taro。", "$meだけ外で待っててもいいですか？", "流石にちょっと無理です"),
+            h.deal("最後尾を歩いていた$n_makoは鼻を摘みながら言った"),
             # NOTE: 最初のやつを倒して、中に突入、部屋まで辿り着いて簡単に救出と思ったら、まこが捕まっていた
+            )
+
+## ep36 scenes
+def sc_rescuemako(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    man, uru, head = w.vilaman1, w.uru, w.town3head
+    return w.scene("魔子を助けに",
+            h.be(w.stage.goblinnest, w.day.awake4),
             )
 
 # episodes
@@ -1124,6 +1142,10 @@ def ep35(w: wd.World):
             sc_lookforgirl(w),
             )
 
+def ep36(w: wd.World):
+    return (w.chaptertitle(TITLE[11]),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -1147,6 +1169,7 @@ def story(w: wd.World):
             ep33(w),
             ep34(w),
             ep35(w),
+            ep36(w),
             )
 
 def main(): # pragma: no cover
