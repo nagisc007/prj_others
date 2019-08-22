@@ -1188,6 +1188,12 @@ def sc_rescuemako(w: wd.World):
     man, uru, head = w.vilaman1, w.uru, w.town3head
     return w.scene("魔子を助けに",
             h.be(w.stage.goblinnest, w.day.awake4),
+            h.deal("$n_goblinの巣ならぬ$n_goblinのダムの中に金髪美女を助けに入った$Sたちだったが",
+                "そこで救助する予定だった美女$n_yulaは一人で$n_goblin五匹を伸してしまうほどの手練《てだれ》だった"),
+            h.look("そして彼女から話を聞いている間に$Sである少年は気づいた。",
+                "ピンクのおかっぱ頭の魔法使い、$n_makoの姿が消えているということに"),
+            yusha.talk(""),
+            # NOTE: まこを探す、ユラのこと、結局最深部で何故かまこがリーダー説教している場面に出くわす
             )
 
 # episodes
