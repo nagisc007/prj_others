@@ -31,7 +31,7 @@ CHARAS = (
         ("antboss", "アルカラ", 34, "female", "蟻族", "me:アタイ"),
         # chapter 3
         ("zones", "シルバ,ゾネス", 56, "female", "長", "me:儂"),# NOTE: シルバ（羅）森の意
-        ("mam_mirei", "ミレィ母", 54, "female", "村人", "me:私:mirei:ミレィ"),
+        ("mam_mirei", "ユルカ", 54, "female", "村人", "me:私:mirei:ミレィ"),
         )
 
 STAGES = (
@@ -67,6 +67,7 @@ DAYS = (
         ("transfer1", "転生した日"),
         ("current", "現在"),
         ("outprison", "脱獄した日"),
+        ("meetmirei", "ミレィと出会った日"),
         # sub
         ("departher", "彼女と別れた日", 6,6, 2016),
         )
@@ -77,6 +78,8 @@ ITEMS = (
         ("sagerobe", "聖紫法衣"),# Yomi: せいしほうい
         # sub
         ("udon_fav1", "冷やしとり天うどん"),
+        # chapter 3
+        ("bad_maekake", "悪心の衣"),
         )
 
 INFOS = (
