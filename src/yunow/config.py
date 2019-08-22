@@ -105,6 +105,7 @@ ITEMS = (
         # chapter3
         ("drink1", "ドクトルペップ"),
         ("na_drink1", "ドクペ"),
+        ("mapsoft", "マップアプリ"),
         )
 
 
