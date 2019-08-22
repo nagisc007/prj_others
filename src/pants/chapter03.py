@@ -18,7 +18,8 @@ TITLE = [
         "パンツとエプロン",# NOTE: 村編突入
         "パンツが下着でエプロンが服で",
         "パンツの思考",
-        "パンツは特別な着衣",
+        "パンツは特別な着衣",# NOTE: 村長と会う
+        "パンツの洗濯日和",# NOTE: パンツ脱げて、エリィ復活作戦
         "パンツ復活",
         "激突パンツとストッキング",
         "パンツ覚醒",
@@ -648,6 +649,63 @@ def sc_meetreader(w: wd.World):
                     "にっこりと笑う$mireiの綺麗な栗色の瞳が見えていた"),
             )
 
+## ep25 scenes
+def sc_takeoffpants(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
+    zones, mam = w.zones, w.mam_mirei
+    return w.scene("パンツが脱げた",
+            h.be(w.stage.mirei_house, w.day.meetmirei),
+            h.look("$mireiはパンツである$meを広げて持ちながら笑いかけていた"),
+            hero.talk("どういうことだ？", "さっきは脱がせられないって言ってなかったか？"),
+            h.deal("$meは自分の体が$eryの腰のところで引っかかってそれ以上脱げなくなった時に痛みも感じたというのに",
+                "何故こんなにもすんなりとパンツを脱がすことができたのだろう"),
+            mirei.talk("すみません。",
+                "先程は嘘をついていたんです"),
+            h.think("つまり脱げないフリをしたということか"),
+            hero.talk("じゃあいつでも脱がせたということか？"),
+            mirei.talk("え？", "$pantsて本当は脱げなかったりするんですか"),
+            h.think("どうなのだろう。",
+                "前とは少し状況が異なるから簡単に比較することはできないが",
+                "一番最初の時には脱げなかった。",
+                "ぴったりと彼女の皮膚に張り付き", "$eryの力を使っても破壊することすら敵わなかった"),
+            h.think("そう。", "ちらりと捲ることすらできなかったのだ。",
+                "それがどういう理屈なのだろう"),
+            h.deal("$meは幾つか可能性を考えてみたが",
+                "どれも勝手な推測の域を出ないものばかりだった"),
+            mam.talk("$mireiや。", "その女の子は大丈夫なのかね？"),
+            mirei.talk("あ、そうだった。",
+                "ごめんなさい。", "ちょっとだけここで休んでて下さい"),
+            h.deal("母親に言われて$eryを見た彼女はそう断ってから$meを布の掛けられたテーブルの上に置くと",
+                "転がったままになった$eryを抱き起こす"),
+            mirei.talk("あ……"),
+            h.deal("彼女を抱き起こしながら顔をこちらに向けた$mireiが",
+                "何かに気づいたようで声を発した"),
+            hero.talk("どうかしたのか？"),
+            mirei.talk("$pants", "一人で立てるんですか"),
+            h.think("え……"),
+            h.look("そう言われて$meは慌てて自分の姿勢を確認する"),
+            hero.talk("どうなってるんだよ……"),
+            h.think("人間であった頃の$meに言ったらきっと笑って首を横に振られるだろうが",
+                "これがこの世界での現実だというなら受け入れるしかない"),
+            h.deal("パンツが", "立っていた"),
+            h.deal("厳密に言えば自立している。",
+                "生活とか意味ではなく", "股裾の部分を軽く広げ",
+                "クロッチ", "所謂股布の部分をテーブルの上に突いて自重を支えているのだ。",
+                "腰側も広がっているみたいだったが", "流石にそこまでは鏡がないと確認できない"),
+            h.think("$meは意識することなく", "自然とテーブルの上で立っていた"),
+            hero.talk(""),
+            # NOTE: エリィを復活させるにはエナ集めだ、ドラゴンなら助けてくれるかも知れないが
+            )
+
+def sc_washpants(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
+    zones, mam = w.zones, w.mam_mirei
+    return w.scene("パンツを洗おう",
+            # NOTE: 初洗濯体験
+            )
+
 # episodes
 def ep23(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -675,6 +733,12 @@ def ep27(w: wd.World):
             sc_meetreader(w),
             )
 
+def ep28(w: wd.World):
+    return (w.chaptertitle(TITLE[5]),
+            sc_takeoffpants(w),
+            sc_washpants(w),
+            )
+
 # outlines
 def story_baseinfo(w: wd.World):
     return [
@@ -692,6 +756,7 @@ def story(w: wd.World):
             ep25(w),
             ep26(w),
             ep27(w),
+            ep28(w),
             )
 
 def main(): # pragma: no cover
