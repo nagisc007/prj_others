@@ -1139,6 +1139,7 @@ def sc_lookforgirl(w: wd.World):
                     "その赤みはふわりとした金髪で隠されていない耳たぶまでを染めた"),
             yula.talk("あ……"),
             yusha.talk("あ……"),
+            h.deal("彼女とほぼ同時に$Sも声を漏らす"),
             sol.talk("何だ？"),
             h.think("$Sは思い出したのである。",
                     "もう完全に息を引き取った$n_goblinの首を左手一本で締めているその女は",
@@ -1250,6 +1251,7 @@ def ep35(w: wd.World):
 
 def ep36(w: wd.World):
     return (w.chaptertitle(TITLE[11]),
+            sc_rescuemako(w),
             )
 
 # outline
