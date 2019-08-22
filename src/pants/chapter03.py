@@ -772,6 +772,13 @@ def sc_washpants(w: wd.World):
     ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
     zones, mam = w.zones, w.mam_mirei
     return w.scene("パンツを洗おう",
+            h.be(w.stage.mirei_house, w.day.meetmirei),
+            h.think("特に空腹は感じていなかった"),
+            h.think("それでも$meはパンツになったことで長らくご無沙汰だった「食べる」という",
+                "実に生き物らしい行為の懐かしさを思い出しながら",
+                "$mireiが用意してくれるという食事を待っていた"),
+            mirei.talk(""),
+            h.look(""),
             # NOTE: 初洗濯体験
             )
 
