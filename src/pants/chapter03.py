@@ -917,6 +917,10 @@ def sc_washing(w: wd.World):
     ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
     zones, mam = w.zones, w.mam_mirei
     return w.scene("洗濯とパンツと",
+            h.be(w.stage.river1, w.day.meetmirei),
+            h.look("そこは$mireiの脹脛くらいまでが浸かる深さの小さな流れだった。",
+                "天候によって変わるそうだが", "今は二メートルほどの太さになっている"),
+            mirei.talk(""),
             # NOTE: パンツを洗う
             )
 
