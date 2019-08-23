@@ -69,7 +69,7 @@ DAYS = (
         ("outprison", "脱獄した日"),
         ("meetmirei", "ミレィと出会った日"),
         # sub
-        ("departher", "彼女と別れた日", 6,6, 2016),
+        ("departher", "彼女と別れた日", 6,6, 2016),# NOTE: 三年前
         )
 
 ITEMS = (
