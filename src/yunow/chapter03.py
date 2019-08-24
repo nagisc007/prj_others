@@ -1421,6 +1421,9 @@ def sc_rescuemako2(w: wd.World):
     man, uru, head = w.vilaman1, w.uru, w.town3head
     return w.scene("魔子救出作戦",
             h.be(w.stage.goblinnest, w.day.awake4),
+            h.explain("薄暗い通路を突き当たりまで歩いていくと",
+                "先頭の$solは上り階段を見つけて振り返る"),
+            sol.talk("このまま上がってばかりだと建物の外に出ちまうんじゃないのか？"),
             # NOTE: 魔子が説教していた、そして証拠隠滅を図ってダム破壊、洪水
             )
 
