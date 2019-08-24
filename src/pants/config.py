@@ -58,6 +58,7 @@ STAGES = (
         ("left_prison", "迷宮跡地"),
         ("town1", "ベグリ"),# NOTE: ベリグリ（三愛）
         ("mirei_house", "ミレィの家"),
+        ("river1", "ベグリ付近の小川"),
         )
 
 DAYS = (
