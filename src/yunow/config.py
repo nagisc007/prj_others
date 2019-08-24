@@ -64,6 +64,7 @@ STAGES = (
         ("lake2", "クレーベ湖"),
         ("near_town3", "ナズム近郊"),
         ("goblinnest", "ゴブリンの巣"),
+        ("gobdom", "ジハーン北汚水製造施設"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
@@ -110,6 +111,7 @@ ITEMS = (
         ("drink1", "ドクトルペップ"),
         ("na_drink1", "ドクペ"),
         ("mapsoft", "マップアプリ"),
+        ("ale", "エールビア"),
         )
 
 
