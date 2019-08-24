@@ -30,7 +30,7 @@ CHARAS = (
         ("empu1", "エンプ", 99, "male", "巨大猿"),
         ("antboss", "アルカラ", 34, "female", "蟻族", "me:アタイ"),
         # chapter 3
-        ("zones", "シルバ,ゾネス", 56, "female", "長", "me:儂"),# NOTE: シルバ（羅）森の意
+        ("zones", "シルバ,ゾネス", 56, "female", "長", "me:儂:yurka:ユルカ"),# NOTE: シルバ（羅）森の意
         ("mam_mirei", "ユルカ", 54, "female", "村人", "me:私:mirei:ミレィ"),
         )
 
