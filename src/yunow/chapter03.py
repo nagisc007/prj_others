@@ -24,6 +24,7 @@ TITLE = [
         "ゴブリンの巣なう・その２",
         "ゴブリンから彼女を助けるなう・その１",
         "ゴブリンから彼女を助けるなう・その２",
+        "ゴブリンなう",
         "ゴブリンから彼女を助けるなう・その３",
         "洞窟なう",# NOTE:洞窟内で
         "野営なう",# NOTE:野宿編１から
@@ -1300,12 +1301,39 @@ def sc_rescuemako(w: wd.World):
             )
 
 ## ep37 scenes
+def sc_wokinggob(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    man, uru, head = w.vilaman1, w.uru, w.town3head
+    gro, gsuke, gshu = w.gobrou, w.gobsuke, w.gobshu
+    return w.scene("働くゴブリンたちの苦悩",
+            h.be(w.stage.goblinnest, w.day.awake4),
+            gro.talk("ハァ……なんで$meたち丸太なんて運んでんだろ"),
+            h.deal("$n_goblinの$n_gobrouは肩に載せた自分の身長の何倍もある切り出した丸太の重みを感じながら",
+                "誰にともなくぼやいた"),
+            gsuke.talk("なんでって決まってんだろがよ。", "$meらもあの$phoneっちゅうもんを支給してもらう為だよ"),
+            gro.talk("けどよ$suke", "この現場に来てからもう一月にもなるのに日当どころかまだ一Ｇ《$i_yen》だって給料貰ってないんだぞ？"),
+            h.deal("$n_gobsukeは粘土を入れた麻袋を担ぎながら真顔で$n_gobrouを見た"),
+            gsuke.talk("お前……まさか知らんと参加したのか！？"),
+            gro.talk("な、何だよ？", "$meはちゃんと『$i_boshu1』を見てコレだと思って応募したんだよ。",
+                "募集内容には『未経験者でも高額支給』ってあったし",
+                "最高クラスだと月収百万Ｇ《$i_yen》も夢じゃないって。",
+                "それに『あなたの夢を叶えたい』『やりがいある職場』で",
+                "何より『優しい先輩が手取り足取り教えてくれます』って書いてあったんだよ？"),
+            h.look("立ち止まって熱弁を揮った$n_gobrouを",
+                "$n_gobsukeはやはり真顔で見続けてから", "左右に首を振って先に歩き出す"),
+            gro.talk("だから何なんだよ！？"),
+            # NOTE: ユラの恐怖に出会う前のゴブリンたちの苦悩
+            )
+
+## ep38 scenes
 def sc_rescuemako2(w: wd.World):
     h = yusha = w.yusha
     sol, mako, yula = w.sol, w.mako, w.yula
     man, uru, head = w.vilaman1, w.uru, w.town3head
     return w.scene("魔子救出作戦",
             h.be(w.stage.goblinnest, w.day.awake4),
+            # NOTE: 魔子が説教していた、そして証拠隠滅を図ってダム破壊、洪水
             )
 
 # episodes
@@ -1374,6 +1402,11 @@ def ep36(w: wd.World):
 
 def ep37(w: wd.World):
     return (w.chaptertitle(TITLE[12]),
+            sc_wokinggob(w),
+            )
+
+def ep38(w: wd.World):
+    return (w.chaptertitle(TITLE[13]),
             sc_rescuemako2(w),
             )
 
@@ -1402,6 +1435,7 @@ def story(w: wd.World):
             ep35(w),
             ep36(w),
             ep37(w),
+            ep38(w),
             )
 
 def main(): # pragma: no cover
