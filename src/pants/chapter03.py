@@ -1024,6 +1024,35 @@ def sc_washing(w: wd.World):
             h.think("行きとは違い", "帰り道では風呂上がりのような心地で彼女の笑顔に付き合うことができた"),
             )
 
+## ep31 scenes
+def sc_backvila(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
+    zones, mam = w.zones, w.mam_mirei
+    return w.scene("村に戻ったら騒動",
+            h.be(w.stage.town1, w.day.meetmirei),
+            h.look("$mireiにうどんの話をしたら是非挑戦したいと言ってくれたことに気を良くして",
+                "村に戻ってきたが", "明らかに様子が変わっていた"),
+            h.look("三角屋根の建物の一つが煙を上げて燃えていた。",
+                "それも赤い炎ではない。", "黒。", "ところによって紫にも見える黒だった"),
+            hero.talk("$eryの炎だ……"),
+            mirei.talk("え？", "大賢者さまの？"),
+            hero.talk("すまないが家まで急いでくれ。", "彼女が目覚めたのかも知れない"),
+            h.think("悪い予感はしない。",
+                "それでも現実として彼女が何かを起こしたことは明白だった"),
+            h.deal("$mireiが左肩に張り付いた$meを落とさないようにと右手で押さえながら走ってくれていた。",
+                "その行く手で村中の人間が外に出ているんじゃないかと思えるほどの人だかりが",
+                "村で一番大きな三角形の前に出来ていた。",
+                "長の家だ"),
+            mirei.talk("何があったんでしょうか……あ", "お母さん！？"),
+            h.look("その人だかりの中心にいた一人は確かに$mireiの母親だ。",
+                "彼女に長が詰め寄っているのが分かる"),
+            mirei.talk("お母さん！"),
+            h.deal("声を掛けると「$mirei！」と返事がある。",
+                "もう一度呼びかけると目を閉じたままのその顔がこちらに向いた"),
+            # NOTE: エリィ復活、巫女倒れ、村騒動に
+            )
+
 # episodes
 def ep23(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -1067,6 +1096,11 @@ def ep30(w: wd.World):
             sc_washing(w),
             )
 
+def ep31(w: wd.World):
+    return (w.chaptertitle(TITLE[8]),
+            sc_backvila(w),
+            )
+
 # outlines
 def story_baseinfo(w: wd.World):
     return [
@@ -1087,6 +1121,7 @@ def story(w: wd.World):
             ep28(w),
             ep29(w),
             ep30(w),
+            ep31(w),
             )
 
 def main(): # pragma: no cover
