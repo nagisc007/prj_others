@@ -1301,6 +1301,18 @@ def sc_hermother(w: wd.World):
     ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
     zones, mam = w.zones, w.mam_mirei
     return w.scene("彼女のお母さん",
+            h.be(w.stage.town1, w.day.meetmirei),
+            h.deal("$mireiの家に入ると",
+                "彼女が何度も母親に呼びかけているのが聞こえた"),
+            hero.talk("もう大丈夫だ。", "$eryさんが何とかしてくれる"),
+            mirei.talk("え？"),
+            h.look("こちらを見た彼女の目は充血して赤くなっている。",
+                "ずっと泣いているのだろう"),
+            h.look("その$mireiの寄り添う前で", "土のベッドの上に寝かされた母親は細い息で今にも生命活動が止まってしまいそうだ。",
+                "胸に置かれた手が微かに上下している。",
+                "彼女の呼びかけに応えようと唇が動くが", "声は漏れない。",
+                "額からは汗が吹き出し", "それが流れて髪を濡らしている"),
+            # NOTE: 巫女の事情、拾った訳、力ついえる、この世界での死
             )
 
 # episodes
