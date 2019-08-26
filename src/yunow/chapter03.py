@@ -1552,6 +1552,25 @@ def sc_rescuemako2(w: wd.World):
                     "壊れた天井が落下してきた"),
             )
 
+## ep39 scenes
+def sc_re5church(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    pri = w.priest1
+    return w.scene("また教会！？",
+            h.be(w.stage.church1, w.day.awake5),
+            yusha.talk("天井が！！"),
+            h.deal("思い切り叫んで目覚めると",
+                "そこは再び$st_homeregion城下町の教会の中だった"),
+            yusha.talk("え……"),
+            h.deal("あの胸糞悪くなる臭気も感じないし",
+                "ランタンなくてもそれなりに明るいし",
+                "壁や天井は補修してあってボロいけれどちゃんと人の手で造られた建物の中だしで",
+                "どう考えても$n_goblinダムではなかった"),
+            pri.talk("また忍び込んで寝ていたのですか……"),
+            # NOTE: 目覚めて教会、魔子からメッセ、外で待ってると言われていくとユラがいる
+            )
+
 # episodes
 def ep25(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
@@ -1626,6 +1645,11 @@ def ep38(w: wd.World):
             sc_rescuemako2(w),
             )
 
+def ep39(w: wd.World):
+    return (w.chaptertitle(TITLE[14]),
+            sc_re5church(w),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -1652,6 +1676,7 @@ def story(w: wd.World):
             ep36(w),
             ep37(w),
             ep38(w),
+            ep39(w),
             )
 
 def main(): # pragma: no cover
