@@ -1420,6 +1420,15 @@ def sc_hermother(w: wd.World):
                     "体の芯まで病が蝕んでおるのが見える"),
             mam.talk("……$mirei"),
             h.deal("その時だった。", "彼女の母親がか細い声を上げた"),
+            )
+
+## ep34 scenes
+def sc_hertears(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei = w.ery, w.dran, w.lily, w.mirei
+    zones, mam = w.zones, w.mam_mirei
+    return w.scene("別離の涙",
+            h.be(w.stage.town1, w.day.meetmirei),
             # NOTE: 元彼女のことを思い出しつつ、彼女に説明、いつまでも一緒にはいられない
             # NOTE: 巫女の事情、拾った訳、力ついえる、この世界での死
             )
@@ -1482,6 +1491,10 @@ def ep33(w: wd.World):
             sc_hermother(w),
             )
 
+def ep34(w: wd.World):
+    return (w.chaptertitle(TITLE[11]),
+            )
+
 # outlines
 def story_baseinfo(w: wd.World):
     return [
@@ -1505,6 +1518,7 @@ def story(w: wd.World):
             ep31(w),
             ep32(w),
             ep33(w),
+            ep34(w),
             )
 
 def main(): # pragma: no cover
