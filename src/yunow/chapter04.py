@@ -104,6 +104,28 @@ def sc_bridge(w: wd.World):
     sol, mako, yula = w.sol, w.mako, w.yula
     return w.scene("橋きたー",
             h.be(w.stage.homefield, w.day.awake5),
+            yusha.talk("おおー！！"),
+            h.look("$Sである少年は深く大地に刻まれた谷に架かる丸太と石で造られたしっかりとした橋を目にして",
+                "感嘆の声を漏らす"),
+            sol.talk("おいおい。", "ここってこんな亀裂入ってたっけか？"),
+            h.look("だが赤い頭髪の長身の男$solは", "その身の丈に似合わず崖の下を覗き込んでは震えて目元を覆っている"),
+            mako.talk("何してるんですか？", "さっさと渡りましょうよ？"),
+            h.deal("既に橋の真ん中まで歩いたピンクのおかっぱの小柄な少女、$n_makoは",
+                "平気な様子で手招きをする"),
+            yula.talk("ほんっと情けないね"),
+            h.look("いつまでも渡ろうとしない$solの足を蹴飛ばして体勢を崩してから橋を渡り始めたのは",
+                "すらりとした立ち姿の美しい金髪の$yulaだ。",
+                "自称大盗賊らしいが", "平地を歩くかの如くに橋を渡っていく"),
+            yusha.talk("大丈夫か？"),
+            h.deal("$Sもその後に続いたが橋の支柱にずっとしがみついたままの$solを心配して声を掛けた"),
+            sol.talk("だ、だだ、大丈夫だよ、こんくらい。", "魔王より全然恐くねえからな！"),
+            # NOTE: 橋を渡る、村に行く、遺跡に行く
+            )
+
+def sc_gotoruins(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    return w.scene("遺跡にて",
             )
 
 # episodes
@@ -115,6 +137,7 @@ def ep40(w: wd.World):
 def ep41(w: wd.World):
     return (w.chaptertitle(TITLE[1]),
             sc_bridge(w),
+            sc_gotoruins(w),
             )
 
 # outline
