@@ -99,7 +99,7 @@ def sc_restart(w: wd.World):
             )
 
 ## ep41 scenes
-def sc_bridege(w: wd.World):
+def sc_bridge(w: wd.World):
     h = yusha = w.yusha
     sol, mako, yula = w.sol, w.mako, w.yula
     return w.scene("橋きたー",
