@@ -12,6 +12,9 @@ THM = cnf.THEMES
 
 # titles
 TITLE = [
+        "Re: 進路どっちなう",
+        "Re: 村なう",
+        "遺跡なう",
        "ゴブリンいないなう",
         "洞窟なう",# NOTE:洞窟内で
         "野営なう",# NOTE:野宿編１から
@@ -19,10 +22,10 @@ TITLE = [
 
 # scenes
 ## ep40 scenes
-def sc_bridge(w: wd.World):
+def sc_restart(w: wd.World):
     h = yusha = w.yusha
     sol, mako, yula = w.sol, w.mako, w.yula
-    return w.scene("橋がある",
+    return w.scene("リスタート",
             h.be(w.stage.homefield, w.day.awake5),
             h.look("城下町を出た$Sと愉快な仲間たちは街道沿いに北の$st_town2の町を目指していた"),
             yusha.talk("澄み渡る風なう！"),
@@ -69,13 +72,48 @@ def sc_bridge(w: wd.World):
             yusha.talk("ちょっと見せて"),
             h.deal("そう言って$yulaの$phoneを覗き込もうとしたのだが、"),
             yula.talk("嫌よ。", "自分ので見なさいよ"),
-            h.deal("彼女に拒否され", "$Sは仕方なく自分の$phoneで$gmapを使って近隣の地図を見てみる"),
-            # NOTE: ユラの言葉から、人物簡易紹介、関係性紹介、森がきえ、クレーベまでが簡単に行けるように。そして橋がかかっていて村が変わっている
+            h.deal("彼女に拒否され", "$Sは仕方なく自分の$phoneで$gmapを使って近隣の地図を見てみる。",
+                "そこにはこれまでに$Sが見たような森もなく", "蛇行した川もない。",
+                "何故か谷が表示され", "そこに橋が渡されている。",
+                "橋の先には$st_town3村が表示されていたが", "また同じ村なのだろうか"),
+            yusha.talk("ちょっと$sol", "紙の地図の方を出してみてよ"),
+            h.deal("もしやと思って$phoneの方ではない地図を確認すると",
+                    "そちらも同じように森は描かれていない。", "ただ村の北側に遺跡跡という表記が消えそうになっているのが見つかった"),
+            yusha.talk("コレってあの$n_goblinダムのことか？"),
+            sol.talk("で", "どうすんだ？", "特に用がないなら湖畔の脇を抜けて$st_town2に行けばいいと思うけどよ？"),
+            yusha.talk("橋を渡ろう"),
+            sol.talk("は？"),
+            h.deal("顔を歪めて$Sを見た$solにもう一度「橋だ」と言う"),
+            sol.talk("あのよ$yusha。", "$meの話聞いてたか？",
+                    "この湖畔脇のルートの方が$st_town2に近いっつってんだよ？"),
+            yusha.talk("分かってる"),
+            sol.talk("だったら"),
+            yusha.talk("橋を渡ろう"),
+            h.deal("そう言って一人頷いた$Sに$solは右の拳を握り締めながら目の前に突き出した"),
+            sol.talk("他人の話！"),
+            yusha.talk("ちょっと確かめたいことがあるんだ"),
+            h.deal("だが真面目な顔で$Sがそう言い返すものだから", "目の前に突き出した拳を$solは軽く広げてから「なら仕方ねえ」と退けた"),
+            yula.talk("それじゃあいいのね？", "橋を渡る方で？"),
+            yusha.talk("うん。", "それで頼む"),
+            h.look("笑顔でそう答えて西に進路を取った$Sを", "$n_makoは不思議な表情で見ながらその後に続いた"),
+            )
+
+## ep41 scenes
+def sc_bridege(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    return w.scene("橋きたー",
+            h.be(w.stage.homefield, w.day.awake5),
             )
 
 # episodes
 def ep40(w: wd.World):
     return (w.chaptertitle(TITLE[0]),
+            sc_restart(w),
+            )
+
+def ep41(w: wd.World):
+    return (w.chaptertitle(TITLE[1]),
             sc_bridge(w),
             )
 
@@ -92,6 +130,7 @@ def story_outline(w: wd.World):
 def story(w: wd.World):
     return (w.maintitle(cnf.TITLE["chap4"]),
             ep40(w),
+            ep41(w),
             )
 
 def main(): # pragma: no cover
