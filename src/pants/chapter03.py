@@ -1493,6 +1493,7 @@ def ep33(w: wd.World):
 
 def ep34(w: wd.World):
     return (w.chaptertitle(TITLE[11]),
+            sc_hertears(w),
             )
 
 # outlines
