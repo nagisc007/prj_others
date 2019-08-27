@@ -45,6 +45,7 @@ CHARAS = (
 STAGES = (
         # Area
         ("homeregion", "ジハーン"),
+        ("region2", "ローレア"),
         # Place
         ("homemount", "アルチハン山脈"),
         ("hometown", "城下町"),

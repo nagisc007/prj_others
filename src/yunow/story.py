@@ -11,6 +11,7 @@ from src.yunow import config as cnf
 from src.yunow import chapter01 as chap1
 from src.yunow import chapter02 as chap2
 from src.yunow import chapter03 as chap3
+from src.yunow import chapter04 as chap4
 THM = cnf.THEMES
 
 
@@ -23,7 +24,8 @@ def story_baseinfo(w: wd.World):
             ("story", story(w), w.yusha, w.yusha),
             ] + chap1.story_baseinfo(w) \
                 + chap2.story_baseinfo(w) \
-                + chap3.story_baseinfo(w)
+                + chap3.story_baseinfo(w) \
+                + chap4.story_baseinfo(w)
 
 def story_outline(w: wd.World):
     return [
@@ -35,7 +37,8 @@ def story_outline(w: wd.World):
                 True),
             ] + chap1.story_outline(w) \
                 + chap2.story_outline(w) \
-                + chap3.story_outline(w)
+                + chap3.story_outline(w) \
+                + chap4.story_outline(w)
 
 # main
 def world():
@@ -54,6 +57,7 @@ def story(w: wd.World):
             chap1.story(w),
             chap2.story(w),
             chap3.story(w),
+            chap4.story(w),
             )
 
 def main(): # pragma: no cover
