@@ -198,6 +198,13 @@ def sc_re_vila(w: wd.World):
             )
 
 ## ep42 scenes
+def sc_inn(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    return w.scene("村の宿",
+            # NOTE: 宿は新しかった
+            )
+
 def sc_ruins(w: wd.World):
     h = yusha = w.yusha
     sol, mako, yula = w.sol, w.mako, w.yula
@@ -219,6 +226,7 @@ def ep41(w: wd.World):
 
 def ep42(w: wd.World):
     return (w.chaptertitle(TITLE[2]),
+            sc_inn(w),
             sc_ruins(w),
             )
 
