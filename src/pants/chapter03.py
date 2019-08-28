@@ -28,7 +28,7 @@ TITLE = [
         "パンツと巫女の真実",
         "激突パンツとストッキング",
         "ストッキングの声を聞くパンツ",
-        "パンツの人権",
+        "パンツを縫う女",
         ]
 
 # scenes
@@ -1660,7 +1660,19 @@ def sc_hisvoice(w: wd.World):
     ery, dran, lily, mirei, rob = w.ery, w.dran, w.lily, w.mirei, w.robber
     return w.scene("あいつの声",
             h.be(w.stage.forest1, w.day.meetmirei),
+            h.think("今の声……"),
+            h.think("それは$meのものでも$eryのものでも$lilyのものですらない",
+                "男性の声だった"),
+            h.deal("$eryはうつ伏せに寝かせた$lilyの腰をパンツを履いた臀部で押さえつけ",
+                "彼女が履いているガーターストッキングの左脚の布を引き裂いていた。",
+                "一度だけでなく", "更に細かく細くなるように二つ", "四つと分けていく"),
+            h.hear("ただその度に$meの耳には聞き慣れない男の絶叫が響いてくる"),
             # NOTE: ストッキングは痴漢魔、リリィ退治、逃亡、ミレィに助けられる
+            )
+
+## ep37 scenes
+def sc_helpmirei(w: wd.World):
+    return w.scene("彼女の助け",
             )
 
 # episodes
@@ -1736,6 +1748,11 @@ def ep36(w: wd.World):
             sc_hisvoice(w),
             )
 
+def ep37(w: wd.World):
+    return (w.chaptertitle(TITLE[14]),
+            sc_helpmirei(w),
+            )
+
 # outlines
 def story_baseinfo(w: wd.World):
     return [
@@ -1762,6 +1779,7 @@ def story(w: wd.World):
             ep34(w),
             ep35(w),
             ep36(w),
+            ep37(w),
             )
 
 def main(): # pragma: no cover
