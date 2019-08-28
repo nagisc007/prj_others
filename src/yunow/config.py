@@ -118,6 +118,7 @@ ITEMS = (
         ("ale", "エールビア"),
         # chapter4
         ("townlog", "町歩くログ"),
+        ("slimegalette", "焼きスライムギャレー"),
         )
 
 
