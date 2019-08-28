@@ -71,6 +71,8 @@ STAGES = (
         ("townstreet1", "路地"),
         ("bedroom", "勇者の寝室"),
         ("myliving", "勇者の家のリビング"),
+        # chapter4
+        ("valley1", "ゴブリン渓谷"),
         )
 
 
@@ -114,6 +116,9 @@ ITEMS = (
         ("na_drink1", "ドクペ"),
         ("mapsoft", "マップアプリ"),
         ("ale", "エールビア"),
+        # chapter4
+        ("townlog", "町歩くログ"),
+        ("slimegalette", "焼きスライムギャレー"),
         )
 
 
