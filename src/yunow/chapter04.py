@@ -271,9 +271,27 @@ def sc_inn(w: wd.World):
             h.think("やっぱこいつバカだわ。", "と内心で$Sは思ったが口には出さなかった"),
             mako.talk("$taro！", "買い物行きませんか？", "ついでに特産の生スライム食べてきましょうよ"),
             h.deal("そうこうしていると荷物を置いてきたらしい$n_makoと$yulaが部屋に入ってきた"),
+            yula.talk("何？"),
+            h.look("$yulaは真面目な顔つきになっている男二人を見て小首を傾げる"),
+            sol.talk("$meは生スライムだけは勘弁だわ"),
+            h.deal("すぐに$solは表情を崩してそう言ったが", "$Sはさっき彼に言われたことを少しだけ気にして苦笑を浮かべながら「そっか」と適当な相槌を返した"),
             # NOTE: 宿は新しかった
             )
 
+def sc_withmako(w: wd.World):
+    h = yusha = w.yusha
+    sol, mako, yula = w.sol, w.mako, w.yula
+    return w.scene("魔子と二人で",
+            h.be(w.stage.town3),
+            h.deal("その後", "$Sたちはそれぞれ別行動を取った。",
+                "ただし$Sには金魚の糞のように彼女が付いてきたのだが"),
+            yusha.talk("別に一緒に来なくても良かったのに？"),
+            mako.talk("忘れたんですか？", "$meは$taroの結婚相手なんですよ？"),
+            h.think("ああ、なんかそんな約束してしまったなあ。",
+                "と思いながら$Sは自分の隣にぴたりとひっついて離れようとしないピンクのおかっぱ髪の少女を見る"),
+            )
+
+## ep43 scenes
 def sc_ruins(w: wd.World):
     h = yusha = w.yusha
     sol, mako, yula = w.sol, w.mako, w.yula
