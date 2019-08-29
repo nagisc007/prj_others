@@ -1764,8 +1764,38 @@ def sc_hisvoice(w: wd.World):
             )
 
 ## ep37 scenes
+def sc_runaway(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei, rob = w.ery, w.dran, w.lily, w.mirei, w.robber
+    return w.scene("逃げ出すストッキング",
+            h.be(w.stage.forest1, w.day.meetmirei),
+            h.look("$lilyの下腹部を申し訳程度に覆う黒のショーツには", "ぱっくりと口が開いていた。",
+                "赤い舌がうねり", "下品な笑い声を上げている"),
+            rob.talk("あん？", "何だよ兄ちゃん。",
+                "忘れちまったのか？",
+                "$meだよ$me。",
+                "電車の中で紐パンを取ってあんたから痴漢の現行犯に仕立て上げられた男だよ"),
+            h.think("姿は全く変わってしまったが",
+                "その気味の悪い感覚と喋り方は確かにあの痴漢魔だと$meには思えた"),
+            ery.talk("何だ……お主らは知り合いなのか？",
+                "そうか。", "パンツ仲間ということだの？"),
+            hero.talk("仲間……とは$meの方は思いたくないがな。",
+                "ただ", "どうやら同じ世界を生きていた奴らしい。",
+                "まさかこっちに来てもパンツに執着していたとは思わなかったがな"),
+            h.deal("そう言った$meに対する返事はなく",
+                "$eryは後ろに手を縛られたまま長座位になっている$lilyの脚を押し開き",
+                "彼女の股間の部分を小さく覆うその黒いショーツを屈み込んでじっくりと見た。",
+                "その所為で$meの視界いっぱいに痴漢魔である黒ショーツが迫った"),
+            rob.talk("あんたが元大賢者なんだってな？",
+                "それにしては大した$i_energyを感じないんだが……五百年ほど寝てる間に老化でもしたのか？"),
+            # NOTE: 痴漢魔だと判明、彼も転生？　気づいたら、もっと知りたいが逃亡、傷つけられる
+            )
+
 def sc_helpmirei(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei, rob = w.ery, w.dran, w.lily, w.mirei, w.robber
     return w.scene("彼女の助け",
+            h.be(w.stage.forest1, w.day.meetmirei),
             )
 
 # episodes
@@ -1843,6 +1873,7 @@ def ep36(w: wd.World):
 
 def ep37(w: wd.World):
     return (w.chaptertitle(TITLE[14]),
+            sc_runaway(w),
             sc_helpmirei(w),
             )
 
