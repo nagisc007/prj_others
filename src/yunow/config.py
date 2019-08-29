@@ -66,6 +66,7 @@ STAGES = (
         ("near_town3", "ナズム近郊"),
         ("goblinnest", "ゴブリンの巣"),
         ("gobdom", "ジハーン北汚水製造施設"),
+        ("apahotel", "アバンホテル"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
@@ -73,6 +74,7 @@ STAGES = (
         ("myliving", "勇者の家のリビング"),
         # chapter4
         ("valley1", "ゴブリン渓谷"),
+        ("foodshop1", "プルプルンナズム店"),
         )
 
 
@@ -119,6 +121,7 @@ ITEMS = (
         # chapter4
         ("townlog", "町歩くログ"),
         ("slimegalette", "焼きスライムギャレー"),
+        ("tabelog", "食べてログ"),
         )
 
 
