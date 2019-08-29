@@ -74,6 +74,7 @@ STAGES = (
         ("myliving", "勇者の家のリビング"),
         # chapter4
         ("valley1", "ゴブリン渓谷"),
+        ("foodshop1", "プルプルンナズム店"),
         )
 
 
@@ -120,6 +121,7 @@ ITEMS = (
         # chapter4
         ("townlog", "町歩くログ"),
         ("slimegalette", "焼きスライムギャレー"),
+        ("tabelog", "食べてログ"),
         )
 
 
