@@ -66,6 +66,7 @@ STAGES = (
         ("near_town3", "ナズム近郊"),
         ("goblinnest", "ゴブリンの巣"),
         ("gobdom", "ジハーン北汚水製造施設"),
+        ("apahotel", "アバンホテル"),
         # Part
         ("castle1gate", "城門"),
         ("townstreet1", "路地"),
