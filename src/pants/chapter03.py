@@ -1879,15 +1879,19 @@ def sc_runaway(w: wd.World):
                     "ただ飛ばしただけでなく$i_energyも使ったようで",
                     "彼女の体は胸元に光を伴ったまま背中から後方に飛ばされると",
                     "そのまま太い樹に衝突してその樹を傾けた"),
-            ery.talk(""),
-            # NOTE: 痴漢魔だと判明、彼も転生？　気づいたら、もっと知りたいが逃亡、傷つけられる
+            ery.talk("全く……五百年前から世話を焼かせるところは何も変わっておらんのだからな"),
+            h.deal("喉を擦りながら$eryはそう言うと",
+                    "わざわざ$meを覗き込んで笑みを見せた"),
+            ery.talk("よくやったぞパンツ$hero"),
             )
 
+## ep38 scenes
 def sc_helpmirei(w: wd.World):
     h = hero = w.hero
     ery, dran, lily, mirei, rob = w.ery, w.dran, w.lily, w.mirei, w.robber
     return w.scene("彼女の助け",
             h.be(w.stage.forest1, w.day.meetmirei),
+            # NOTE: 痴漢魔だと判明、彼も転生？　気づいたら、もっと知りたいが逃亡、傷つけられる
             )
 
 # episodes
