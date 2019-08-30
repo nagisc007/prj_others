@@ -29,7 +29,7 @@ TITLE = [
         "激突パンツとストッキング",
         "パンツとストッキングの折り合い",
         "ストッキングの声を聞くパンツ",
-        "パンツを縫う女",
+        "パンツ縫いの少女",
         ]
 
 # scenes
@@ -1886,12 +1886,33 @@ def sc_runaway(w: wd.World):
             )
 
 ## ep38 scenes
+def sc_vanishsis(w: wd.World):
+    h = hero = w.hero
+    ery, dran, lily, mirei, rob = w.ery, w.dran, w.lily, w.mirei, w.robber
+    return w.scene("妹たちは消えた",
+            h.be(w.stage.forest1, w.day.meetmirei),
+            h.deal("今は夜だ。",
+                "$meはゆっくりと歩いていく$eryの股間から見上げて改めてそれを確かめた"),
+            h.look("森の天井を覆う葉と葉の隙間からはただ闇が覗き",
+                "彼女が落ち葉を踏みしめる音以外は静寂を保っている"),
+            h.look("$eryが向かう先には傾いた大樹の根本でぐったりと背をもたれされて目を閉じている",
+                "ガーターベルト付きのストッキングを履いた少女$lilyだ。",
+                "彼女は姉である$ery譲りのピンク掛かった髪を腿まで伸ばして脱力したままで",
+                "もう先程までのような淡いピンクの発光をしていない"),
+            h.deal("今は$eryの右の指先に灯った小さな光だけが光源となり", "$meの目でも何とか動く様子がないことが確認できるだけだ"),
+            hero.talk("もう……大丈夫なのか？"),
+            h.deal("$lilyの下腹部を申し訳程度に覆う黒いショーツに開いていた口は", "だらしなく舌を垂らしたまま動かない"),
+            ery.talk("さあな。",
+                "ただ$i_energyは感じぬ"),
+            # NOTE: リリィたちは森を爆破して姿を消す、そこで損傷を受けて気絶
+            )
+
 def sc_helpmirei(w: wd.World):
     h = hero = w.hero
     ery, dran, lily, mirei, rob = w.ery, w.dran, w.lily, w.mirei, w.robber
     return w.scene("彼女の助け",
             h.be(w.stage.forest1, w.day.meetmirei),
-            # NOTE: 痴漢魔だと判明、彼も転生？　気づいたら、もっと知りたいが逃亡、傷つけられる
+            # NOTE: 目覚めるとミレィが縫ってくれていた
             )
 
 # episodes
@@ -1970,6 +1991,11 @@ def ep36(w: wd.World):
 def ep37(w: wd.World):
     return (w.chaptertitle(TITLE[14]),
             sc_runaway(w),
+            )
+
+def ep38(w: wd.World):
+    return (w.chaptertitle(TITLE[15]),
+            sc_vanishsis(w),
             sc_helpmirei(w),
             )
 
@@ -2000,6 +2026,7 @@ def story(w: wd.World):
             ep35(w),
             ep36(w),
             ep37(w),
+            ep38(w),
             )
 
 def main(): # pragma: no cover
