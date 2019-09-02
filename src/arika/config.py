@@ -9,20 +9,33 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
+        ("mio", "夏草,美緒", 17, "female", "学生", "me:わたし"),
         # sub
+        (""),
         # family
+        ("mam", "夏草,母", 42, "female", "パート", "me:私"),
+        ("dad", "夏草,父", 43, "male", "会社員", "me:僕"),
         # mob
         )
 
 STAGES = (
         # Area
+        ("Gifu", "岐阜県"),
+        ("Tajimi", "多治見市"),
+        ("mytown", "万千見市"),# NOTE: まちみ
         # Place
+        ("school", "高校"),
+        ("myhome", "夏草家"),
         # Part
+        ("myroom", "自室"),
+        ("dyning", "食堂"),
+        ("living", "リビング"),
+        ("kitchen", "キッチン"),
         )
 
 DAYS = (
         # main
-        ("current", "現在", 10,28, 2019),
+        ("current", "現在", 9,1, 2019),
         # sub
         )
 

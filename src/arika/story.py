@@ -12,8 +12,34 @@ THM = cnf.THEMES
 
 
 # scenes
+def sc_awaking(w: wd.World):
+    return w.scene("目覚め",
+            )
+
+def sc_myfriend(w: wd.World):
+    return w.scene("わたしのともだち",
+            )
+
+def sc_herboyfriend(w: wd.World):
+    return w.scene("わたしの彼氏",
+            )
 
 # episodes
+def ep_intro(w: wd.World):
+    return (w.chaptertitle("目覚めたら知らないわたし"),
+            sc_awaking(w),
+            )
+
+def ep_unknownme(w: wd.World):
+    return (w.chaptertitle("わたしの知らないわたし"),
+            sc_myfriend(w),
+            sc_herboyfriend(w),
+            )
+
+def ep_itsme(w: wd.World):
+    return (w.chaptertitle("それがわたし"),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -32,6 +58,9 @@ def world():
 
 def story(w: wd.World):
     return (w.maintitle("わたしの在り処"),
+            ep_intro(w),
+            ep_unknownme(w),
+            ep_itsme(w),
             )
 
 def main(): # pragma: no cover
