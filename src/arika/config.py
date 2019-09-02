@@ -30,11 +30,13 @@ STAGES = (
         ("dyning", "食堂"),
         ("living", "リビング"),
         ("kitchen", "キッチン"),
+        ("classroom", "教室"),
         )
 
 DAYS = (
         # main
         ("current", "現在", 9,1, 2019),
+        ("first", "最初に気づいた日", 9,1,2019),
         # sub
         )
 
