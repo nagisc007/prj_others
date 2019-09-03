@@ -96,6 +96,9 @@ def story(w: wd.World):
     return (w.maintitle("わたしの在り処"),
             ep_intro(w),
             ep_unknownme(w),
+            ep_X1(w),
+            ep_X2(w),
+            ep_X3(w),
             ep_itsme(w),
             )
 
