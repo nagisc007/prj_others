@@ -62,6 +62,7 @@ def sc_myfamily(w: wd.World):
     h = mio = w.mio
     return w.scene("わたしの家族",
             h.be(w.stage.dyning),
+            # NOTE: 家族の中の自分
             # NOTE: 朝食、知らない家族、知らない自分、高校生？　二学期
             )
 
@@ -69,6 +70,7 @@ def sc_myschool(w: wd.World):
     h = mio = w.mio
     return w.scene("わたしの学校",
             h.be(w.stage.school),
+            # NOTE: 学校の自分
             # NOTE: 登校、知らない道、学校、教室も知らず、友達に声かけられ
             )
 
@@ -76,13 +78,50 @@ def sc_myfriend(w: wd.World):
     h = mio = w.mio
     return w.scene("わたしのともだち",
             h.be(w.stage.classroom),
+            # NOTE: 友達の前の自分
             # NOTE: 友人、自分をよく知る、いつもと違う、雰囲気変わったって
             )
 
 def sc_herboyfriend(w: wd.World):
     h = mio = w.mio
     return w.scene("わたしの彼氏",
+            # NOTE: 彼の前の自分
             # NOTE: 彼氏がやってくる、放課後、初めて自分の本音を告げる
+            )
+
+def sc_sleeping(w: wd.World):
+    return w.scene("眠りにつくか",
+            # NOTE: 帰ってきて、自室、眠れず、SNSを見つける、知らない自分
+            )
+
+def sc_awake2day(w: wd.World):
+    return w.scene("目覚めたら知らないわたし",
+            # NOTE: 目覚めたらまた知らない部屋、私を見つける作業、SNSには同じ私
+            )
+
+def sc_unknownfamily(w: wd.World):
+    return w.scene("知らない家族",
+            # NOTE: 前の家族と違うギャップ、また知らない私、妙に気遣う家族、違う私
+            )
+
+def sc_newschool(w: wd.World):
+    return w.scene("違う学校",
+            # NOTE: 違う学校に違うクラス、違う制服、女子校、不登校だった私
+            )
+
+def sc_samehim(w: wd.World):
+    return w.scene("同じ彼",
+            # NOTE: 彼の前だけ同じ私、それが安寧、好きということ、でも彼はそろそろ別れたそう
+            )
+
+def sc_alonenight(w: wd.World):
+    return w.scene("一人の夜",
+            # NOTE: 好きな曲をききながら考え込む、わたしって何、わたしの在り処を知りたい
+            )
+
+def sc_everydayme(w: wd.World):
+    return w.scene("毎日違うわたし",
+            # NOTE:
             )
 
 # episodes
@@ -99,16 +138,21 @@ def ep_unknownme(w: wd.World):
             sc_herboyfriend(w),
             )
 
-def ep_X1(w: wd.World):
-    return (w.chaptertitle("二日目の展開"),
+def ep_notme(w: wd.World):
+    return (w.chaptertitle("わたしで無いわたし"),
+            sc_sleeping(w),
+            sc_awake2day(w),
+            sc_newschool(w),
+            sc_samehim(w),
+            sc_alonenight(w),
             )
 
-def ep_X2(w: wd.World):
-    return (w.chaptertitle("その後はずっと自分で自分て何だろうと"),
+def ep_denyme(w: wd.World):
+    return (w.chaptertitle("わたしを否定する"),
             )
 
-def ep_X3(w: wd.World):
-    return (w.chaptertitle("迷うわたし"),
+def ep_realme(w: wd.World):
+    return (w.chaptertitle("本物のわたし"),
             )
 
 def ep_itsme(w: wd.World):
