@@ -172,6 +172,7 @@ def ep_notme(w: wd.World):
     return (w.chaptertitle("わたしで無いわたし"),
             sc_sleeping(w),
             sc_awake2day(w),
+            sc_unknownfamily(w),
             sc_newschool(w),
             sc_samehim(w),
             sc_alonenight(w),
