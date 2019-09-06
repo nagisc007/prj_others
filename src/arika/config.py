@@ -9,11 +9,12 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("mio", "夏草,美緒", 17, "female", "学生", "me:わたし"),
+        ("mio", "夏草,美緒", 17, "female", "学生", "me:わたし:S:わたし"),
         # sub
+        ("haru", "稲葉,春彦", 25, "male", "会社員", "me:俺:mio:美緒ちゃん"),
         # family
-        ("mam", "夏草,母", 42, "female", "パート", "me:私"),
-        ("dad", "夏草,父", 43, "male", "会社員", "me:僕"),
+        ("mam", "夏草,母", 42, "female", "パート", "me:私:mio:美緒"),
+        ("dad", "夏草,父", 43, "male", "会社員", "me:僕:mio:美緒"),
         # mob
         )
 
