@@ -121,7 +121,37 @@ def sc_alonenight(w: wd.World):
 
 def sc_everydayme(w: wd.World):
     return w.scene("毎日違うわたし",
-            # NOTE:
+            # NOTE: 目覚める度にわたしを探す、その日々の中、彼だけがわたしを安定させてくれていた
+            )
+
+def sc_brokenme(w: wd.World):
+    return w.scene("破壊されるわたし",
+            # NOTE: わたしは壊れた、彼がいなくなった
+            )
+
+def sc_lostme(w: wd.World):
+    return w.scene("わたしはどこにもいない",
+            # NOTE: 自分を見失い、意識も心も漂う
+            )
+
+def sc_oldfriend(w: wd.World):
+    return w.scene("SNSの幼馴染",
+            # NOTE: SNSで幼馴染が声をかけてくれる、小さな頃のわたし、
+            )
+
+def sc_meetfriend(w: wd.World):
+    return w.scene("幼馴染との再会",
+            # NOTE: 再会し、わたしを取り戻す、わたしの在り処の鍵を知る
+            )
+
+def sc_findme(w: wd.World):
+    return w.scene("わたしを見つけた",
+            # NOTE: 色々なところに自分の面影を見つける
+            )
+
+def sc_me(w: wd.World):
+    return w.scene("わたし",
+            # NOTE: 色々なわたしがいる、でもどれもわたしだ
             )
 
 # episodes
@@ -149,14 +179,17 @@ def ep_notme(w: wd.World):
 
 def ep_denyme(w: wd.World):
     return (w.chaptertitle("わたしを否定する"),
-            )
-
-def ep_realme(w: wd.World):
-    return (w.chaptertitle("本物のわたし"),
+            sc_everydayme(w),
+            sc_brokenme(w),
+            sc_lostme(w),
+            sc_oldfriend(w),
             )
 
 def ep_itsme(w: wd.World):
     return (w.chaptertitle("それがわたし"),
+            sc_meetfriend(w),
+            sc_findme(w),
+            sc_me(w),
             )
 
 # outline
@@ -179,9 +212,8 @@ def story(w: wd.World):
     return (w.maintitle("わたしの在り処"),
             ep_intro(w),
             ep_unknownme(w),
-            ep_X1(w),
-            ep_X2(w),
-            ep_X3(w),
+            ep_notme(w),
+            ep_denyme(w),
             ep_itsme(w),
             )
 
