@@ -69,6 +69,7 @@ def sc_awaking(w: wd.World):
 
 def sc_myfamily(w: wd.World):
     h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
     return w.scene("わたしの家族",
             h.be(w.stage.dyning),
             h.move("食堂に降りてくる"),
@@ -76,29 +77,68 @@ def sc_myfamily(w: wd.World):
             # NOTE: 父の描写
             # NOTE: 弟の描写
             # NOTE: 家族の中の自分
+            mam.talk("あれ？　あんたそれ食べたっけ？"),
+            h.deal("どうやら$Sはオクラを食べられないらしい"),
             # NOTE: 朝食、知らない家族、知らない自分、高校生？　二学期
             )
 
 def sc_myschool(w: wd.World):
     h = mio = w.mio
+    asano = w.asano
     return w.scene("わたしの学校",
+            h.be(w.stage.street1),
+            h.deal("通学路を歩く。",
+                "スマホで場所は調べた。",
+                "周りを歩く同じ制服姿に安堵する"),
+            h.deal("SNSを見て、そこにも自分を見つける"),
+            h.deal("LINEで友達から連絡。返すと後ろから走ってきて、腕を掴まれる"),
+            asano.talk("おーはよ、$mio"),
+            # NOTE: くだけた自分、麻乃とのおしゃべり、楽しい？
             h.be(w.stage.school),
+            h.deal("三階建ての校舎。グラウンドで朝練する子たち。その一人が何故か睨みつけていく"),
             # NOTE: 学校の自分
+            h.be(w.stage.classroom),
+            h.deal("席を当然間違えて座るって注意された"),
+            h.deal("覚えのない顔ばかりで落ち着かない。ただ$asanoが同じクラスでよかった"),
+            h.deal("そして授業が始まる"),
             # NOTE: 登校、知らない道、学校、教室も知らず、友達に声かけられ
             )
 
 def sc_myfriend(w: wd.World):
     h = mio = w.mio
+    asano, ochi = w.asano, w.ochi
     return w.scene("わたしのともだち",
             h.be(w.stage.classroom),
+            h.deal("休み時間になり、文庫本を開く。それはいつかの自分が読みかけだったものみたいで、前半十数ページで止まったまま。何か思い出せるだろうかと読みふける"),
+            # NOTE: 本の内容少し
+            h.deal("見ると廊下側で$Sを睨んでいる女子生徒がいた。",
+                "立ち上がったがチャイムが鳴り、先生が入ってくる。",
+                "あれは確か今朝走っていた部活の生徒で自分を睨んだ子だ"),
             # NOTE: 友達の前の自分
+            h.deal("放課後、やっと解放された。",
+                "でも$Sはどこにも見つけられない。ふわふわとしたまま一日を過ごした"),
+            asano.talk("どっか寄ってく？"),
+            mio.talk("ううん。今日は"),
+            asano.talk("ああ。またアイツ？　いい加減にしといた方がいいわよ"),
+            h.deal("彼と付き合い始めてから雰囲気が変わった、と$asanoに言われた。",
+                "自覚ないどころか、何も覚えていないのだ。それは本当に$Sなのだろうか"),
             # NOTE: 友人、自分をよく知る、いつもと違う、雰囲気変わったって
             )
 
 def sc_herboyfriend(w: wd.World):
     h = mio = w.mio
+    haru = w.haru
     return w.scene("わたしの彼氏",
-            # NOTE: 彼の前の自分
+            h.be(w.stage.street1),
+            h.deal("LINEで待ち合わせ場所を指定され、そこで待っていると車が停まる"),
+            # NOTE: 彼の描写
+            h.deal("スーツ姿の会社員。女子高生を買っているおっさん、という訳ではなさそう。イケメンではないけれど真面目そう。どういう経緯で出会ったんだろう"),
+            haru.talk("記憶でも失くした？"),
+            h.deal("車を出してからすぐ穏やかな声でそんなことを言う"),
+            mio.talk("え？　どうしてですか？"),
+            # NOTE: 春彦は何故か分かる。「ここに君がいない」と。
+            h.deal("仕方なく事情を話した"),
+            haru.talk("病院行く？"),
             # NOTE: 彼氏がやってくる、放課後、初めて自分の本音を告げる
             )
 
