@@ -9,11 +9,12 @@ sys.path.append('storybuilder')
 
 CHARAS = (
         # main
-        ("mio", "夏草,美緒", 17, "female", "学生", "me:わたし:S:わたし:asano:右輪さん:asachi:麻乃さん:inaba:稲葉さん:haru:春彦さん"),
+        ("mio", "夏草,美緒", 17, "female", "学生", "me:わたし:S:わたし:asano:右輪さん:asachi:麻乃さん:inaba:稲葉さん:haru:春彦さん:yamane:山根さん"),
         # sub
         ("haru", "稲葉,春彦", 25, "male", "会社員", "me:俺:mio:美緒ちゃん"),
         ("asano", "右輪,麻乃", 17, "female", "学生", "me:うち:mio:美緒っち"),
         ("ochi", "越智,侑李", 17, "female", "学生", "me:私:mio:美緒"),
+        ("yamane", "山根,百合", 17, "female", "学生", "me:私:mio:美緒さん"),
         # family
         ("mam", "夏草,母", 42, "female", "パート", "me:私:mio:美緒"),
         ("dad", "夏草,父", 43, "male", "会社員", "me:僕:mio:美緒"),
@@ -41,7 +42,8 @@ STAGES = (
 DAYS = (
         # main
         ("current", "現在", 9,1, 2019),
-        ("first", "最初に気づいた日", 9,1,2019),
+        ("first", "最初に気づいた日", 9,2,2019),
+        ("second", "二番目の日", 9,3,2019),
         # sub
         )
 

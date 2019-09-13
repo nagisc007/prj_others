@@ -143,66 +143,133 @@ def sc_herboyfriend(w: wd.World):
             )
 
 def sc_sleeping(w: wd.World):
+    h = mio = w.mio
     return w.scene("眠りにつくか",
+            h.be(w.stage.myroom),
+            h.deal("ベッドの上で休んでいる。", "制服のまま"),
+            h.think("$Sについて考える。$Sは今までどうしていたのだろう"),
+            h.think("それは記憶とか思い出とかそんなもので構成されているとすれば、それが消えた途端にゼロになるんだろうか"),
+            h.think("自分の病気を疑ったけれど医者に行く勇気はない"),
+            h.deal("目を閉じる。眠れば明日になればきっと$Sが$Sに戻っていると信じて"),
+            h.deal("と、スマホが鳴った"),
+            h.look("迷惑メールだった。ほっとして、けれど眠れず、画面を見つめてしまう"),
+            h.deal("自分のアカウントを見つけ、それを覗く。そこには全然違う$Sが広がる"),
+            h.deal("それはまるでオタサーの姫。JKというだけでちやほやしてくるフォロワーに媚をうって、かわいいって言われて喜んでいる。これが$S？"),
+            h.deal("思い切り投げつけて枕で顔を覆った"),
             # NOTE: 帰ってきて、自室、眠れず、SNSを見つける、知らない自分
             )
 
 def sc_awake2day(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
     return w.scene("目覚めたら知らないわたし",
+            h.be(w.stage.myroom, w.day.second),
+            h.deal("目覚めた時の感覚は昨日と同じだった"),
+            h.think("つまり$Sって誰だ"),
+            h.look("部屋を観察する。ベッド、本棚、制服、パソコン"),
+            # NOTE: パソコンはなかったが置いてある
+            h.look("可愛らしい制服。知らない制服"),
+            h.deal("スマホが……違う。それが鳴っている"),
+            h.deal("見ると家族ＬＩＮＥだった。親からもう起きた？と"),
+            h.deal("返事をして食堂に向かうことにする"),
+            h.deal("ふと思ってSNSを確認する。そこには昨夜投げ出した$S"),
             # NOTE: 目覚めたらまた知らない部屋、私を見つける作業、SNSには同じ私
             )
 
 def sc_unknownfamily(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
     return w.scene("知らない家族",
+            h.be(w.stage.dyning),
+            h.deal("父と母がいる"),
+            h.deal("$Sは一人娘としてとても大切にされているらしい"),
+            h.deal("並ぶものはトースト中心に洋風で",
+                "コーヒーの香りが満たす"),
+            h.deal("飲めるだろうか。不安とともに口をつけると苦味が心地よかった。頭がはっきりとする。ここに$Sはいる、と感じる"),
             # NOTE: 前の家族と違うギャップ、また知らない私、妙に気遣う家族、違う私
             )
 
 def sc_newschool(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
+    yamane = w.yamane
     return w.scene("違う学校",
+            h.be(w.stage.classroom),
+            h.deal("違う学校に知らない教室。清潔感漂う校舎"),
+            h.deal("隣に座る眼鏡の女性。$n_yamane。どうやらよく一緒にいる友達らしい"),
+            h.deal("休み時間になり、彼女は本を開いていた。花柄のブックカバーだったが、内容はライト文芸だ"),
             # NOTE: 違う学校に違うクラス、違う制服、女子校、不登校だった私
             )
 
 def sc_samehim(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("同じ彼",
             # NOTE: 彼の前だけ同じ私、それが安寧、好きということ、でも彼はそろそろ別れたそう
             )
 
 def sc_alonenight(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("一人の夜",
             # NOTE: 好きな曲をききながら考え込む、わたしって何、わたしの在り処を知りたい
             )
 
 def sc_everydayme(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("毎日違うわたし",
             # NOTE: 目覚める度にわたしを探す、その日々の中、彼だけがわたしを安定させてくれていた
             )
 
 def sc_brokenme(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("破壊されるわたし",
             # NOTE: わたしは壊れた、彼がいなくなった
             )
 
 def sc_lostme(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("わたしはどこにもいない",
             # NOTE: 自分を見失い、意識も心も漂う
             )
 
 def sc_oldfriend(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("SNSの幼馴染",
             # NOTE: SNSで幼馴染が声をかけてくれる、小さな頃のわたし、
             )
 
 def sc_meetfriend(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("幼馴染との再会",
             # NOTE: 再会し、わたしを取り戻す、わたしの在り処の鍵を知る
             )
 
 def sc_findme(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("わたしを見つけた",
             # NOTE: 色々なところに自分の面影を見つける
             )
 
 def sc_me(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("わたし",
             # NOTE: 色々なわたしがいる、でもどれもわたしだ
             )
