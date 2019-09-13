@@ -199,7 +199,9 @@ def sc_newschool(w: wd.World):
             h.deal("違う学校に知らない教室。清潔感漂う校舎"),
             h.deal("隣に座る眼鏡の女性。$n_yamane。どうやらよく一緒にいる友達らしい"),
             h.deal("休み時間になり、彼女は本を開いていた。花柄のブックカバーだったが、内容はライト文芸だ"),
-            # NOTE: 違う学校に違うクラス、違う制服、女子校、不登校だった私
+            h.deal("彼女は$Sが普段と違うと指摘する"),
+            h.deal("そして彼女からかつて不登校だったと聞く"),
+            # NOTE: 違う学校に違うクラス、違う制服、女子校
             )
 
 def sc_samehim(w: wd.World):
@@ -207,6 +209,11 @@ def sc_samehim(w: wd.World):
     mam, dad, bro = w.mam, w.dad, w.bro
     asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("同じ彼",
+            h.be(w.stage.restaurant1),
+            h.deal("彼だけは同じ人"),
+            h.deal("違う制服姿の$Sを見ても何も驚かない。彼だけが同じ対応だった"),
+            h.deal("ただ距離感が違う。徐々に離れていくそれを感じる"),
+            haru.talk("どうかしたかい？"),
             # NOTE: 彼の前だけ同じ私、それが安寧、好きということ、でも彼はそろそろ別れたそう
             )
 
@@ -215,6 +222,14 @@ def sc_alonenight(w: wd.World):
     mam, dad, bro = w.mam, w.dad, w.bro
     asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("一人の夜",
+            h.be(w.stage.myroom),
+            h.deal("帰ってきて一人。ベッドの上で考え込む"),
+            h.think("昨日の記憶はある。思い出もある。でも$Sが分からない"),
+            h.think("$Sはどこにるのだろう。まだ昨日に置き去りなんだろうか。それ以前の$Sはどこだ"),
+            h.think("そもそも$Sって何だ"),
+            h.look("SNSを見る。そこには$Sがいる。知らない$S。フォロワーにからかわれたり、かわいいと言われる$S"),
+            h.look("そこに後ろ姿をアップしてみる。$Sはここにいるんだろうか"),
+            h.deal("沢山のいいねが集まり、眠ってしまう"),
             # NOTE: 好きな曲をききながら考え込む、わたしって何、わたしの在り処を知りたい
             )
 
@@ -223,6 +238,12 @@ def sc_everydayme(w: wd.World):
     mam, dad, bro = w.mam, w.dad, w.bro
     asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("毎日違うわたし",
+            h.deal("それからも目覚める度に$Sは$Sを探した。",
+                "部屋は同じように見えたが何か常に違和感が支配的だ"),
+            h.deal("毎日目覚める度に自分を確認する。部屋を確認する。ちょっとした違いがあったけれど、どれも$Sだった"),
+            h.think("$Sって何だろう"),
+            h.deal("彼に抱き締められているその時だけが確かな$Sみたいで安心できた。",
+                "けれど彼は徐々に距離を取り始めていた"),
             # NOTE: 目覚める度にわたしを探す、その日々の中、彼だけがわたしを安定させてくれていた
             )
 
@@ -231,6 +252,16 @@ def sc_brokenme(w: wd.World):
     mam, dad, bro = w.mam, w.dad, w.bro
     asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("破壊されるわたし",
+            h.deal("目覚めたら彼からメールが入っていた。それも長文だ"),
+            h.deal("$Sは自分を確認するよりも早くその文面に目を通した"),
+            h.think("概要はこうだ"),
+            h.deal("ほんの親切心で町の片隅で拾った$Sとつきあい始め",
+                "当初こそ楽しく思ったがそれはただ自分が学生時代に得られなかったものを手にしているというだけのもので",
+                "制服を脱いだ$Sには何もときめきがなかったということ"),
+            h.deal("その文面を読み終えて",
+                "$Sは$Sを見失ったことを理解した"),
+            h.deal("ドアが叩かれる。でも反応する気力がない"),
+            h.deal("こうして$Sは不登校になった"),
             # NOTE: わたしは壊れた、彼がいなくなった
             )
 
@@ -239,14 +270,22 @@ def sc_lostme(w: wd.World):
     mam, dad, bro = w.mam, w.dad, w.bro
     asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("わたしはどこにもいない",
+            h.deal("学校に行かず、日中はほとんど寝て過ごし、昼過ぎから起き出してSNSに顔を出す。そんな毎日"),
+            h.deal("そんな日々を続けていたある日の朝、スマホが鳴った"),
             # NOTE: 自分を見失い、意識も心も漂う
             )
 
 def sc_oldfriend(w: wd.World):
     h = mio = w.mio
     mam, dad, bro = w.mam, w.dad, w.bro
-    asano, ochi, haru = w.asano, w.ochi, w.haru
+    asano, ochi, haru, akimoto = w.asano, w.ochi, w.haru, w.akimoto
     return w.scene("SNSの幼馴染",
+            h.deal("SNSで最近フォローがあった、中学時代の友達らしい"),
+            h.deal("その彼から連絡。覚えているかと"),
+            h.deal("かつてアップした後ろ姿で気づいたらしい"),
+            h.deal("小学校からずっと一緒で中学卒業の時には告白まがいの手紙を渡してくれたそうだ。そんなものはどこにも見つからなかった"),
+            akimoto.talk("$mioって……今不登校？"),
+            h.deal("彼も同じだった"),
             # NOTE: SNSで幼馴染が声をかけてくれる、小さな頃のわたし、
             )
 
