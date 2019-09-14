@@ -389,6 +389,7 @@ def ep_itsme(w: wd.World):
     return (w.chaptertitle("それがわたし"),
             sc_meetfriend(w),
             sc_findme(w),
+            sc_mytruth(w),
             sc_me(w),
             )
 
