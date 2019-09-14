@@ -292,24 +292,64 @@ def sc_oldfriend(w: wd.World):
 def sc_meetfriend(w: wd.World):
     h = mio = w.mio
     mam, dad, bro = w.mam, w.dad, w.bro
-    asano, ochi, haru = w.asano, w.ochi, w.haru
+    asano, ochi, haru, akimoto = w.asano, w.ochi, w.haru, w.akimoto
     return w.scene("幼馴染との再会",
+            h.be(w.stage.station, w.day.datefriend),
+            h.deal("駅前で待ち合わせて、出会った"),
+            # NOTE: 幼馴染の外見
+            h.deal("話しているうちに徐々に$Sが形成される"),
+            h.deal("過去と思い出。それが$Sを支えてくれていたんじゃないかと気づく"),
+            h.deal("傷跡を抉る旅に出る。昔通っっていた中学や小学校、保育園。児童館"),
+            h.deal("それから事故みたいな初キス"),
+            h.deal("その翌日、彼が亡くなったことを知った"),
             # NOTE: 再会し、わたしを取り戻す、わたしの在り処の鍵を知る
             )
 
 def sc_findme(w: wd.World):
     h = mio = w.mio
     mam, dad, bro = w.mam, w.dad, w.bro
-    asano, ochi, haru = w.asano, w.ochi, w.haru
+    asano, ochi, haru, akimoto = w.asano, w.ochi, w.haru, w.akimoto
     return w.scene("わたしを見つけた",
+            h.deal("$Sはどこにもいなくなった"),
+            h.deal("目覚める度に消える$S"),
+            h.deal("SNSの中だけが居場所のように思えたのに",
+                "アカウントが乗っ取られた。でも誰も気づかない。そのまま$Sとして接する人たち"),
+            h.deal("走り出す"),
+            h.deal("酷い雨の中"),
+            h.deal("車が停まる。彼だった"),
             # NOTE: 色々なところに自分の面影を見つける
+            )
+
+def sc_mytruth(w: wd.World):
+    h = mio = w.mio
+    mam, dad, bro = w.mam, w.dad, w.bro
+    asano, ochi, haru, akimoto = w.asano, w.ochi, w.haru, w.akimoto
+    return w.scene("真実",
+            h.deal("彼と話す。最後の会話"),
+            h.deal("彼は転勤になる。もう助けてやれないとはっきり言われる"),
+            h.deal("自分の在り処は自分で見つけるしかない。どこにもあるし、どこにもない"),
+            h.deal("彼は最後のキスをしてくれる。それが必要なら、その相手を探せと言われて"),
             )
 
 def sc_me(w: wd.World):
     h = mio = w.mio
     mam, dad, bro = w.mam, w.dad, w.bro
-    asano, ochi, haru = w.asano, w.ochi, w.haru
+    asano, ochi, haru, akimoto = w.asano, w.ochi, w.haru, w.akimoto
     return w.scene("わたし",
+            h.deal("歩いて帰る"),
+            h.deal("沢山の人がいる"),
+            h.deal("誰もが自分を分かっているのだろうか"),
+            h.deal("$Sは$Sが分からない"),
+            h.deal("泣いてる。泣き声が聞こえる"),
+            h.deal("それは迷子だった。女の子。彼女を連れて歩く。行く宛てもなく"),
+            h.deal("彼女は迷子ではなく、家出娘だった。原因は些細なことだ。でも家には帰りたくない。自分の居場所がないから"),
+            h.deal("二人で公園に泊まろうとする。でも母親が迎えに来てしまう。警察に連れて行かれた"),
+            h.deal("交番に母が迎えに来る"),
+            h.deal("家に帰る。何も言われない"),
+            h.deal("玄関に入る前に一言だけ。ごめんお母さん。$Sが見つからなかった"),
+            h.deal("わたしなんて外に探しに行くもんじゃないでしょ？　と小突かれる"),
+            h.deal("部屋に帰ってくると$Sがいた。$Sが待っていた。姿見に$Sがいた。ずっと気づかなかった。$Sはずっと$Sだ"),
+            h.deal("それに気づいてやっと、$Sは$Sを取り戻した"),
             # NOTE: 色々なわたしがいる、でもどれもわたしだ
             )
 

@@ -34,6 +34,7 @@ STAGES = (
         ("famires1", "ファミレス"),
         ("karaoke1", "カラオケ店"),
         ("restaurant1", "レストラン"),
+        ("station", "駅前"),
         # Part
         ("myroom", "自室"),
         ("dyning", "食堂"),
@@ -48,6 +49,7 @@ DAYS = (
         ("current", "現在", 9,1, 2019),
         ("first", "最初に気づいた日", 9,2,2019),
         ("second", "二番目の日", 9,3,2019),
+        ("datefriend", "幼馴染と会った日", 9,22, 2019),
         # sub
         )
 
