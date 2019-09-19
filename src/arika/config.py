@@ -60,6 +60,7 @@ ITEMS = (
 
 INFOS = (
         # main
+        ("hismessage1", "会社帰りに寄るから映画でも見に行こう"),
         )
 
 
