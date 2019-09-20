@@ -13,7 +13,7 @@ CHARAS = (
         # sub
         ("haru", "稲葉,春彦", 25, "male", "会社員", "me:俺:mio:美緒ちゃん"),
         ("asano", "右輪,麻乃", 17, "female", "学生", "me:うち:mio:美緒っち"),
-        ("ochi", "越智,侑李", 17, "female", "学生", "me:私:mio:美緒"),
+        ("ochi", "越智,侑李", 17, "female", "学生", "me:私:mio:夏草さん"),
         ("yamane", "山根,百合", 17, "female", "学生", "me:私:mio:美緒さん"),
         ("akimoto", "秋本,修二", 17, "male", "学生", "me:僕:mio:夏草さん"),
         # family
