@@ -12,6 +12,7 @@ THM = cnf.THEMES
 
 
 # scenes
+## ep intro scenes
 def sc_awaking(w: wd.World):
     h = mio = w.mio
     mam = w.mam
@@ -94,6 +95,7 @@ def sc_awaking(w: wd.World):
             h.look("壁に掛けられた高校の制服を見やったまま", "情けない声を上げた"),
             )
 
+## ep1 scenes
 def sc_myfamily(w: wd.World):
     h = mio = w.mio
     mam, dad, bro = w.mam, w.dad, w.bro
@@ -286,10 +288,12 @@ def sc_myschool(w: wd.World):
             h.look("背の高い男性教師が入ってくると同時に始業のチャイムが鳴り響いた"),
             )
 
+## ep2 scenes
 def sc_myfriend(w: wd.World):
     h = mio = w.mio
     asano, ochi = w.asano, w.ochi
     return w.scene("わたしのともだち",
+            # TODO: 放課後になり、友達のこととか情報を仕入れて、それから彼氏の話に
             h.be(w.stage.classroom),
             h.deal("休み時間になり、文庫本を開く。それはいつかの自分が読みかけだったものみたいで、前半十数ページで止まったまま。何か思い出せるだろうかと読みふける"),
             # NOTE: 本の内容少し
@@ -545,12 +549,12 @@ def ep_unknownme(w: wd.World):
     return (w.chaptertitle("わたしの知らないわたし"),
             sc_myfamily(w),
             sc_myschool(w),
-            sc_myfriend(w),
-            sc_herboyfriend(w),
             )
 
 def ep_notme(w: wd.World):
     return (w.chaptertitle("わたしで無いわたし"),
+            sc_myfriend(w),
+            sc_herboyfriend(w),
             sc_sleeping(w),
             sc_awake2day(w),
             sc_unknownfamily(w),
