@@ -478,6 +478,21 @@ def sc_talkmystatus(w: wd.World):
     haru = w.haru
     return w.scene("わたしの状況",
             h.be(w.stage.karaoke1),
+            h.deal("彼に連れてこられたのはレストランでもファミレスでもなく",
+                "カラオケボックスの個室だった。",
+                "外の通路にはいくつも素人の歌声が響き", "雑然とした空気を時折店員の足音が割っていく"),
+            haru.talk("歌いたかったら歌ってもいいよ"),
+            mio.talk("いえ、いいです"),
+            h.deal("$Sは先に座った彼から離れて", "ソファではなく壁側に置いてあった丸椅子を出して座る"),
+            h.look("彼はカロリーのありそうな注文を済ませると", "メニューをテーブルの上に置いて足を組んだ。",
+                "ズボンの裾が上がり", "紺色の靴下が見える"),
+            haru.talk("もう一度聞くけど",
+                "いつそのことに気づいたんだ？"),
+            mio.talk("今朝……目覚めたら"),
+            h.think("そもそも昨日のことをよく覚えていない。",
+                "でも日常ってそんなものかも知れないと思うのだ。",
+                "スマートフォンでＳＮＳを覗けば自分が書き込んだことがそのままずっと残されているけれど",
+                "そんなことを書いたことすら本人は忘れている"),
             # TODO: カラオケボックスで食事
             # NOTE: 彼氏がやってくる、放課後、初めて自分の本音を告げる
             )
@@ -713,6 +728,10 @@ def ep_notme(w: wd.World):
             sc_sleeping(w),
             sc_awake2day(w),
             sc_unknownfamily(w),
+            )
+
+def ep_understandme(w: wd.World):
+    return (w.chaptertitle("わたしを理解する"),
             sc_newschool(w),
             sc_samehim(w),
             sc_alonenight(w),
@@ -755,6 +774,7 @@ def story(w: wd.World):
             ep_intro(w),
             ep_unknownme(w),
             ep_notme(w),
+            ep_understandme(w),
             ep_denyme(w),
             ep_itsme(w),
             )
