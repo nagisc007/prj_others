@@ -36,6 +36,7 @@ STAGES = (
         ("restaurant1", "レストラン"),
         ("station", "駅前"),
         # Part
+        ("onstreet", "路地"),
         ("myroom", "自室"),
         ("dyning", "食堂"),
         ("living", "リビング"),

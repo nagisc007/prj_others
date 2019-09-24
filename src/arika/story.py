@@ -616,6 +616,27 @@ def sc_talkmystatus(w: wd.World):
 def sc_sleeping(w: wd.World):
     h = mio = w.mio
     return w.scene("眠りにつくか",
+            h.be(w.stage.onstreet),
+            h.move("車で家の近所の交差点まで送ってもらい",
+                "$Sはすっかり暗がりになった歩道を歩く"),
+            h.feel("秋の夜風は少し頬に冷たいけれどそれでも$Sを感じさせてくれる程度には心地よい。",
+                "きっと誰かを前にすることさえなかったら",
+                "$Sが$Sを分かっていようといまいと関係ないのだ"),
+            h.think("こうしてスニーカーの足音を聴きながら歩いているだけで",
+                "ちゃんと生きている"),
+            h.think("別れ際に$haruから言われたけれど",
+                "そこまで自分がどうとか誰かとか", "気にしなくて良かっただけなのかも知れない"),
+            h.look("車のライトが$Sを照らしながら通り過ぎていく"),
+            h.think("でも運転手は$Sが$n_mioだなんて考えていない。",
+                "ただ制服とそのスカートを見て「女子高生だ」と思うだけだ。",
+                "人によってはそこに価値を見出すかも知れない。",
+                "けどそんなことに大した価値はないんだよと$haruは言っていた"),
+            h.deal("$Sと彼はＳＮＳで知り合ったらしい"),
+            h.deal("スマートフォンを取り出して",
+                "ネットの世界の$Sを確認する。",
+                "そこには知らない間に$Sが$n_haruの車に乗り込む姿を捉えた写真が投稿され",
+                "合成じゃなくて本物なのかという問い合わせが殺到していた"),
+            # TODO
             h.be(w.stage.myroom),
             h.deal("ベッドの上で休んでいる。", "制服のまま"),
             h.think("$Sについて考える。$Sは今までどうしていたのだろう"),
@@ -843,11 +864,11 @@ def ep_notme(w: wd.World):
             sc_talkmystatus(w),
             sc_sleeping(w),
             sc_awake2day(w),
-            sc_unknownfamily(w),
             )
 
 def ep_understandme(w: wd.World):
     return (w.chaptertitle("わたしを理解する"),
+            sc_unknownfamily(w),
             sc_newschool(w),
             sc_samehim(w),
             sc_alonenight(w),
