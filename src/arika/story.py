@@ -923,6 +923,17 @@ def sc_samehim(w: wd.World):
     mam, dad, bro = w.mam, w.dad, w.bro
     asano, ochi, haru = w.asano, w.ochi, w.haru
     return w.scene("同じ彼",
+            h.be(w.stage.onstreet),
+            h.deal("その日は担任にまで驚かれ「無理しなくてもいいんだぞ」という言葉に甘えて",
+                "昼休みには学校を出た"),
+            h.look("白を基調としたセーラー服はよく目立つし",
+                "午後の早い時間帯から外を一人で歩いていれば警官に声を掛けられても仕方ないとは思う"),
+            h.deal("だから$Sはバスに乗り込み駅前を目指しつつ",
+                "スマートフォンで$n_haruに連絡を取った。",
+                "彼ならこの奇妙な現象に何か理由を与えてくれるような気がしたからだ"),
+            mio.talk("あ……"),
+            h.deal("返事は五分ほどでやってきた。",
+                ""),
             h.be(w.stage.restaurant1),
             h.deal("彼だけは同じ人"),
             h.deal("違う制服姿の$Sを見ても何も驚かない。彼だけが同じ対応だった"),
