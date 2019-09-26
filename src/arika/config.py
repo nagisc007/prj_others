@@ -36,6 +36,7 @@ STAGES = (
         ("karaoke1", "カラオケ店"),
         ("restaurant1", "レストラン"),
         ("station", "駅前"),
+        ("movie1", "映画館"),
         # Part
         ("onstreet", "路地"),
         ("myroom", "自室"),
