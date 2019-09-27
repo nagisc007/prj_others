@@ -37,6 +37,7 @@ STAGES = (
         ("restaurant1", "レストラン"),
         ("station", "駅前"),
         ("movie1", "映画館"),
+        ("hospital", "病院"),
         # Part
         ("onstreet", "路地"),
         ("myroom", "自室"),
@@ -54,6 +55,7 @@ DAYS = (
         ("second", "二番目の日", 10,3,2019),
         ("datefriend", "幼馴染と会った日", 10,14, 2019),
         ("everyday", "変わりゆく日々"),
+        ("strangedays", "おかしな日々"),
         # sub
         )
 
