@@ -1229,7 +1229,7 @@ def sc_oldfriend(w: wd.World):
     h = mio = w.mio
     mam, dad, bro = w.mam, w.dad, w.bro
     asano, ochi, haru, akimoto = w.asano, w.ochi, w.haru, w.akimoto
-    return w.scene("SNSの幼馴染",
+    return w.scene("彼との別れ",
             h.deal("車は三十分ほど走ってからコンビニの駐車場に入った"),
             haru.talk("怪我をしたって見たから病院に向かっていたら救急車と揉めてる女性がいてね。",
                 "誰かと思ったら君だったから驚いた。",
@@ -1266,15 +1266,34 @@ def sc_oldfriend(w: wd.World):
                 "自分に笑われるし怒られるし追いかけられるしで",
                 "悪夢でしかないです"),
             haru.talk("けどさ",
-                ""),
-            # TODO: 口論から逃げ出す、一人、SNSに居場所、ストーカーの幼馴染と出会う
-            h.deal("SNSで最近フォローがあった、中学時代の友達らしい"),
-            h.deal("その彼から連絡。覚えているかと"),
-            h.deal("かつてアップした後ろ姿で気づいたらしい"),
-            h.deal("小学校からずっと一緒で中学卒業の時には告白まがいの手紙を渡してくれたそうだ。そんなものはどこにも見つからなかった"),
-            akimoto.talk("$mioって……今不登校？"),
-            h.deal("彼も同じだった"),
-            # NOTE: SNSで幼馴染が声をかけてくれる、小さな頃のわたし、
+                "それこそ$mioが望んでいたことじゃなかったの？"),
+            h.deal("$Sは妙なことを言い出した$Sの顔をまじまじと見た"),
+            haru.talk("だって自分がどんなだったか分からなくなったんだろう？",
+                "けど世界中に君しかいないなら", "誰になったっていいし", "好きな自分を選べばいいし",
+                "何なら毎日取っ替えたって構わない訳だ。",
+                "自分てどういう人間なのかを考える必要がなく",
+                "どんな自分にもなれるってことだよ。", "それって悪夢というよりは夢みたいじゃない？"),
+            h.think("好きな自分になれる"),
+            h.think("その言葉はとても魅力的に思えた。",
+                "ただそれはほんの一瞬のことで",
+                "隣の運転席でホットドッグを食べ始めたスーツ姿の$Sはどう見ても$Sじゃなかったし",
+                "$S以外を$Sと言われても$Sだなんて今更思えない"),
+            h.think("$Sは$S以外の$Sになんてなりたくない"),
+            mio.talk("それじゃあ君が探していた$Sって奴は何なのさ？"),
+            h.deal("$Sが言う。",
+                    "$Sが$Sに質問する。",
+                    "普通なら自問自答と呼ぶのに", "これじゃあやっぱり悪夢だ"),
+            h.deal("ドアを開け", "外に出る"),
+            haru.talk("$mio？"),
+            mio.talk("今日までありがとうございました。", "またどこかで知的な女子高生でも見つけて宜しくやって下さい"),
+            h.think("さようなら"),
+            h.deal("その言葉は空に投げて歩き出す"),
+            h.look("通りには$Sがいたが", "気にしない"),
+            h.think("$Sは", "$Sだ。", "$Sしかいないのだから"),
+            h.deal("それでも否応なく視界に飛び込んでくる色々な服装の$Sに頭がいっぱいになり",
+                    "駆け出した"),
+            h.think("どこでもいい。", "誰もいない世界に行きたかった。",
+                    "$Sだけが存在する世界に", "消えたかった"),
             )
 
 def sc_meetfriend(w: wd.World):
@@ -1291,13 +1310,14 @@ def sc_meetfriend(w: wd.World):
             h.deal("それから事故みたいな初キス"),
             h.deal("その翌日、彼が亡くなったことを知った"),
             # NOTE: 再会し、わたしを取り戻す、わたしの在り処の鍵を知る
-            )
+            ).omit()
 
 def sc_findme(w: wd.World):
     h = mio = w.mio
     mam, dad, bro = w.mam, w.dad, w.bro
     asano, ochi, haru, akimoto = w.asano, w.ochi, w.haru, w.akimoto
     return w.scene("わたしを見つけた",
+            # TODO: わたしを探す旅
             h.deal("$Sはどこにもいなくなった"),
             h.deal("目覚める度に消える$S"),
             h.deal("SNSの中だけが居場所のように思えたのに",
@@ -1380,7 +1400,7 @@ def ep_denyme(w: wd.World):
 
 def ep_itsme(w: wd.World):
     return (w.chaptertitle("それがわたし"),
-            sc_meetfriend(w),
+            sc_meetfriend(w),# NOTE: omit
             sc_findme(w),
             sc_mytruth(w),
             sc_me(w),
