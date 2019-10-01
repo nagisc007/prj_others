@@ -2,7 +2,7 @@
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| v0.1.0 | Develop | 2019.9.- | 2019.9.1 | Human, Bungaku | 50K | [Non published](https://google.com/) | [文學界新人賞](https://www.bunshun.co.jp/mag/bungakukai/bungakukai_prize.htm) |
+| v0.1.0 | Applied | 2019.9.30 | 2019.9.30 | Human, Bungaku | 50K | [Non published](https://google.com/) | [文學界新人賞](https://www.bunshun.co.jp/mag/bungakukai/bungakukai_prize.htm) |
 
 **「いつも思っていた、わたしはどこに在るのだろうかと」**
 
