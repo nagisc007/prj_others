@@ -1836,55 +1836,13 @@ def ep_epilogue(w: wd.World):
             )
 
 # test data
-def story_baseinfos(w: wd.World):
+def story_baseinfo(w: wd.World):
     return [
             ("story", story(w), w.nao, w.saya),
             ]
 
-def story_outlines(w: wd.World):
+def story_outline(w: wd.World):
     return [
-            ("story", story(w),
-                w.nao.think("全ての本を集める"),
-                w.nao.know(w.i.vanishshop),
-                w.nao.deal("本を集める"),
-                w.nao.go(w.saya, "彼女に会う"),
-                True),
-            ("ep0", ep_intro(w),
-                w.nao.think("彼女の本を全部そろえたい"),
-                w.nao.think("人生を救われた"),
-                w.nao.go(w.stage.bookshop),
-                w.nao.know(w.i.vanishshop),
-                True),
-            ("ep1", ep_buyout(w),
-                w.nao.deal("店が潰れるまでに収集しなきゃ"),
-                w.nao.know(w.i.vanishshop),
-                w.nao.deal("本を買い集める"),
-                w.nao.know("金が足りない"),
-                True),
-            ("ep2", ep_working(w),
-                w.nao.deal("働く"),
-                w.nao.deal("金を貯める"),
-                w.nao.look("バイト探し"),
-                w.nao.have("金を得る"),
-                True),
-            ("ep3", ep_closedshop(w),
-                w.nao.think("彼女に会いたい"),
-                w.nao.know("全ては集められない"),
-                w.nao.deal(w.akiko, "頼む"),
-                w.nao.know(w.i.her_addr),
-                True),
-            ("ep4", ep_lastbook(w),
-                w.nao.go(w.saya),
-                w.nao.know(w.i.her_addr),
-                w.nao.meet(w.saya),
-                w.nao.know(w.i.her_mind),
-                True),
-            ("ep5", ep_remainheart(w) + ep_epilogue(w),
-                w.nao.know(w.i.her_reason),
-                w.nao.meet(w.saya),
-                w.nao.ask(w.i.her_reason),
-                w.nao.deal("想いを伝えた"),
-                True),
             ]
 
 # main

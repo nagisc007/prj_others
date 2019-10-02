@@ -1,7 +1,8 @@
-# 彼女の本が、消えます
+# 彼女の本が消える町
 
 | version | status | released | modified | genre | size | site | contest |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| v0.3.0 | Develop | 2019.10.- | 2019.10.2 | Human, Love, Mystery | 50K | [No published](https://google.com) | [群像新人文学賞](http://gunzo.kodansha.co.jp/awards) |
 | v0.2.0 | Released | 2019.6.30 | 2019.7.4 | Human, Love, Mystery | 34K | [エブリスタ](https://estar.jp/novels/25501141) | [執筆応援キャンペーン「本／図書館／本屋さん」](https://estar.jp/official_contests/159350) |
 
 **「大好きなものを、どうしても失いたくなかったんだ」**
