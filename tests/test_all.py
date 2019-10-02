@@ -6,6 +6,7 @@ import test_yubijo
 import test_kyoko
 import test_zebra
 import test_arika
+import test_lostbook
 
 
 def suite():
@@ -25,6 +26,8 @@ def suite():
         unittest.makeSuite(test_zebra.StoryTest),
         # bungakukai
         unittest.makeSuite(test_arika.StoryTest),
+        # Gunzo
+        unittest.makeSuite(test_lostbook.StoryTest),
         ))
 
     return suite

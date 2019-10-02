@@ -6,6 +6,7 @@ Web応募の可否に関わらず、メジャーサイト以外で開催、募�
 
 | Number | Title | Contest |
 | --- | --- | --- |
+| [#gunzo63](lostbook/README.md) | 彼女本が消える町 | [群像新人賞](http://gunzo.kodansha.co.jp/awards) |
 | [#bgk125](arika/README.md) | わたしの在り処 | [文學界新人賞](https://www.bunshun.co.jp/mag/bungakukai/bungakukai_prize.htm) |
 | [#cvlt203](zebra/README.md) | ぜぶらぶら | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 | [#cvlt202](kyoko/README.md) | 今日子さんの夕沈み | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
