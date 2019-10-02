@@ -6,8 +6,9 @@ Web応募の可否に関わらず、メジャーサイト以外で開催、募�
 
 | Number | Title | Contest |
 | --- | --- | --- |
+| [#cvlt204](cobalt/README204.md) | キスマーク | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 | [#bgk125](arika/README.md) | わたしの在り処 | [文學界新人賞](https://www.bunshun.co.jp/mag/bungakukai/bungakukai_prize.htm) |
-| [#cvlt203](zebra/README.md) | ぜぶらぶら | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
+| [#cvlt203](cobalt/README.md) | ぜぶらぶら | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 | [#cvlt202](kyoko/README.md) | 今日子さんの夕沈み | [短編小説新人賞](http://cobalt.shueisha.co.jp/write/newface-award-apply/) |
 | [#ga12](yubijo/README.md) | 幽霊が美少女なら問題ないよね？ | [第12回GA文庫大賞](https://ga.sbcr.jp/novel/taisyo/guide.html) |
 
