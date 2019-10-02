@@ -4,7 +4,7 @@
 import unittest
 import test_yubijo
 import test_kyoko
-import test_zebra
+import test_cobalt
 import test_arika
 
 
@@ -22,7 +22,7 @@ def suite():
         # novema
         # cobalt
         unittest.makeSuite(test_kyoko.StoryTest),
-        unittest.makeSuite(test_zebra.StoryTest),
+        unittest.makeSuite(test_cobalt.StoryTest),
         # bungakukai
         unittest.makeSuite(test_arika.StoryTest),
         ))

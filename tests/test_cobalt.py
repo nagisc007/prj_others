@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
-"""Test: The zebra-bra
+"""Test: The cobalt short novels
 """
 import unittest
 from storybuilder.builder import testutils as utl
-from src.zebra.story import world, story, story_baseinfo, story_outline
-from src.zebra.config import THEMES, MOTIFS
+from src.cobalt.story import world, story, story_baseinfo, story_outline
+from src.cobalt.config import THEMES, MOTIFS
 
 
-_FILENAME = "zebra.story.py"
+_FILENAME = "cobalt.story.py"
 
 
 class StoryTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        utl.print_test_title(_FILENAME, "The zebra-bra project")
+        utl.print_test_title(_FILENAME, "The cobalt short novel project")
 
     def setUp(self):
         self.w = world()
