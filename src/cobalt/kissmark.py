@@ -10,6 +10,30 @@ from storybuilder.builder import world as wd
 from src.cobalt import config as cnf
 THM = cnf.THEMES
 
+
+# scenes
+
+# episodes
+def ep_intro(w: wd.World):
+    return (w.chaptertitle("冒頭"),
+            )
+
+def ep_ramen(w: wd.World):
+    return (w.chaptertitle("ラーメン屋"),
+            )
+
+def ep_oldstory(w: wd.World):
+    return (w.chaptertitle("昔話"),
+            )
+
+def ep_univ(w: wd.World):
+    return (w.chaptertitle("大学生"),
+            )
+
+def ep_kissmark(w: wd.World):
+    return (w.chaptertitle("キスマーク"),
+            )
+
 # outline
 def story_baseinfo(w: wd.World):
     return [
@@ -22,6 +46,11 @@ def story_outline(w: wd.World):
 # main
 def story(w: wd.World):
     return (w.maintitle("キスマーク"),
+            ep_intro(w),
+            ep_ramen(w),
+            ep_oldstory(w),
+            ep_univ(w),
+            ep_kissmark(w),
             )
 
 def main(): # pragma: no cover
