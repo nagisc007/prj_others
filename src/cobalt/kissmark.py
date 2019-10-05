@@ -250,31 +250,47 @@ def sc_kissmark(w: wd.World):
 # episodes
 def ep_intro(w: wd.World):
     return (w.chaptertitle("冒頭"),
+            sc_intro(w),
+            w.hana.explain(w.info("彼女にキスさせない")),
             )
 
 def ep_ramen(w: wd.World):
     return (w.chaptertitle("ラーメン屋"),
+            sc_ramen(w),
             )
 
 def ep_oldstory(w: wd.World):
     return (w.chaptertitle("昔話"),
+            sc_oldtalk(w),
+            w.hana.explain(w.info("キスマークのトラウマを語る")),
             )
 
 def ep_univ(w: wd.World):
     return (w.chaptertitle("大学生"),
+            sc_gotouniv(w),
             )
 
 def ep_kissmark(w: wd.World):
     return (w.chaptertitle("キスマーク"),
+            sc_kissmark(w),
+            w.hana.explain(w.info("彼女が$n_mitsuと告白する")),
+            w.hana.explain(w.info("彼女のキスマークを否定する")),
             )
 
 # outline
 def story_baseinfo(w: wd.World):
     return [
+            ("story", story(w), w.hana, w.mizu),
             ]
 
 def story_outline(w: wd.World):
     return [
+            ("story", story(w),
+                w.hana.explain(w.info("彼女にキスさせない")),
+                w.hana.explain(w.info("キスマークのトラウマを語る")),
+                w.hana.explain(w.info("彼女が$n_mitsuと告白する")),
+                w.hana.explain(w.info("彼女のキスマークを否定する")),
+                True),
             ]
 
 # main
