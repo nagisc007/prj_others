@@ -16,6 +16,7 @@ def sc_intro(w: wd.World):
     h = hana = w.hana
     mizu = w.mizukawa
     return w.scene("キスマークを嫌う",
+            h.be(w.stage.ks_home, w.day.current),
             h.be("冷蔵庫を開けるとドリンク用のスペースに水のペットボトルが隙間なく入っていた。",
                 "その一本を手に取り、砂を呑み込んだ後のような喉を掃除する。",
                 "胃袋まで唾液混ざりの液体が押し流されて、微睡《まどろ》みから抜けた気分がいくらかすっきりした"),
@@ -300,7 +301,7 @@ def ep_kissmark(w: wd.World):
 # outline
 def story_baseinfo(w: wd.World):
     return [
-            ("story", story(w), w.hana, w.mizu),
+            ("story", story(w), w.hana, w.mizukawa),
             ]
 
 def story_outline(w: wd.World):
