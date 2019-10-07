@@ -17,6 +17,11 @@ CHARAS = (
         ("mamken", "陣野,リア", 42, "female", "パート", "me:私i:ken:ケン:emi:笑美ちゃん"),
         ("teacher", "先生", 50, "male", "高校教師", "me:私"),
         ("murata", "村田,健吾", 67, "male", "農家", "me:僕"),
+        # kissmark
+        ("hana", "蜂須賀,花", 20, "male", "大学生", "me:俺"),
+        ("mizukawa", "水川", 20, "female", "大学生", "me:わたし"),
+        ("mitsu", "ミッツ", 11, "female", "小学生", "me:わたし"),
+        ("kitami", "喜多見", 24, "male", "大学生", "me:オレ"),
         )
 
 STAGES = (
@@ -34,6 +39,10 @@ STAGES = (
         ("dyning", "食堂"),
         ("classroom", "教室"),
         ("studio", "撮影スタジオ"),
+        # kissmark
+        ("ks_univ", "北海道大学"),
+        ("ks_home", "花のアパート"),
+        ("ks_ramen", "大学前ラーメン店"),
         )
 
 DAYS = (
@@ -43,6 +52,8 @@ DAYS = (
         ("marason", "マラソン大会", 10,25, 2019),
         ("getzebra", "ゼブラブラ入手日"),
         ("camera", "撮影日"),
+        # kissmark
+        ("ks_shogaku", "小学生時代")
         )
 
 ITEMS = (
