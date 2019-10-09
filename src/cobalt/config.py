@@ -43,6 +43,7 @@ STAGES = (
         ("ks_univ", "北海道大学"),
         ("ks_home", "花のアパート"),
         ("ks_ramen", "大学前ラーメン店"),
+        ("oncorridor", "廊下"),
         )
 
 DAYS = (
