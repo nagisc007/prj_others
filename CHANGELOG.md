@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Re-Project: The town vanishing her books
-- Re-Project: Kissmark
 ### Changed
+
+## [0.7.0] - 2019-10-10
+### Added
+- Re-Project: Kissmark
 
 ## [0.6.0] - 2019-10-01
 ### Added
@@ -59,7 +62,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Setup file for python.
 - Submodule: storybuilder is a library to build a story.
 
-[Unreleased]: https://github.com/nagisc007/prj_estar/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/nagisc007/prj_estar/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/nagisc007/prj_estar/releases/v0.7.0
 [0.6.0]: https://github.com/nagisc007/prj_estar/releases/v0.6.0
 [0.5.0]: https://github.com/nagisc007/prj_estar/releases/v0.5.0
 [0.4.0]: https://github.com/nagisc007/prj_estar/releases/v0.4.0
